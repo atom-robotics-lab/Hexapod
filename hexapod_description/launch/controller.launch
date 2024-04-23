@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find zamin_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="zamin" args="Revolute 63_position_controller Revolute 64_position_controller Revolute 65_position_controller Revolute 66_position_controller Revolute 67_position_controller Revolute 69_position_controller Revolute 70_position_controller Revolute 71_position_controller Revolute 72_position_controller Revolute 73_position_controller Revolute 74_position_controller Revolute 75_position_controller Revolute 76_position_controller Revolute 77_position_controller Revolute 78_position_controller Revolute 79_position_controller Revolute 80_position_controller Revolute 81_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/zamin/joint_states"/>
+</node>
+
+</launch>

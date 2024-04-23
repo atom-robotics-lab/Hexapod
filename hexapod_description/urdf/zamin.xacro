@@ -1,0 +1,532 @@
+<?xml version="1.0" ?>
+<robot name="zamin" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find zamin_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find zamin_description)/urdf/zamin.trans" />
+<xacro:include filename="$(find zamin_description)/urdf/zamin.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.1000352418955988 0.06495559041692857 0.006960329203092366" rpy="0 0 0"/>
+    <mass value="14.09466584247892"/>
+    <inertia ixx="0.167546" iyy="0.075339" izz="0.199615" ixy="-0.012339" iyz="0.003184" ixz="-0.003868"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_1_link_2_1">
+  <inertial>
+    <origin xyz="-0.020798247907869903 -0.003004122621169035 -0.05840364105605461" rpy="0 0 0"/>
+    <mass value="1.012661950148346"/>
+    <inertia ixx="0.001014" iyy="0.001236" izz="0.000891" ixy="-0.000197" iyz="-0.00022" ixz="-0.000489"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.031628 0.00646 -0.021757" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_1_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.031628 0.00646 -0.021757" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_1_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_1_link_3_1">
+  <inertial>
+    <origin xyz="-0.05232794213563882 0.015850438170881664 0.012387465467738626" rpy="0 0 0"/>
+    <mass value="0.22871600239093776"/>
+    <inertia ixx="0.000208" iyy="0.000275" izz="0.000422" ixy="-1e-05" iyz="1.8e-05" ixz="6.7e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.080903 0.053284 0.063455" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_1_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.080903 0.053284 0.063455" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_1_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_1_link_1_1">
+  <inertial>
+    <origin xyz="-0.024118708207036738 0.023198280722906535 -0.02416394528421939" rpy="0 0 0"/>
+    <mass value="0.907399585528797"/>
+    <inertia ixx="0.0028" iyy="0.003123" izz="0.0006" ixy="-0.00015" iyz="-0.00034" ixz="-0.000941"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.175395 0.070243 0.035462" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_1_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.175395 0.070243 0.035462" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_1_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_2_link_3__1__1">
+  <inertial>
+    <origin xyz="-0.020572592986036774 0.0037045224840009106 -0.05844286708274243" rpy="0 0 0"/>
+    <mass value="1.0126607300527286"/>
+    <inertia ixx="0.000943" iyy="0.001319" izz="0.000879" ixy="-0.000108" iyz="-8.7e-05" ixz="-0.00053"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.012855 -0.122421 -0.022834" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_2_link_3__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.012855 -0.122421 -0.022834" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_2_link_3__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_2_link_2_1">
+  <inertial>
+    <origin xyz="-0.044921169422652035 0.02724896339450003 0.019557009209572804" rpy="0 0 0"/>
+    <mass value="0.22871574861196214"/>
+    <inertia ixx="0.000229" iyy="0.000276" izz="0.000399" ixy="3e-06" iyz="-4e-06" ixz="9.5e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.071248 -0.091046 0.063695" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_2_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.071248 -0.091046 0.063695" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_2_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_3_link_3_1">
+  <inertial>
+    <origin xyz="-0.01471532830032863 0.017066498243044487 -0.05783367655412228" rpy="0 0 0"/>
+    <mass value="1.0126620006859057"/>
+    <inertia ixx="0.000964" iyy="0.001294" izz="0.000883" ixy="0.000135" iyz="0.000218" ixz="-0.000494"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.02145 -0.24803 -0.025922" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_3_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.02145 -0.24803 -0.025922" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_3_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_3_link_2_1">
+  <inertial>
+    <origin xyz="-0.02490321172110873 0.04393892851157011 0.024331856966839732" rpy="0 0 0"/>
+    <mass value="0.2287158182027981"/>
+    <inertia ixx="0.000248" iyy="0.000272" izz="0.000385" ixy="1.3e-05" iyz="-6.3e-05" ixz="8.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.042897 -0.255314 0.061759" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_3_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.042897 -0.255314 0.061759" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_3_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_3_link_1_1">
+  <inertial>
+    <origin xyz="0.008717952333481188 0.029799584273488944 -0.027197642277439673" rpy="0 0 0"/>
+    <mass value="0.9073986789846695"/>
+    <inertia ixx="0.00313" iyy="0.003181" izz="0.000211" ixy="8e-06" iyz="3.3e-05" ixz="0.000122"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.11862 -0.300684 0.014775" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_3_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.11862 -0.300684 0.014775" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_3_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_4_link_3_1">
+  <inertial>
+    <origin xyz="0.034731263262566064 -0.00392802530506986 -0.05135714502309486" rpy="0 0 0"/>
+    <mass value="1.0132520108724496"/>
+    <inertia ixx="0.000783" iyy="0.00123" izz="0.001141" ixy="0.000259" iyz="-0.000176" ixz="0.000456"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.178057 0.050638 -0.048896" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_4_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.178057 0.050638 -0.048896" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_4_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_4_link_2_1">
+  <inertial>
+    <origin xyz="0.052809765042208995 0.014176083454792127 -0.010373790935542228" rpy="0 0 0"/>
+    <mass value="0.2286696896275042"/>
+    <inertia ixx="0.000203" iyy="0.000273" izz="0.000428" ixy="1.5e-05" iyz="-1.5e-05" ixz="5.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.24643 0.099265 0.021536" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_4_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.24643 0.099265 0.021536" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_4_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_4_link_1_1">
+  <inertial>
+    <origin xyz="0.029407532301332473 0.022677687832287977 -0.018492432077358373" rpy="0 0 0"/>
+    <mass value="0.9074869947367368"/>
+    <inertia ixx="0.002339" iyy="0.003123" izz="0.001068" ixy="0.00022" iyz="-0.000309" ixz="0.001301"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.341523 0.119515 0.044929" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_4_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.341523 0.119515 0.044929" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_4_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_5_link_3_1">
+  <inertial>
+    <origin xyz="0.03418268792955556 -0.007023107521480734 -0.051395778898290834" rpy="0 0 0"/>
+    <mass value="1.0132520108724496"/>
+    <inertia ixx="0.000844" iyy="0.001174" izz="0.001136" ixy="0.000296" iyz="-0.000224" ixz="0.000437"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.212362 -0.074971 -0.051984" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_5_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.212362 -0.074971 -0.051984" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_5_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_5_llink_2_1">
+  <inertial>
+    <origin xyz="0.05422235004203746 0.008389679172791733 -0.0114936184371848" rpy="0 0 0"/>
+    <mass value="0.2286696896275042"/>
+    <inertia ixx="0.000206" iyy="0.00027" izz="0.000429" ixy="2.2e-05" iyz="-2.2e-05" ixz="5.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.275077 -0.020076 0.019104" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_5_llink_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.275077 -0.020076 0.019104" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_5_llink_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_5_link_1_1">
+  <inertial>
+    <origin xyz="0.028061540825260523 0.020927835811465526 -0.022263178357636942" rpy="0 0 0"/>
+    <mass value="0.9074869947367368"/>
+    <inertia ixx="0.002789" iyy="0.003125" izz="0.000616" ixy="0.000147" iyz="-0.000317" ixz="0.000967"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.367591 0.010327 0.041837" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_5_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.367591 0.010327 0.041837" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_5_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_6_link_3_1">
+  <inertial>
+    <origin xyz="0.034896122067995666 -0.0020427463356449127 -0.051355316337585624" rpy="0 0 0"/>
+    <mass value="1.0132520108724496"/>
+    <inertia ixx="0.000751" iyy="0.00126" izz="0.001143" ixy="0.00023" iyz="-0.000146" ixz="0.000465"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.231135 -0.203852 -0.053061" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_6_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.231135 -0.203852 -0.053061" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_6_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_6_link_2_1">
+  <inertial>
+    <origin xyz="0.04752311177088503 0.018310662194375382 -0.023426808330500083" rpy="0 0 0"/>
+    <mass value="0.2286696896275042"/>
+    <inertia ixx="0.000239" iyy="0.000276" izz="0.000389" ixy="5e-06" iyz="-1.6e-05" ixz="0.000102"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.302567 -0.159289 0.017023" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_6_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.302567 -0.159289 0.017023" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_6_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_6_link_1_1">
+  <inertial>
+    <origin xyz="0.02549629841380968 0.02479671305703493 -0.021358022325784654" rpy="0 0 0"/>
+    <mass value="0.9074869947367368"/>
+    <inertia ixx="0.002597" iyy="0.003153" izz="0.000779" ixy="0.000129" iyz="-0.000217" ixz="0.001143"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.390694 -0.146611 0.062552" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_6_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.390694 -0.146611 0.062552" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_6_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_2_link_1_1">
+  <inertial>
+    <origin xyz="0.014950984513356164 0.027472482543958468 0.026934944841813708" rpy="0 0 0"/>
+    <mass value="0.9073984436402253"/>
+    <inertia ixx="0.003087" iyy="0.003172" izz="0.000265" ixy="3.2e-05" iyz="9e-05" ixz="-0.000402"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.162465 -0.095774 0.022988" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_2_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.162465 -0.095774 0.022988" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://zamin_description/meshes/leg_2_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute 63" type="continuous">
+  <origin xyz="-0.031628 -0.00646 0.021757" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_1_link_2_1"/>
+  <axis xyz="0.126261 -0.010099 -0.991946"/>
+</joint>
+
+<joint name="Revolute 64" type="continuous">
+  <origin xyz="-0.049275 -0.046824 -0.085212" rpy="0 0 0"/>
+  <parent link="leg_1_link_2_1"/>
+  <child link="leg_1_link_3_1"/>
+  <axis xyz="0.186207 -0.981932 0.033699"/>
+</joint>
+
+<joint name="Revolute 65" type="continuous">
+  <origin xyz="-0.094492 -0.016959 0.027993" rpy="0 0 0"/>
+  <parent link="leg_1_link_3_1"/>
+  <child link="leg_1_link_1_1"/>
+  <axis xyz="0.186207 -0.981932 0.033699"/>
+</joint>
+
+<joint name="Revolute 66" type="continuous">
+  <origin xyz="-0.012855 0.122421 0.022834" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_2_link_3__1__1"/>
+  <axis xyz="0.126261 -0.010099 -0.991946"/>
+</joint>
+
+<joint name="Revolute 67" type="continuous">
+  <origin xyz="-0.058393 -0.031375 -0.086529" rpy="0 0 0"/>
+  <parent link="leg_2_link_3__1__1"/>
+  <child link="leg_2_link_2_1"/>
+  <axis xyz="-0.050076 -0.998738 0.003795"/>
+</joint>
+
+<joint name="Revolute 69" type="continuous">
+  <origin xyz="0.02145 0.24803 0.025922" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_3_link_3_1"/>
+  <axis xyz="0.126261 -0.010099 -0.991946"/>
+</joint>
+
+<joint name="Revolute 70" type="continuous">
+  <origin xyz="-0.064347 0.007284 -0.087681" rpy="0 0 0"/>
+  <parent link="leg_3_link_3_1"/>
+  <child link="leg_3_link_2_1"/>
+  <axis xyz="-0.540263 -0.839339 -0.060222"/>
+</joint>
+
+<joint name="Revolute 71" type="continuous">
+  <origin xyz="-0.075723 0.04537 0.046984" rpy="0 0 0"/>
+  <parent link="leg_3_link_2_1"/>
+  <child link="leg_3_link_1_1"/>
+  <axis xyz="-0.540263 -0.839339 -0.060222"/>
+</joint>
+
+<joint name="Revolute 72" type="continuous">
+  <origin xyz="0.178057 -0.050638 0.048896" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_4_link_3_1"/>
+  <axis xyz="0.126261 -0.010099 -0.991946"/>
+</joint>
+
+<joint name="Revolute 73" type="continuous">
+  <origin xyz="0.068373 -0.048627 -0.070432" rpy="0 0 0"/>
+  <parent link="leg_4_link_3_1"/>
+  <child link="leg_4_link_2_1"/>
+  <axis xyz="-0.21227 -0.977062 -0.017071"/>
+</joint>
+
+<joint name="Revolute 74" type="continuous">
+  <origin xyz="0.095093 -0.02025 -0.023393" rpy="0 0 0"/>
+  <parent link="leg_4_link_2_1"/>
+  <child link="leg_4_link_1_1"/>
+  <axis xyz="0.21227 0.977062 0.017071"/>
+</joint>
+
+<joint name="Revolute 75" type="continuous">
+  <origin xyz="0.212362 0.074971 0.051984" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_5_link_3_1"/>
+  <axis xyz="0.126261 -0.010099 -0.991946"/>
+</joint>
+
+<joint name="Revolute 76" type="continuous">
+  <origin xyz="0.062715 -0.054895 -0.071088" rpy="0 0 0"/>
+  <parent link="leg_5_link_3_1"/>
+  <child link="leg_5_llink_2_1"/>
+  <axis xyz="-0.318912 -0.947279 -0.030948"/>
+</joint>
+
+<joint name="Revolute 77" type="continuous">
+  <origin xyz="0.092514 -0.030403 -0.022733" rpy="0 0 0"/>
+  <parent link="leg_5_llink_2_1"/>
+  <child link="leg_5_link_1_1"/>
+  <axis xyz="0.318912 0.947279 0.030948"/>
+</joint>
+
+<joint name="Revolute 78" type="continuous">
+  <origin xyz="0.231135 0.203852 0.053061" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_6_link_3_1"/>
+  <axis xyz="0.126261 -0.010099 -0.991946"/>
+</joint>
+
+<joint name="Revolute 79" type="continuous">
+  <origin xyz="0.071432 -0.044563 -0.070084" rpy="0 0 0"/>
+  <parent link="leg_6_link_3_1"/>
+  <child link="leg_6_link_2_1"/>
+  <axis xyz="-0.146743 -0.989137 -0.008608"/>
+</joint>
+
+<joint name="Revolute 80" type="continuous">
+  <origin xyz="0.088127 -0.012678 -0.045529" rpy="0 0 0"/>
+  <parent link="leg_6_link_2_1"/>
+  <child link="leg_6_link_1_1"/>
+  <axis xyz="0.146743 0.989137 0.008608"/>
+</joint>
+
+<joint name="Revolute 81" type="continuous">
+  <origin xyz="-0.091217 0.004728 0.040707" rpy="0 0 0"/>
+  <parent link="leg_2_link_2_1"/>
+  <child link="leg_2_link_1_1"/>
+  <axis xyz="-0.050076 -0.998738 0.003795"/>
+</joint>
+
+</robot>
