@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot name="zamin" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+<robot name="hexapod" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
 <xacro:property name="body_color" value="Gazebo/Silver" />
 
@@ -10,7 +10,7 @@
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
   <gravity>true</gravity>
 </gazebo>
 
@@ -18,126 +18,126 @@
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="leg_1_link_3_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="leg_1_link_1_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="leg_2_link_3__1__1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
-</gazebo>
-
-<gazebo reference="leg_2_link_2_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="leg_3_link_3_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="leg_3_link_2_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="leg_3_link_1_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="leg_4_link_3_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="leg_4_link_2_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="leg_4_link_1_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="leg_5_link_3_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="leg_5_llink_2_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="leg_5_link_1_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="leg_6_link_3_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="leg_6_link_2_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="leg_6_link_1_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="leg_2_link_3__1__1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="leg_2_link_2_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
 </gazebo>
 
 <gazebo reference="leg_2_link_1_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <self_collide>true</self_collide>
 </gazebo>
 
 </robot>
