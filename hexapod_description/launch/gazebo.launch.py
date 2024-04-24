@@ -16,14 +16,14 @@ def generate_launch_description():
     share_dir = get_package_share_directory('hexapod_description')
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
     pkg_ugv_sim = get_package_share_directory('hexapod_description')
-    world_path = pkg_ugv_sim + "/worlds/" + "world_test.sdf"
+    world_path = "/home/aakshar/hexapod_ws/src/Hexapod/hexapod_description/worlds/world.sdf"
     hexapod_description = share_dir 
     parameters=[{'robot_description': launch_ros.descriptions.ParameterValue( launch.substitutions.Command(['xacro ',os.path.join(hexapod_description,'hexapod.xacro')]), value_type=str)  }]
     xacro_file = os.path.join(share_dir, 'urdf', 'hexapod.xacro')
     robot_description_config = xacro.process_file(xacro_file)
     robot_urdf = robot_description_config.toxml()
 
-    robot_urdf = "/home/aryan/hexapod/src/Hexapod/hexapod_description/urdf/hexapod.xacro"
+    robot_urdf = "/home/aakshar/hexapod_ws/src/Hexapod/hexapod_description/urdf/hexapod.xacro"
     gazebo_file = robot_urdf
     robot_xacro_config = xacro.process_file(robot_urdf)
     robot_urdf = robot_xacro_config.toxml()
@@ -33,28 +33,33 @@ def generate_launch_description():
     arguments = ["-topic", "/robot_description",
                 "-name", "hexapod",
                 "-allow_renaming", "true",
-                "-z", "0",
-                "-x", "0",
-                "-y", "0",
-                "-Y", "0",
+                "-z", "0.0",
+                "-x", "0.0",
+                "-y", "0.0",
+                "-Y", "0.0",
                 ],
     output='screen'
     )
 
-    # robot_state_publisher_node = Node(
-    #     package='robot_state_publisher',
-    #     executable='robot_state_publisher',
-    #     name='robot_state_publisher',
-    #     parameters=[
-    #         {'robot_description': robot_urdf}
-    #     ]
-    # )
+    ros_gz_bridge = Node(package="ros_gz_bridge", 
+                executable="parameter_bridge",
+                )
 
-    # joint_state_publisher_node = Node(
-    #     package='joint_state_publisher',
-    #     executable='joint_state_publisher',
-    #     name='joint_state_publisher'
-    # )
+
+    robot_state_publisher_node = Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        name='robot_state_publisher',
+        parameters=[
+            {'robot_description': rviz_file}
+        ]
+    )
+
+    joint_state_publisher_node = Node(
+        package='joint_state_publisher',
+        executable='joint_state_publisher',
+        name='joint_state_publisher'
+    )
 
     gz_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -79,19 +84,12 @@ def generate_launch_description():
     #     ])
     # )
 
-    # urdf_spawn_node = Node(
-    #     package='gazebo_ros',
-    #     executable='spawn_entity.py',
-    #     arguments=[
-    #         '-entity', 'hexapod',
-    #         '-topic', 'robot_description'
-    #     ],
-    #     output='screen'
-    # )
 
     return LaunchDescription([
-        # robot_state_publisher_node,
+        robot_state_publisher_node,
         # joint_state_publisher_node,
         gz_sim,
+        ros_gz_bridge,
+        spawn_robot,
         # urdf_spawn_node,
     ])
