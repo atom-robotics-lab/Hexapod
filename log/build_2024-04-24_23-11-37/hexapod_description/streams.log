@@ -1,0 +1,18 @@
+[0.844s] Invoking command in '/home/akshat/atom_projects/Hexapod/build/hexapod_description': PYTHONPATH=/home/akshat/atom_projects/Hexapod/build/hexapod_description/prefix_override:/home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/akshat/atom_projects/Hexapod/build/hexapod_description/build --no-deps symlink_data
+[1.117s] /home/akshat/.local/lib/python3.10/site-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[1.117s]   warnings.warn(
+[1.201s] running develop
+[1.425s] running egg_info
+[1.426s] writing hexapod_description.egg-info/PKG-INFO
+[1.426s] writing dependency_links to hexapod_description.egg-info/dependency_links.txt
+[1.426s] writing entry points to hexapod_description.egg-info/entry_points.txt
+[1.426s] writing requirements to hexapod_description.egg-info/requires.txt
+[1.426s] writing top-level names to hexapod_description.egg-info/top_level.txt
+[1.430s] reading manifest file 'hexapod_description.egg-info/SOURCES.txt'
+[1.431s] writing manifest file 'hexapod_description.egg-info/SOURCES.txt'
+[1.433s] running build_ext
+[1.433s] Creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/python3.10/site-packages/hexapod-description.egg-link (link to .)
+[1.434s] 
+[1.435s] Installed /home/akshat/atom_projects/Hexapod/build/hexapod_description
+[1.435s] running symlink_data
+[1.492s] Invoked command in '/home/akshat/atom_projects/Hexapod/build/hexapod_description' returned '0': PYTHONPATH=/home/akshat/atom_projects/Hexapod/build/hexapod_description/prefix_override:/home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/akshat/atom_projects/Hexapod/build/hexapod_description/build --no-deps symlink_data

@@ -1,0 +1,55 @@
+[0.834s] Invoking command in '/home/akshat/atom_projects/Hexapod/build/hexapod_description': PYTHONPATH=/home/akshat/atom_projects/Hexapod/build/hexapod_description/prefix_override:/home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/akshat/atom_projects/Hexapod/build/hexapod_description/build --no-deps symlink_data
+[1.110s] /home/akshat/.local/lib/python3.10/site-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[1.110s]   warnings.warn(
+[1.168s] running develop
+[1.399s] running egg_info
+[1.400s] creating hexapod_description.egg-info
+[1.400s] writing hexapod_description.egg-info/PKG-INFO
+[1.400s] writing dependency_links to hexapod_description.egg-info/dependency_links.txt
+[1.400s] writing entry points to hexapod_description.egg-info/entry_points.txt
+[1.400s] writing requirements to hexapod_description.egg-info/requires.txt
+[1.400s] writing top-level names to hexapod_description.egg-info/top_level.txt
+[1.402s] writing manifest file 'hexapod_description.egg-info/SOURCES.txt'
+[1.404s] reading manifest file 'hexapod_description.egg-info/SOURCES.txt'
+[1.405s] writing manifest file 'hexapod_description.egg-info/SOURCES.txt'
+[1.406s] running build_ext
+[1.406s] Creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/python3.10/site-packages/hexapod-description.egg-link (link to .)
+[1.407s] 
+[1.407s] Installed /home/akshat/atom_projects/Hexapod/build/hexapod_description
+[1.408s] running symlink_data
+[1.408s] creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/ament_index
+[1.408s] creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/ament_index/resource_index
+[1.408s] creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/ament_index/resource_index/packages
+[1.408s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/resource/hexapod_description -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/ament_index/resource_index/packages
+[1.408s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/package.xml -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description
+[1.408s] creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/launch
+[1.408s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/launch/display.launch.py -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/launch
+[1.408s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/launch/gazebo.launch.py -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/launch
+[1.408s] creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/urdf
+[1.408s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/urdf/hexapod.gazebo -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/urdf
+[1.409s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/urdf/hexapod.xacro -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/urdf
+[1.409s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/urdf/materials.xacro -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/urdf
+[1.409s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/urdf/hexapod.trans -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/urdf
+[1.409s] creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.409s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_5_llink_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.409s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_5_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.409s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_3_link_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.409s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_4_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.409s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_2_link_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.409s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_5_link_3_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.409s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_6_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.409s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_6_link_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.409s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_1_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.410s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_3_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.414s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_1_link_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.414s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_1_link_3_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.415s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_2_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.415s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_2_link_3__1__1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.415s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_6_link_3_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.415s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_3_link_3_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.415s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_4_link_3_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.415s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_4_link_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.415s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/base_link.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+[1.415s] creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/config
+[1.415s] symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/config/display.rviz -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/config
+[1.497s] Invoked command in '/home/akshat/atom_projects/Hexapod/build/hexapod_description' returned '0': PYTHONPATH=/home/akshat/atom_projects/Hexapod/build/hexapod_description/prefix_override:/home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/akshat/atom_projects/Hexapod/build/hexapod_description/build --no-deps symlink_data
