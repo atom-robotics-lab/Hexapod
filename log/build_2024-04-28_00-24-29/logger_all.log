@@ -1,0 +1,388 @@
+[0.105s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.105s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7cd6724465f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7cd67252b190>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7cd67252b190>>)
+[0.324s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.324s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.324s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.324s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.324s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.324s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.324s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/akshat/atom_projects/Hexapod'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.324s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'ignore'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'ignore_ament_install'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extensions ['colcon_pkg']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'colcon_pkg'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extensions ['colcon_meta']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'colcon_meta'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extensions ['ros']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'ros'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extensions ['cmake', 'python']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'cmake'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'python'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extensions ['python_setup_py']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control) by extension 'python_setup_py'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extensions ['ignore', 'ignore_ament_install']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'ignore'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'ignore_ament_install'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extensions ['colcon_pkg']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'colcon_pkg'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extensions ['colcon_meta']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'colcon_meta'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extensions ['ros']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'ros'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extensions ['cmake', 'python']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'cmake'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'python'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extensions ['python_setup_py']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/Dockerfile) by extension 'python_setup_py'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extensions ['ignore', 'ignore_ament_install']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'ignore_ament_install'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extensions ['colcon_pkg']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'colcon_pkg'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extensions ['colcon_meta']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'colcon_meta'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extensions ['ros']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'ros'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extensions ['cmake', 'python']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'cmake'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'python'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extensions ['python_setup_py']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc) by extension 'python_setup_py'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extensions ['ignore', 'ignore_ament_install']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'ignore'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'ignore_ament_install'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extensions ['colcon_pkg']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'colcon_pkg'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extensions ['colcon_meta']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'colcon_meta'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extensions ['ros']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'ros'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extensions ['cmake', 'python']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'cmake'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'python'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extensions ['python_setup_py']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/doc/img) by extension 'python_setup_py'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extensions ['ignore', 'ignore_ament_install']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extension 'ignore'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extension 'ignore_ament_install'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extensions ['colcon_pkg']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extension 'colcon_pkg'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extensions ['colcon_meta']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extension 'colcon_meta'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extensions ['ros']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/gz_ros2_control_tests) by extension 'ros'
+[0.357s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gz_ros2_control/gz_ros2_control_tests' with type 'ros.ament_cmake' and name 'gz_ros2_control_tests'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extensions ['ignore', 'ignore_ament_install']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extension 'ignore'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extension 'ignore_ament_install'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extensions ['colcon_pkg']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extension 'colcon_pkg'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extensions ['colcon_meta']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extension 'colcon_meta'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extensions ['ros']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control) by extension 'ros'
+[0.361s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gz_ros2_control/ign_ros2_control' with type 'ros.ament_cmake' and name 'ign_ros2_control'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extensions ['ignore', 'ignore_ament_install']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extension 'ignore'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extension 'ignore_ament_install'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extensions ['colcon_pkg']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extension 'colcon_pkg'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extensions ['colcon_meta']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extension 'colcon_meta'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extensions ['ros']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/gz_ros2_control/ign_ros2_control_demos) by extension 'ros'
+[0.363s] DEBUG:colcon.colcon_core.package_identification:Package 'src/gz_ros2_control/ign_ros2_control_demos' with type 'ros.ament_cmake' and name 'ign_ros2_control_demos'
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extensions ['ignore', 'ignore_ament_install']
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extension 'ignore'
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extension 'ignore_ament_install'
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extensions ['colcon_pkg']
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extension 'colcon_pkg'
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extensions ['colcon_meta']
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extension 'colcon_meta'
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extensions ['ros']
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(src/hexapod_description) by extension 'ros'
+[0.364s] DEBUG:colcon.colcon_core.package_identification:Package 'src/hexapod_description' with type 'ros.ament_python' and name 'hexapod_description'
+[0.364s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.364s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.364s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.364s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.364s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.384s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.386s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/akshat/atom_projects/Hexapod/install
+[0.386s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/akshat/Desktop/atom_aud/install
+[0.388s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 325 installed packages in /opt/ros/humble
+[0.389s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'cmake_args' from command line to 'None'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'cmake_target' from command line to 'None'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'hexapod_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.426s] DEBUG:colcon.colcon_core.verb:Building package 'hexapod_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/akshat/atom_projects/Hexapod/build/hexapod_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/akshat/atom_projects/Hexapod/install/hexapod_description', 'merge_install': False, 'path': '/home/akshat/atom_projects/Hexapod/src/hexapod_description', 'symlink_install': True, 'test_result_base': None}
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'cmake_args' from command line to 'None'
+[0.426s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'cmake_target' from command line to 'None'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.427s] DEBUG:colcon.colcon_core.verb:Building package 'ign_ros2_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control', 'merge_install': False, 'path': '/home/akshat/atom_projects/Hexapod/src/gz_ros2_control/ign_ros2_control', 'symlink_install': True, 'test_result_base': None}
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_args' from command line to 'None'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_target' from command line to 'None'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_clean_cache' from command line to 'False'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_clean_first' from command line to 'False'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'cmake_force_configure' from command line to 'False'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'ament_cmake_args' from command line to 'None'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'catkin_cmake_args' from command line to 'None'
+[0.427s] Level 5:colcon.colcon_core.verb:set package 'gz_ros2_control_tests' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.427s] DEBUG:colcon.colcon_core.verb:Building package 'gz_ros2_control_tests' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests', 'merge_install': False, 'path': '/home/akshat/atom_projects/Hexapod/src/gz_ros2_control/gz_ros2_control_tests', 'symlink_install': True, 'test_result_base': None}
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'cmake_args' from command line to 'None'
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'cmake_target' from command line to 'None'
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'cmake_clean_cache' from command line to 'False'
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'cmake_clean_first' from command line to 'False'
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'cmake_force_configure' from command line to 'False'
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'ament_cmake_args' from command line to 'None'
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'catkin_cmake_args' from command line to 'None'
+[0.428s] Level 5:colcon.colcon_core.verb:set package 'ign_ros2_control_demos' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.428s] DEBUG:colcon.colcon_core.verb:Building package 'ign_ros2_control_demos' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos', 'merge_install': False, 'path': '/home/akshat/atom_projects/Hexapod/src/gz_ros2_control/ign_ros2_control_demos', 'symlink_install': True, 'test_result_base': None}
+[0.428s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.429s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.429s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/akshat/atom_projects/Hexapod/src/gz_ros2_control/ign_ros2_control' with build type 'ament_cmake'
+[0.430s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/akshat/atom_projects/Hexapod/src/gz_ros2_control/ign_ros2_control'
+[0.431s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.432s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.432s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.436s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/akshat/atom_projects/Hexapod/src/hexapod_description' with build type 'ament_python'
+[0.436s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_description', 'ament_prefix_path')
+[0.436s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/hook/ament_prefix_path.ps1'
+[0.437s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/hook/ament_prefix_path.dsv'
+[0.437s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/hook/ament_prefix_path.sh'
+[0.438s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.438s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.450s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/akshat/atom_projects/Hexapod/install/hexapod_description:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble /usr/bin/cmake --build /home/akshat/atom_projects/Hexapod/build/ign_ros2_control -- -j12 -l12
+[0.782s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/akshat/atom_projects/Hexapod/src/hexapod_description'
+[0.782s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.782s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.788s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/akshat/atom_projects/Hexapod/install/hexapod_description:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble /usr/bin/cmake --build /home/akshat/atom_projects/Hexapod/build/ign_ros2_control -- -j12 -l12
+[0.848s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/akshat/atom_projects/Hexapod/install/hexapod_description:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble /usr/bin/cmake --install /home/akshat/atom_projects/Hexapod/build/ign_ros2_control
+[0.876s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ign_ros2_control)
+[0.877s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/akshat/atom_projects/Hexapod/install/hexapod_description:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble /usr/bin/cmake --install /home/akshat/atom_projects/Hexapod/build/ign_ros2_control
+[0.878s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control' for CMake module files
+[0.879s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control' for CMake config files
+[0.879s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_ros2_control', 'cmake_prefix_path')
+[0.879s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/hook/cmake_prefix_path.ps1'
+[0.880s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/hook/cmake_prefix_path.dsv'
+[0.880s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/hook/cmake_prefix_path.sh'
+[0.881s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/lib'
+[0.881s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_ros2_control', 'ld_library_path_lib')
+[0.881s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/hook/ld_library_path_lib.ps1'
+[0.881s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/hook/ld_library_path_lib.dsv'
+[0.882s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/hook/ld_library_path_lib.sh'
+[0.882s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/bin'
+[0.882s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/lib/pkgconfig/ign_ros2_control.pc'
+[0.882s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/lib/python3.10/site-packages'
+[0.882s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/bin'
+[0.883s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/package.ps1'
+[0.883s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/package.dsv'
+[0.884s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/package.sh'
+[0.885s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/package.bash'
+[0.885s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/package.zsh'
+[0.886s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/colcon-core/packages/ign_ros2_control)
+[0.920s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ign_ros2_control)
+[0.921s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control' for CMake module files
+[0.921s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control' for CMake config files
+[0.922s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_ros2_control', 'cmake_prefix_path')
+[0.922s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/hook/cmake_prefix_path.ps1'
+[0.922s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/hook/cmake_prefix_path.dsv'
+[0.923s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/hook/cmake_prefix_path.sh'
+[0.923s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/lib'
+[0.923s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_ros2_control', 'ld_library_path_lib')
+[0.923s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/hook/ld_library_path_lib.ps1'
+[0.924s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/hook/ld_library_path_lib.dsv'
+[0.924s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/hook/ld_library_path_lib.sh'
+[0.924s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/bin'
+[0.924s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/lib/pkgconfig/ign_ros2_control.pc'
+[0.924s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/lib/python3.10/site-packages'
+[0.924s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/bin'
+[0.925s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/package.ps1'
+[0.925s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/package.dsv'
+[0.925s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/package.sh'
+[0.926s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/package.bash'
+[0.926s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/package.zsh'
+[0.926s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/colcon-core/packages/ign_ros2_control)
+[0.927s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/akshat/atom_projects/Hexapod/src/gz_ros2_control/gz_ros2_control_tests' with build type 'ament_cmake'
+[0.927s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/akshat/atom_projects/Hexapod/src/gz_ros2_control/gz_ros2_control_tests'
+[0.927s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.927s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.932s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/akshat/atom_projects/Hexapod/src/gz_ros2_control/ign_ros2_control_demos' with build type 'ament_cmake'
+[0.932s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/akshat/atom_projects/Hexapod/src/gz_ros2_control/ign_ros2_control_demos'
+[0.933s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.933s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.941s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests': CMAKE_PREFIX_PATH=/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos:/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests:/home/akshat/atom_projects/Hexapod/install/hexapod_description:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble /usr/bin/cmake --build /home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests -- -j12 -l12
+[0.945s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos': CMAKE_PREFIX_PATH=/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos:/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests:/home/akshat/atom_projects/Hexapod/install/hexapod_description:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble /usr/bin/cmake --build /home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos -- -j12 -l12
+[1.033s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests' returned '0': CMAKE_PREFIX_PATH=/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos:/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests:/home/akshat/atom_projects/Hexapod/install/hexapod_description:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble /usr/bin/cmake --build /home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests -- -j12 -l12
+[1.034s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos' returned '0': CMAKE_PREFIX_PATH=/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos:/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests:/home/akshat/atom_projects/Hexapod/install/hexapod_description:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble /usr/bin/cmake --build /home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos -- -j12 -l12
+[1.069s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests': CMAKE_PREFIX_PATH=/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos:/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests:/home/akshat/atom_projects/Hexapod/install/hexapod_description:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble /usr/bin/cmake --install /home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests
+[1.092s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos': CMAKE_PREFIX_PATH=/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos:/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests:/home/akshat/atom_projects/Hexapod/install/hexapod_description:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble /usr/bin/cmake --install /home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos
+[1.098s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gz_ros2_control_tests)
+[1.099s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests' for CMake module files
+[1.099s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests' returned '0': CMAKE_PREFIX_PATH=/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos:/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests:/home/akshat/atom_projects/Hexapod/install/hexapod_description:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble /usr/bin/cmake --install /home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests
+[1.100s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests' for CMake config files
+[1.100s] Level 1:colcon.colcon_core.shell:create_environment_hook('gz_ros2_control_tests', 'cmake_prefix_path')
+[1.100s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.ps1'
+[1.101s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.dsv'
+[1.103s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.sh'
+[1.104s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/lib'
+[1.105s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/bin'
+[1.105s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/lib/pkgconfig/gz_ros2_control_tests.pc'
+[1.105s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/lib/python3.10/site-packages'
+[1.105s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/bin'
+[1.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.ps1'
+[1.107s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.dsv'
+[1.108s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.sh'
+[1.108s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.bash'
+[1.108s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.zsh'
+[1.109s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/colcon-core/packages/gz_ros2_control_tests)
+[1.120s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ign_ros2_control_demos)
+[1.121s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos' for CMake module files
+[1.122s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos' returned '0': CMAKE_PREFIX_PATH=/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos:/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests:/home/akshat/atom_projects/Hexapod/install/hexapod_description:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble /usr/bin/cmake --install /home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos
+[1.122s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos' for CMake config files
+[1.123s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_ros2_control_demos', 'cmake_prefix_path')
+[1.124s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/hook/cmake_prefix_path.ps1'
+[1.125s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/hook/cmake_prefix_path.dsv'
+[1.125s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/hook/cmake_prefix_path.sh'
+[1.126s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/lib'
+[1.126s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/bin'
+[1.126s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/lib/pkgconfig/ign_ros2_control_demos.pc'
+[1.126s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/lib/python3.10/site-packages'
+[1.126s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/bin'
+[1.126s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.ps1'
+[1.127s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.dsv'
+[1.128s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.sh'
+[1.128s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.bash'
+[1.128s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.zsh'
+[1.129s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/colcon-core/packages/ign_ros2_control_demos)
+[1.138s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gz_ros2_control_tests)
+[1.138s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests' for CMake module files
+[1.139s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests' for CMake config files
+[1.139s] Level 1:colcon.colcon_core.shell:create_environment_hook('gz_ros2_control_tests', 'cmake_prefix_path')
+[1.139s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.ps1'
+[1.140s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.dsv'
+[1.140s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/hook/cmake_prefix_path.sh'
+[1.141s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/lib'
+[1.141s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/bin'
+[1.141s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/lib/pkgconfig/gz_ros2_control_tests.pc'
+[1.142s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/lib/python3.10/site-packages'
+[1.142s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/bin'
+[1.142s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.ps1'
+[1.143s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.dsv'
+[1.143s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.sh'
+[1.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.bash'
+[1.145s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.zsh'
+[1.145s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/colcon-core/packages/gz_ros2_control_tests)
+[1.177s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ign_ros2_control_demos)
+[1.178s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos' for CMake module files
+[1.178s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos' for CMake config files
+[1.179s] Level 1:colcon.colcon_core.shell:create_environment_hook('ign_ros2_control_demos', 'cmake_prefix_path')
+[1.179s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/hook/cmake_prefix_path.ps1'
+[1.180s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/hook/cmake_prefix_path.dsv'
+[1.180s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/hook/cmake_prefix_path.sh'
+[1.181s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/lib'
+[1.181s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/bin'
+[1.181s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/lib/pkgconfig/ign_ros2_control_demos.pc'
+[1.181s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/lib/python3.10/site-packages'
+[1.181s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/bin'
+[1.182s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.ps1'
+[1.182s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.dsv'
+[1.183s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.sh'
+[1.183s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.bash'
+[1.184s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.zsh'
+[1.184s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/colcon-core/packages/ign_ros2_control_demos)
+[1.298s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/akshat/atom_projects/Hexapod/build/hexapod_description': PYTHONPATH=/home/akshat/atom_projects/Hexapod/build/hexapod_description/prefix_override:/home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/akshat/atom_projects/Hexapod/build/hexapod_description/build --no-deps symlink_data
+[1.884s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_description', 'pythonpath_develop')
+[1.885s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/build/hexapod_description/share/hexapod_description/hook/pythonpath_develop.ps1'
+[1.885s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/akshat/atom_projects/Hexapod/build/hexapod_description' returned '0': PYTHONPATH=/home/akshat/atom_projects/Hexapod/build/hexapod_description/prefix_override:/home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/akshat/atom_projects/Hexapod/build/hexapod_description/build --no-deps symlink_data
+[1.886s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/akshat/atom_projects/Hexapod/build/hexapod_description/share/hexapod_description/hook/pythonpath_develop.dsv'
+[1.886s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/build/hexapod_description/share/hexapod_description/hook/pythonpath_develop.sh'
+[1.886s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/hexapod_description' for CMake module files
+[1.887s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/hexapod_description' for CMake config files
+[1.887s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/hexapod_description/lib'
+[1.888s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/hexapod_description/bin'
+[1.888s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/pkgconfig/hexapod_description.pc'
+[1.888s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/python3.10/site-packages'
+[1.888s] Level 1:colcon.colcon_core.shell:create_environment_hook('hexapod_description', 'pythonpath')
+[1.888s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/hook/pythonpath.ps1'
+[1.888s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/hook/pythonpath.dsv'
+[1.889s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/hook/pythonpath.sh'
+[1.889s] Level 1:colcon.colcon_core.environment:checking '/home/akshat/atom_projects/Hexapod/install/hexapod_description/bin'
+[1.889s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(hexapod_description)
+[1.889s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/package.ps1'
+[1.890s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/package.dsv'
+[1.890s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/package.sh'
+[1.891s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/package.bash'
+[1.891s] INFO:colcon.colcon_core.shell:Creating package script '/home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/package.zsh'
+[1.891s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/akshat/atom_projects/Hexapod/install/hexapod_description/share/colcon-core/packages/hexapod_description)
+[1.892s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.892s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.892s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.892s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.898s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.898s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.898s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.910s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.911s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/akshat/atom_projects/Hexapod/install/local_setup.ps1'
+[1.912s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/akshat/atom_projects/Hexapod/install/_local_setup_util_ps1.py'
+[1.913s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/akshat/atom_projects/Hexapod/install/setup.ps1'
+[1.914s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/akshat/atom_projects/Hexapod/install/local_setup.sh'
+[1.915s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/akshat/atom_projects/Hexapod/install/_local_setup_util_sh.py'
+[1.915s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/akshat/atom_projects/Hexapod/install/setup.sh'
+[1.916s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/akshat/atom_projects/Hexapod/install/local_setup.bash'
+[1.916s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/akshat/atom_projects/Hexapod/install/setup.bash'
+[1.917s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/akshat/atom_projects/Hexapod/install/local_setup.zsh'
+[1.918s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/akshat/atom_projects/Hexapod/install/setup.zsh'

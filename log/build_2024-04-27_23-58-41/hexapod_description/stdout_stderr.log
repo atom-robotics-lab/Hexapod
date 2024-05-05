@@ -1,0 +1,55 @@
+/home/akshat/.local/lib/python3.10/site-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  warnings.warn(
+running develop
+running egg_info
+creating hexapod_description.egg-info
+writing hexapod_description.egg-info/PKG-INFO
+writing dependency_links to hexapod_description.egg-info/dependency_links.txt
+writing entry points to hexapod_description.egg-info/entry_points.txt
+writing requirements to hexapod_description.egg-info/requires.txt
+writing top-level names to hexapod_description.egg-info/top_level.txt
+writing manifest file 'hexapod_description.egg-info/SOURCES.txt'
+reading manifest file 'hexapod_description.egg-info/SOURCES.txt'
+writing manifest file 'hexapod_description.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/python3.10/site-packages/hexapod-description.egg-link (link to .)
+
+Installed /home/akshat/atom_projects/Hexapod/build/hexapod_description
+running symlink_data
+creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/ament_index
+creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/ament_index/resource_index
+creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/ament_index/resource_index/packages
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/resource/hexapod_description -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/ament_index/resource_index/packages
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/package.xml -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description
+creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/launch
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/launch/display.launch.py -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/launch
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/launch/robot.launch.py -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/launch
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/launch/gazebo.launch.py -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/launch
+creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/urdf
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/urdf/hexapod.gazebo -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/urdf
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/urdf/hexapod.xacro -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/urdf
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/urdf/materials.xacro -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/urdf
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/urdf/hexapod.trans -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/urdf
+creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_5_llink_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_5_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_3_link_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_4_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_2_link_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_5_link_3_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_6_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_6_link_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_1_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_3_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_1_link_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_1_link_3_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_2_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_2_link_3__1__1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_6_link_3_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_3_link_3_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_4_link_3_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_4_link_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/base_link.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes
+creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/config
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/config/my_controllers.yaml -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/config
+symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/config/display.rviz -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/config

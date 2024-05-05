@@ -1,0 +1,541 @@
+<?xml version="1.0" ?>
+<robot name="hexapod" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find hexapod_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find hexapod_description)/urdf/hexapod.trans" />
+<xacro:include filename="$(find hexapod_description)/urdf/hexapod.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.1000352418955988 0.06495559041692857 0.006960329203092366" rpy="0 0 0"/>
+    <mass value="14.09466584247892"/>
+    <inertia ixx="0.167546" iyy="0.075339" izz="0.199615" ixy="-0.012339" iyz="0.003184" ixz="-0.003868"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_1_link_2_1">
+  <inertial>
+    <origin xyz="-0.020798247907869903 -0.003004122621169035 -0.05840364105605461" rpy="0 0 0"/>
+    <mass value="1.012661950148346"/>
+    <inertia ixx="0.001014" iyy="0.001236" izz="0.000891" ixy="-0.000197" iyz="-0.00022" ixz="-0.000489"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.031628 0.00646 -0.021757" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_1_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.031628 0.00646 -0.021757" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_1_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_1_link_3_1">
+  <inertial>
+    <origin xyz="-0.05232794213563882 0.015850438170881664 0.012387465467738626" rpy="0 0 0"/>
+    <mass value="0.22871600239093776"/>
+    <inertia ixx="0.000208" iyy="0.000275" izz="0.000422" ixy="-1e-05" iyz="1.8e-05" ixz="6.7e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.080903 0.053284 0.063455" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_1_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.080903 0.053284 0.063455" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_1_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_1_link_1_1">
+  <inertial>
+    <origin xyz="-0.024118708207036738 0.023198280722906535 -0.02416394528421939" rpy="0 0 0"/>
+    <mass value="0.907399585528797"/>
+    <inertia ixx="0.0028" iyy="0.003123" izz="0.0006" ixy="-0.00015" iyz="-0.00034" ixz="-0.000941"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.175395 0.070243 0.035462" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_1_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.175395 0.070243 0.035462" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_1_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_3_link_3_1">
+  <inertial>
+    <origin xyz="-0.014715328300328638 0.017066498243044487 -0.05783367655412228" rpy="0 0 0"/>
+    <mass value="1.0126620006859057"/>
+    <inertia ixx="0.000964" iyy="0.001294" izz="0.000883" ixy="0.000135" iyz="0.000218" ixz="-0.000494"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.02145 -0.24803 -0.025922" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_3_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.02145 -0.24803 -0.025922" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_3_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_3_link_2_1">
+  <inertial>
+    <origin xyz="-0.02490321172110873 0.04393892851157011 0.024331856966839732" rpy="0 0 0"/>
+    <mass value="0.2287158182027981"/>
+    <inertia ixx="0.000248" iyy="0.000272" izz="0.000385" ixy="1.3e-05" iyz="-6.3e-05" ixz="8.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.042897 -0.255314 0.061759" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_3_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.042897 -0.255314 0.061759" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_3_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_3_link_1_1">
+  <inertial>
+    <origin xyz="0.008717952333481188 0.029799584273488944 -0.027197642277439673" rpy="0 0 0"/>
+    <mass value="0.9073986789846695"/>
+    <inertia ixx="0.00313" iyy="0.003181" izz="0.000211" ixy="8e-06" iyz="3.3e-05" ixz="0.000122"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.11862 -0.300684 0.014775" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_3_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.11862 -0.300684 0.014775" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_3_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_4_link_3_1">
+  <inertial>
+    <origin xyz="0.03493574224479934 -0.00037422890006483245 -0.05136730013941539" rpy="0 0 0"/>
+    <mass value="1.0132520108724496"/>
+    <inertia ixx="0.000726" iyy="0.001283" izz="0.001145" ixy="0.000203" iyz="-0.00012" ixz="0.000471"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.178057 0.050638 -0.048896" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_4_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.178057 0.050638 -0.048896" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_4_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_4_link_2_1">
+  <inertial>
+    <origin xyz="0.051695518913694394 0.020397632984701985 -0.0029876891797632928" rpy="0 0 0"/>
+    <mass value="0.22866968962750417"/>
+    <inertia ixx="0.000188" iyy="0.000275" izz="0.00044" ixy="8e-06" iyz="-2e-06" ixz="1.9e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.251957 0.091451 0.020912" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_4_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.251957 0.091451 0.020912" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_4_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_4_link_1_1">
+  <inertial>
+    <origin xyz="-0.000526697869027537 0.02827489662401167 -0.030353038043343876" rpy="0 0 0"/>
+    <mass value="0.9074869947367368"/>
+    <inertia ixx="0.002641" iyy="0.003177" izz="0.000712" ixy="3e-05" iyz="1.7e-05" ixz="-0.001109"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.351263 0.100253 0.028711" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_4_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.351263 0.100253 0.028711" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_4_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_5_link_3_1">
+  <inertial>
+    <origin xyz="0.033866656604737144 -0.008244553986686304 -0.05142356931495705" rpy="0 0 0"/>
+    <mass value="1.0132520108724496"/>
+    <inertia ixx="0.00087" iyy="0.00115" izz="0.001134" ixy="0.000307" iyz="-0.000243" ixz="0.000428"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.212362 -0.074971 -0.051984" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_5_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.212362 -0.074971 -0.051984" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_5_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_5_llink_2_1">
+  <inertial>
+    <origin xyz="0.05581296761700272 0.005046809815590542 0.0013923363225871316" rpy="0 0 0"/>
+    <mass value="0.22866968962750417"/>
+    <inertia ixx="0.000198" iyy="0.000265" izz="0.000441" ixy="3e-05" iyz="-3e-06" ixz="-9e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.272618 -0.017746 0.019394" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_5_llink_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.272618 -0.017746 0.019394" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_5_llink_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_5_link_1_1">
+  <inertial>
+    <origin xyz="0.013937076987451114 0.025884273932207755 -0.029271222693096868" rpy="0 0 0"/>
+    <mass value="0.9074869947367368"/>
+    <inertia ixx="0.003054" iyy="0.003145" izz="0.000331" ixy="7e-05" iyz="0.000231" ixz="-0.000546"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.365809 0.018422 0.016698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_5_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.365809 0.018422 0.016698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_5_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_6_link_3_1">
+  <inertial>
+    <origin xyz="0.03477889817756116 0.0024676237025516856 -0.05141615896524518" rpy="0 0 0"/>
+    <mass value="1.0132520108724496"/>
+    <inertia ixx="0.000692" iyy="0.001316" izz="0.001146" ixy="0.000149" iyz="-7.4e-05" ixz="0.000479"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.231135 -0.203852 -0.053061" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_6_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.231135 -0.203852 -0.053061" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_6_link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_6_link_2_1">
+  <inertial>
+    <origin xyz="-0.015065755941645498 0.025266709153690392 0.04771890579685114" rpy="0 0 0"/>
+    <mass value="0.22866968962750417"/>
+    <inertia ixx="0.000417" iyy="0.000276" izz="0.000211" ixy="2e-06" iyz="-0.0" ixz="7.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.308723 -0.169751 0.016345" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_6_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.308723 -0.169751 0.016345" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_6_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_6_link_1_1">
+  <inertial>
+    <origin xyz="0.030015927768925255 0.028477589836575362 0.003027671908309146" rpy="0 0 0"/>
+    <mass value="0.9074869947367368"/>
+    <inertia ixx="0.000344" iyy="0.003179" izz="0.003007" ixy="6e-05" iyz="4e-06" ixz="0.000618"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.277665 -0.170495 -0.078706" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_6_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.277665 -0.170495 -0.078706" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_6_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_2_link_3__1">
+  <inertial>
+    <origin xyz="-0.0204324626555867 0.004535002979926123 -0.058433485854018384" rpy="0 0 0"/>
+    <mass value="1.0126607300527286"/>
+    <inertia ixx="0.000937" iyy="0.001326" izz="0.000878" ixy="-9.5e-05" iyz="-6.9e-05" ixz="-0.000533"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.012855 -0.122421 -0.022834" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_2_link_3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.012855 -0.122421 -0.022834" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_2_link_3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_2_link_2_1">
+  <inertial>
+    <origin xyz="-0.04728937759402714 0.028753242764041703 0.008935509645913484" rpy="0 0 0"/>
+    <mass value="0.22871574861196214"/>
+    <inertia ixx="0.000197" iyy="0.000276" izz="0.000432" ixy="7e-06" iyz="-4e-06" ixz="4.9e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.072124 -0.093122 0.063828" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_2_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.072124 -0.093122 0.063828" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_2_link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="leg_2_link_1_1">
+  <inertial>
+    <origin xyz="0.00945298222541896 0.027417343905499214 0.029370612679365103" rpy="0 0 0"/>
+    <mass value="0.9073984436402253"/>
+    <inertia ixx="0.003123" iyy="0.003172" izz="0.000228" ixy="1.4e-05" iyz="6.6e-05" ixz="0.000248"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.169894 -0.100943 0.04434" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_2_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.169894 -0.100943 0.04434" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find hexapod_description)/meshes/leg_2_link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Leg_1_coxa" type="continuous">
+  <origin xyz="-0.031628 -0.00646 0.021757" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_1_link_2_1"/>
+  <axis xyz="0.126261 -0.010099 -0.991946"/>
+</joint>
+
+<joint name="Leg_1_tibia" type="continuous">
+  <origin xyz="-0.049275 -0.046824 -0.085212" rpy="0 0 0"/>
+  <parent link="leg_1_link_2_1"/>
+  <child link="leg_1_link_3_1"/>
+  <axis xyz="0.186207 -0.981932 0.033699"/>
+</joint>
+
+<joint name="Leg_1_femur" type="continuous">
+  <origin xyz="-0.094492 -0.016959 0.027993" rpy="0 0 0"/>
+  <parent link="leg_1_link_3_1"/>
+  <child link="leg_1_link_1_1"/>
+  <axis xyz="0.186207 -0.981932 0.033699"/>
+</joint>
+
+<joint name="Leg_3_coxa" type="continuous">
+  <origin xyz="0.02145 0.24803 0.025922" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_3_link_3_1"/>
+  <axis xyz="0.126261 -0.010099 -0.991946"/>
+</joint>
+
+<joint name="Leg_3_tibia" type="continuous">
+  <origin xyz="-0.064347 0.007284 -0.087681" rpy="0 0 0"/>
+  <parent link="leg_3_link_3_1"/>
+  <child link="leg_3_link_2_1"/>
+  <axis xyz="-0.540263 -0.839339 -0.060222"/>
+</joint>
+
+<joint name="Leg_3_femur" type="continuous">
+  <origin xyz="-0.075723 0.04537 0.046984" rpy="0 0 0"/>
+  <parent link="leg_3_link_2_1"/>
+  <child link="leg_3_link_1_1"/>
+  <axis xyz="-0.540263 -0.839339 -0.060222"/>
+</joint>
+
+<joint name="leg_4_coxa" type="revolute">
+  <origin xyz="0.178057 -0.050638 0.048896" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_4_link_3_1"/>
+  <axis xyz="0.126261 -0.010099 -0.991946"/>
+  <limit upper="0.349066" lower="-0.436332" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Leg_4_tibia" type="revolute">
+  <origin xyz="0.0739 -0.040813 -0.069808" rpy="0 0 0"/>
+  <parent link="leg_4_link_3_1"/>
+  <child link="leg_4_link_2_1"/>
+  <axis xyz="-0.088375 -0.996087 -0.001107"/>
+  <limit upper="1.832596" lower="-1.832596" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Leg_4_femur" type="revolute">
+  <origin xyz="0.099306 -0.008802 -0.007799" rpy="0 0 0"/>
+  <parent link="leg_4_link_2_1"/>
+  <child link="leg_4_link_1_1"/>
+  <axis xyz="0.088375 0.996087 0.001107"/>
+  <limit upper="0.785398" lower="-2.268928" effort="100" velocity="100"/>
+</joint>
+
+<joint name="leg_5_coxa" type="revolute">
+  <origin xyz="0.212362 0.074971 0.051984" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_5_link_3_1"/>
+  <axis xyz="0.126261 -0.010099 -0.991946"/>
+  <limit upper="-0.139626" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Leg_5_tibia" type="revolute">
+  <origin xyz="0.060256 -0.057225 -0.071378" rpy="0 0 0"/>
+  <parent link="leg_5_link_3_1"/>
+  <child link="leg_5_llink_2_1"/>
+  <axis xyz="-0.360661 -0.931986 -0.036418"/>
+  <limit upper="1.047198" lower="-3.665191" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Leg_5_femur" type="revolute">
+  <origin xyz="0.093191 -0.036168 0.002696" rpy="0 0 0"/>
+  <parent link="leg_5_llink_2_1"/>
+  <child link="leg_5_link_1_1"/>
+  <axis xyz="0.360661 0.931986 0.036418"/>
+  <limit upper="0.785398" lower="-2.268928" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Leg_6_coxa" type="revolute">
+  <origin xyz="0.231135 0.203852 0.053061" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_6_link_3_1"/>
+  <axis xyz="0.126261 -0.010099 -0.991946"/>
+  <limit upper="-0.139626" lower="-0.523599" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Leg_6_tibia" type="revolute">
+  <origin xyz="0.077588 -0.034101 -0.069406" rpy="0 0 0"/>
+  <parent link="leg_6_link_3_1"/>
+  <child link="leg_6_link_2_1"/>
+  <axis xyz="0.01178 -0.999862 0.011679"/>
+  <limit upper="0.959931" lower="-3.316126" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Leg_6_femur" type="revolute">
+  <origin xyz="-0.031058 0.000744 0.095051" rpy="0 0 0"/>
+  <parent link="leg_6_link_2_1"/>
+  <child link="leg_6_link_1_1"/>
+  <axis xyz="-0.01178 0.999862 -0.011679"/>
+  <limit upper="0.0" lower="-2.268928" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Leg_2_coxa" type="continuous">
+  <origin xyz="-0.012855 0.122421 0.022834" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="leg_2_link_3__1"/>
+  <axis xyz="0.126261 -0.010099 -0.991946"/>
+</joint>
+
+<joint name="Leg_2_tibia" type="continuous">
+  <origin xyz="-0.059269 -0.029299 -0.086662" rpy="0 0 0"/>
+  <parent link="leg_2_link_3__1"/>
+  <child link="leg_2_link_2_1"/>
+  <axis xyz="-0.079733 -0.996816 0.0"/>
+</joint>
+
+<joint name="Leg_2_femur" type="continuous">
+  <origin xyz="-0.09777 0.007821 0.019488" rpy="0 0 0"/>
+  <parent link="leg_2_link_2_1"/>
+  <child link="leg_2_link_1_1"/>
+  <axis xyz="-0.079733 -0.996816 0.0"/>
+</joint>
+
+</robot>
