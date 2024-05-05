@@ -2,6 +2,7 @@ package.xml
 setup.cfg
 setup.py
 config/display.rviz
+config/my_controllers.yaml
 hexapod_description/__init__.py
 hexapod_description.egg-info/PKG-INFO
 hexapod_description.egg-info/SOURCES.txt
@@ -33,6 +34,7 @@ meshes/leg_6_link_1_1.stl
 meshes/leg_6_link_2_1.stl
 meshes/leg_6_link_3_1.stl
 resource/hexapod_description
+urdf/controllers.xacro
 urdf/hexapod.gazebo
 urdf/hexapod.trans
 urdf/hexapod.xacro

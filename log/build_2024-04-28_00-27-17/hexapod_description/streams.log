@@ -1,0 +1,16 @@
+[1.012s] Invoking command in '/home/akshat/atom_projects/Hexapod/build/hexapod_description': PYTHONPATH=/home/akshat/atom_projects/Hexapod/build/hexapod_description/prefix_override:/home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/akshat/atom_projects/Hexapod/build/hexapod_description/build --no-deps symlink_data
+[1.348s] running develop
+[1.579s] running egg_info
+[1.579s] writing hexapod_description.egg-info/PKG-INFO
+[1.580s] writing dependency_links to hexapod_description.egg-info/dependency_links.txt
+[1.580s] writing entry points to hexapod_description.egg-info/entry_points.txt
+[1.580s] writing requirements to hexapod_description.egg-info/requires.txt
+[1.580s] writing top-level names to hexapod_description.egg-info/top_level.txt
+[1.584s] reading manifest file 'hexapod_description.egg-info/SOURCES.txt'
+[1.585s] writing manifest file 'hexapod_description.egg-info/SOURCES.txt'
+[1.586s] running build_ext
+[1.586s] Creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/python3.10/site-packages/hexapod-description.egg-link (link to .)
+[1.587s] 
+[1.587s] Installed /home/akshat/atom_projects/Hexapod/build/hexapod_description
+[1.587s] running symlink_data
+[1.664s] Invoked command in '/home/akshat/atom_projects/Hexapod/build/hexapod_description' returned '0': PYTHONPATH=/home/akshat/atom_projects/Hexapod/build/hexapod_description/prefix_override:/home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/akshat/atom_projects/Hexapod/build/hexapod_description/build --no-deps symlink_data

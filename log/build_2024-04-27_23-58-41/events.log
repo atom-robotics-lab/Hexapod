@@ -1,0 +1,873 @@
+[0.000000] (-) TimerEvent: {}
+[0.000572] (hexapod_description) JobQueued: {'identifier': 'hexapod_description', 'dependencies': OrderedDict()}
+[0.000647] (ign_ros2_control) JobQueued: {'identifier': 'ign_ros2_control', 'dependencies': OrderedDict()}
+[0.000724] (gz_ros2_control_tests) JobQueued: {'identifier': 'gz_ros2_control_tests', 'dependencies': OrderedDict([('ign_ros2_control', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control')])}
+[0.000937] (ign_ros2_control_demos) JobQueued: {'identifier': 'ign_ros2_control_demos', 'dependencies': OrderedDict([('ign_ros2_control', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control')])}
+[0.001034] (ign_ros2_control) JobStarted: {'identifier': 'ign_ros2_control'}
+[0.006160] (hexapod_description) JobStarted: {'identifier': 'hexapod_description'}
+[0.018984] (ign_ros2_control) JobProgress: {'identifier': 'ign_ros2_control', 'progress': 'cmake'}
+[0.019421] (ign_ros2_control) Command: {'cmd': ['/usr/bin/cmake', '/home/akshat/atom_projects/Hexapod/src/gz_ros2_control/ign_ros2_control', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/akshat/atom_projects/Hexapod/install/ign_ros2_control'], 'cwd': '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control', 'env': OrderedDict([('LANGUAGE', 'en_IN:en'), ('USER', 'akshat'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/akshat'), ('OLDPWD', '/home/akshat'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('NVM_BIN', '/home/akshat/.nvm/versions/node/v21.7.1/bin'), ('ZSH', '/home/akshat/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('NVM_INC', '/home/akshat/.nvm/versions/node/v21.7.1/include/node'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/akshat/.nvm'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu-xorg.mandatory.path'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/akshat/Desktop/atom_aud/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'akshat'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu-xorg.default.path'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'akshat'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/akshat/.nvm/versions/node/v21.7.1/bin:/opt/ros/humble/bin:/home/akshat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/akshat/.spicetify'), ('SESSION_MANAGER', 'local/akshat-ASUS-TUF:@/tmp/.ICE-unix/2320,unix/akshat-ASUS-TUF:/tmp/.ICE-unix/2320'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0aeb7297_6375_42f1_9f6e_52084a08cd30'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_IN'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('GNOME_TERMINAL_SERVICE', ':1.187'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('NVM_CD_FLAGS', '-q'), ('PYTHONPATH', '/home/akshat/Desktop/atom_aud/build/selection_task:/home/akshat/Desktop/atom_aud/install/selection_task/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble')]), 'shell': False}
+[0.099728] (-) TimerEvent: {}
+[0.200080] (-) TimerEvent: {}
+[0.300380] (-) TimerEvent: {}
+[0.385739] (ign_ros2_control) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.386294] (ign_ros2_control) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.386386] (ign_ros2_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.386449] (ign_ros2_control) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.386508] (ign_ros2_control) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.386567] (ign_ros2_control) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.386625] (ign_ros2_control) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.386683] (ign_ros2_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.400497] (-) TimerEvent: {}
+[0.430830] (ign_ros2_control) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.437858] (ign_ros2_control) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.438178] (ign_ros2_control) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.438504] (ign_ros2_control) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.442184] (ign_ros2_control) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.500602] (-) TimerEvent: {}
+[0.600922] (-) TimerEvent: {}
+[0.606035] (ign_ros2_control) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.679682] (ign_ros2_control) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.701021] (-) TimerEvent: {}
+[0.718651] (ign_ros2_control) StdoutLine: {'line': b'-- Found ament_index_cpp: 1.4.0 (/opt/ros/humble/share/ament_index_cpp/cmake)\n'}
+[0.721150] (ign_ros2_control) StdoutLine: {'line': b'-- Found controller_manager: 2.40.0 (/opt/ros/humble/share/controller_manager/cmake)\n'}
+[0.774483] (ign_ros2_control) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.779648] (ign_ros2_control) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.788323] (ign_ros2_control) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.801200] (-) TimerEvent: {}
+[0.803042] (ign_ros2_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.823377] (ign_ros2_control) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.844427] (hexapod_description) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/akshat/atom_projects/Hexapod/build/hexapod_description/build', '--no-deps', 'symlink_data'], 'cwd': '/home/akshat/atom_projects/Hexapod/build/hexapod_description', 'env': {'LANGUAGE': 'en_IN:en', 'USER': 'akshat', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/akshat', 'OLDPWD': '/home/akshat', 'LESS': '-R', 'DESKTOP_SESSION': 'ubuntu-xorg', 'NVM_BIN': '/home/akshat/.nvm/versions/node/v21.7.1/bin', 'ZSH': '/home/akshat/.oh-my-zsh', 'LSCOLORS': 'Gxfxcxdxbxegedabagacad', 'NVM_INC': '/home/akshat/.nvm/versions/node/v21.7.1/include/node', 'GTK_MODULES': 'gail:atk-bridge', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'PAGER': 'less', 'ROS_PYTHON_VERSION': '3', 'SYSTEMD_EXEC_PID': '2551', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'NVM_DIR': '/home/akshat/.nvm', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu-xorg.mandatory.path', 'ROS_DISTRO': 'humble', 'COLCON_PREFIX_PATH': '/home/akshat/Desktop/atom_aud/install', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'akshat', '_': '/usr/bin/colcon', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu-xorg.default.path', 'XDG_SESSION_CLASS': 'user', 'ROS_VERSION': '2', 'USERNAME': 'akshat', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/home/akshat/.nvm/versions/node/v21.7.1/bin:/opt/ros/humble/bin:/home/akshat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/akshat/.spicetify', 'SESSION_MANAGER': 'local/akshat-ASUS-TUF:@/tmp/.ICE-unix/2320,unix/akshat-ASUS-TUF:/tmp/.ICE-unix/2320', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/0aeb7297_6375_42f1_9f6e_52084a08cd30', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_IN', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'GNOME_TERMINAL_SERVICE': ':1.187', 'XMODIFIERS': '@im=ibus', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'AMENT_PREFIX_PATH': '/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble', 'SHELL': '/usr/bin/zsh', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/akshat/atom_projects/Hexapod/build/hexapod_description', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'NVM_CD_FLAGS': '-q', 'PYTHONPATH': '/home/akshat/atom_projects/Hexapod/build/hexapod_description/prefix_override:/home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/python3.10/site-packages:/home/akshat/Desktop/atom_aud/build/selection_task:/home/akshat/Desktop/atom_aud/install/selection_task/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[0.901331] (-) TimerEvent: {}
+[1.001763] (-) TimerEvent: {}
+[1.102093] (-) TimerEvent: {}
+[1.118519] (hexapod_description) StderrLine: {'line': b"/home/akshat/.local/lib/python3.10/site-packages/setuptools/dist.py:717: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[1.118706] (hexapod_description) StderrLine: {'line': b'  warnings.warn(\n'}
+[1.169210] (hexapod_description) StdoutLine: {'line': b'running develop\n'}
+[1.202195] (-) TimerEvent: {}
+[1.302474] (-) TimerEvent: {}
+[1.383518] (hexapod_description) StdoutLine: {'line': b'running egg_info\n'}
+[1.383832] (hexapod_description) StdoutLine: {'line': b'creating hexapod_description.egg-info\n'}
+[1.383989] (hexapod_description) StdoutLine: {'line': b'writing hexapod_description.egg-info/PKG-INFO\n'}
+[1.384167] (hexapod_description) StdoutLine: {'line': b'writing dependency_links to hexapod_description.egg-info/dependency_links.txt\n'}
+[1.384231] (hexapod_description) StdoutLine: {'line': b'writing entry points to hexapod_description.egg-info/entry_points.txt\n'}
+[1.384291] (hexapod_description) StdoutLine: {'line': b'writing requirements to hexapod_description.egg-info/requires.txt\n'}
+[1.384349] (hexapod_description) StdoutLine: {'line': b'writing top-level names to hexapod_description.egg-info/top_level.txt\n'}
+[1.385408] (hexapod_description) StdoutLine: {'line': b"writing manifest file 'hexapod_description.egg-info/SOURCES.txt'\n"}
+[1.387212] (hexapod_description) StdoutLine: {'line': b"reading manifest file 'hexapod_description.egg-info/SOURCES.txt'\n"}
+[1.388073] (hexapod_description) StdoutLine: {'line': b"writing manifest file 'hexapod_description.egg-info/SOURCES.txt'\n"}
+[1.389580] (hexapod_description) StdoutLine: {'line': b'running build_ext\n'}
+[1.389901] (hexapod_description) StdoutLine: {'line': b'Creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/lib/python3.10/site-packages/hexapod-description.egg-link (link to .)\n'}
+[1.390523] (hexapod_description) StdoutLine: {'line': b'\n'}
+[1.390626] (hexapod_description) StdoutLine: {'line': b'Installed /home/akshat/atom_projects/Hexapod/build/hexapod_description\n'}
+[1.390699] (hexapod_description) StdoutLine: {'line': b'running symlink_data\n'}
+[1.390866] (hexapod_description) StdoutLine: {'line': b'creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/ament_index\n'}
+[1.390932] (hexapod_description) StdoutLine: {'line': b'creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/ament_index/resource_index\n'}
+[1.391004] (hexapod_description) StdoutLine: {'line': b'creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/ament_index/resource_index/packages\n'}
+[1.391945] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/resource/hexapod_description -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/ament_index/resource_index/packages\n'}
+[1.392408] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/package.xml -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description\n'}
+[1.392565] (hexapod_description) StdoutLine: {'line': b'creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/launch\n'}
+[1.392653] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/launch/display.launch.py -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/launch\n'}
+[1.392737] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/launch/robot.launch.py -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/launch\n'}
+[1.392816] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/launch/gazebo.launch.py -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/launch\n'}
+[1.392899] (hexapod_description) StdoutLine: {'line': b'creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/urdf\n'}
+[1.392975] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/urdf/hexapod.gazebo -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/urdf\n'}
+[1.393051] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/urdf/hexapod.xacro -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/urdf\n'}
+[1.393108] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/urdf/materials.xacro -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/urdf\n'}
+[1.393201] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/urdf/hexapod.trans -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/urdf\n'}
+[1.393366] (hexapod_description) StdoutLine: {'line': b'creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.393443] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_5_llink_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.393514] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_5_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.393585] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_3_link_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.393660] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_4_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.393761] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_2_link_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.393840] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_5_link_3_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.393907] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_6_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.393998] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_6_link_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.394073] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_1_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.394130] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_3_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.394197] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_1_link_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.394259] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_1_link_3_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.394320] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_2_link_1_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.394398] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_2_link_3__1__1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.394469] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_6_link_3_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.394525] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_3_link_3_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.394578] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_4_link_3_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.394629] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/leg_4_link_2_1.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.394681] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/meshes/base_link.stl -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/meshes\n'}
+[1.394749] (hexapod_description) StdoutLine: {'line': b'creating /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/config\n'}
+[1.394803] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/config/my_controllers.yaml -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/config\n'}
+[1.394862] (hexapod_description) StdoutLine: {'line': b'symbolically linking /home/akshat/atom_projects/Hexapod/build/hexapod_description/config/display.rviz -> /home/akshat/atom_projects/Hexapod/install/hexapod_description/share/hexapod_description/config\n'}
+[1.402597] (-) TimerEvent: {}
+[1.456924] (hexapod_description) CommandEnded: {'returncode': 0}
+[1.467294] (hexapod_description) JobEnded: {'identifier': 'hexapod_description', 'rc': 0}
+[1.502713] (-) TimerEvent: {}
+[1.516208] (ign_ros2_control) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.518736] (ign_ros2_control) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.557177] (ign_ros2_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.602902] (-) TimerEvent: {}
+[1.645574] (ign_ros2_control) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.648090] (ign_ros2_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.667271] (ign_ros2_control) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.676261] (ign_ros2_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.685690] (ign_ros2_control) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[1.698441] (ign_ros2_control) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.703019] (-) TimerEvent: {}
+[1.716124] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.803145] (-) TimerEvent: {}
+[1.811755] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.812060] (ign_ros2_control) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.896083] (ign_ros2_control) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.897009] (ign_ros2_control) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.903275] (-) TimerEvent: {}
+[2.003600] (-) TimerEvent: {}
+[2.103864] (-) TimerEvent: {}
+[2.204137] (-) TimerEvent: {}
+[2.304550] (-) TimerEvent: {}
+[2.404924] (-) TimerEvent: {}
+[2.464887] (ign_ros2_control) StdoutLine: {'line': b'-- Found yaml_cpp_vendor: 8.0.2 (/opt/ros/humble/share/yaml_cpp_vendor/cmake)\n'}
+[2.485900] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-gazebo6 -- found version 6.16.0\n'}
+[2.493945] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-gazebo6\n'}
+[2.499148] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for sdformat12 -- found version 12.7.2\n'}
+[2.500010] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of sdformat12\n'}
+[2.505042] (-) TimerEvent: {}
+[2.508247] (ign_ros2_control) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[2.530758] (ign_ros2_control) StdoutLine: {'line': b'--   Found tinyxml2, version 9.0.0\n'}
+[2.587140] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.587579] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[2.590750] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.5.1\n'}
+[2.591113] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-utils1\n'}
+[2.594675] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[2.594981] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1\n'}
+[2.595418] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-plugin1> component [loader]\n'}
+[2.598640] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1-loader -- found version 1.4.0\n'}
+[2.599043] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1-loader\n'}
+[2.599472] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-plugin1> component [register]\n'}
+[2.601919] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1-register -- found version 1.4.0\n'}
+[2.602346] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1-register\n'}
+[2.605124] (-) TimerEvent: {}
+[2.605533] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-transport11 -- found version 11.4.1\n'}
+[2.606245] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport11\n'}
+[2.637859] (ign_ros2_control) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[2.654040] (ign_ros2_control) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[2.660186] (ign_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[2.682516] (ign_ros2_control) StdoutLine: {'line': b'--   Found libzmq , version 4.3.4\n'}
+[2.705243] (-) TimerEvent: {}
+[2.746947] (ign_ros2_control) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[2.753993] (ign_ros2_control) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[2.775967] (ign_ros2_control) StdoutLine: {'line': b'--   Found uuid, version 2.37.2\n'}
+[2.805359] (-) TimerEvent: {}
+[2.840057] (ign_ros2_control) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[2.840467] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.5.1\n'}
+[2.840860] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-utils1\n'}
+[2.841030] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-utils1> component [cli]\n'}
+[2.843599] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-utils1-cli -- found version 1.5.1\n'}
+[2.844023] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-utils1-cli\n'}
+[2.847076] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.7.0\n'}
+[2.847444] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-msgs8\n'}
+[2.871458] (ign_ros2_control) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") \n'}
+[2.872135] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.881942] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-transport11> component [log]\n'}
+[2.884323] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-transport11-log -- found version 11.4.1\n'}
+[2.884707] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport11-log\n'}
+[2.885095] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-transport11> component [parameters]\n'}
+[2.887557] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-transport11-parameters -- found version 11.4.1\n'}
+[2.887914] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-transport11-parameters\n'}
+[2.888699] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.7.0\n'}
+[2.891507] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[2.891868] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4\n'}
+[2.892129] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[2.893107] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[2.894323] (ign_ros2_control) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[2.905534] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [profiler]\n'}
+[2.906030] (-) TimerEvent: {}
+[2.907871] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4-profiler -- found version 4.7.0\n'}
+[2.908329] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-profiler\n'}
+[2.908794] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [events]\n'}
+[2.911359] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4-events -- found version 4.7.0\n'}
+[2.911728] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-events\n'}
+[2.912030] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[2.912461] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [av]\n'}
+[2.914889] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4-av -- found version 4.7.0\n'}
+[2.915342] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-av\n'}
+[2.922301] (ign_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libswscale'\n"}
+[2.941186] (ign_ros2_control) StdoutLine: {'line': b'--   Found libswscale, version 5.9.100\n'}
+[3.001473] (ign_ros2_control) StdoutLine: {'line': b'-- Found SWSCALE: TRUE  \n'}
+[3.006150] (-) TimerEvent: {}
+[3.007676] (ign_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libavdevice >= 56.4.100'\n"}
+[3.027568] (ign_ros2_control) StdoutLine: {'line': b'--   Found libavdevice , version 58.13.100\n'}
+[3.089591] (ign_ros2_control) StdoutLine: {'line': b'-- Found AVDEVICE: TRUE (Required is at least version "56.4.100") \n'}
+[3.096747] (ign_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libavformat'\n"}
+[3.106270] (-) TimerEvent: {}
+[3.120049] (ign_ros2_control) StdoutLine: {'line': b'--   Found libavformat, version 58.76.100\n'}
+[3.177607] (ign_ros2_control) StdoutLine: {'line': b'-- Found AVFORMAT: TRUE  \n'}
+[3.184826] (ign_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libavcodec'\n"}
+[3.206378] (-) TimerEvent: {}
+[3.207746] (ign_ros2_control) StdoutLine: {'line': b'--   Found libavcodec, version 58.134.100\n'}
+[3.269846] (ign_ros2_control) StdoutLine: {'line': b'-- Found AVCODEC: TRUE  \n'}
+[3.276955] (ign_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libavutil'\n"}
+[3.296981] (ign_ros2_control) StdoutLine: {'line': b'--   Found libavutil, version 56.70.100\n'}
+[3.306493] (-) TimerEvent: {}
+[3.354946] (ign_ros2_control) StdoutLine: {'line': b'-- Found AVUTIL: TRUE  \n'}
+[3.366893] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-fuel_tools7 -- found version 7.3.0\n'}
+[3.368021] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-fuel_tools7\n'}
+[3.406618] (-) TimerEvent: {}
+[3.486557] (ign_ros2_control) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  \n'}
+[3.500004] (ign_ros2_control) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[3.506727] (-) TimerEvent: {}
+[3.520406] (ign_ros2_control) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[3.575050] (ign_ros2_control) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[3.582662] (ign_ros2_control) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[3.604990] (ign_ros2_control) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[3.606813] (-) TimerEvent: {}
+[3.661388] (ign_ros2_control) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[3.661721] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[3.662137] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[3.662480] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.7.0\n'}
+[3.674377] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-gui6 -- found version 6.8.0\n'}
+[3.674894] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-gui6\n'}
+[3.706989] (-) TimerEvent: {}
+[3.709758] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[3.710104] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[3.710492] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[3.710884] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-transport11 -- found version 11.4.1\n'}
+[3.713979] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-rendering6 -- found version 6.6.3\n'}
+[3.714213] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-rendering6\n'}
+[3.714458] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[3.714881] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6\n'}
+[3.715098] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-math6> component [eigen3]\n'}
+[3.717353] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6-eigen3 -- found version 6.15.1\n'}
+[3.717950] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-math6-eigen3\n'}
+[3.728010] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[3.728308] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4\n'}
+[3.728479] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[3.728596] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[3.739317] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [graphics]\n'}
+[3.744268] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4-graphics -- found version 4.7.0\n'}
+[3.746061] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-common4-graphics\n'}
+[3.746538] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[3.747380] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.5.1\n'}
+[3.749177] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-common4> component [events]\n'}
+[3.750743] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[3.751150] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-plugin1\n'}
+[3.751247] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-plugin1> component [all]\n'}
+[3.753656] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for all libraries of ignition-plugin1 -- found version 1.4.0\n'}
+[3.754157] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[3.756143] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.7.0\n'}
+[3.782683] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-physics5 -- found version 5.3.2\n'}
+[3.783059] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5\n'}
+[3.783309] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[3.783665] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[3.784027] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.5.1\n'}
+[3.785006] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-physics5> component [heightmap]\n'}
+[3.787519] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-physics5-heightmap -- found version 5.3.2\n'}
+[3.787953] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5-heightmap\n'}
+[3.788242] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[3.788647] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-physics5> component [mesh]\n'}
+[3.791276] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-physics5-mesh -- found version 5.3.2\n'}
+[3.791709] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5-mesh\n'}
+[3.792017] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[3.792416] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-physics5> component [sdf]\n'}
+[3.794900] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-physics5-sdf -- found version 5.3.2\n'}
+[3.795322] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-physics5-sdf\n'}
+[3.795637] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for sdformat12 -- found version 12.7.2\n'}
+[3.798890] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.0\n'}
+[3.799312] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6\n'}
+[3.807081] (-) TimerEvent: {}
+[3.823773] (ign_ros2_control) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") \n'}
+[3.824511] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[3.824866] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-common4 -- found version 4.7.0\n'}
+[3.825244] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-transport11 -- found version 11.4.1\n'}
+[3.825730] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-rendering6 -- found version 6.6.3\n'}
+[3.826118] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-msgs8 -- found version 8.7.0\n'}
+[3.826486] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for sdformat12 -- found version 12.7.2\n'}
+[3.826994] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [air_pressure]\n'}
+[3.829560] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-air_pressure -- found version 6.8.0\n'}
+[3.830176] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-air_pressure\n'}
+[3.830578] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [altimeter]\n'}
+[3.833094] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-altimeter -- found version 6.8.0\n'}
+[3.833570] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-altimeter\n'}
+[3.834120] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [imu]\n'}
+[3.837086] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-imu -- found version 6.8.0\n'}
+[3.837605] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-imu\n'}
+[3.838353] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [force_torque]\n'}
+[3.841004] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-force_torque -- found version 6.8.0\n'}
+[3.841395] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-force_torque\n'}
+[3.841879] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [logical_camera]\n'}
+[3.844387] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-logical_camera -- found version 6.8.0\n'}
+[3.844634] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-logical_camera\n'}
+[3.845090] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [magnetometer]\n'}
+[3.847529] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-magnetometer -- found version 6.8.0\n'}
+[3.848021] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-magnetometer\n'}
+[3.848489] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [navsat]\n'}
+[3.851008] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-navsat -- found version 6.8.0\n'}
+[3.851426] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-navsat\n'}
+[3.851815] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [rendering]\n'}
+[3.854324] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-rendering -- found version 6.8.0\n'}
+[3.854729] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-rendering\n'}
+[3.855163] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [lidar]\n'}
+[3.857554] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-lidar -- found version 6.8.0\n'}
+[3.858087] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-lidar\n'}
+[3.858584] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.0\n'}
+[3.859185] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [gpu_lidar]\n'}
+[3.862077] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-gpu_lidar -- found version 6.8.0\n'}
+[3.862506] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-gpu_lidar\n'}
+[3.862817] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.0\n'}
+[3.863265] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [camera]\n'}
+[3.865558] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-camera -- found version 6.8.0\n'}
+[3.866050] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-camera\n'}
+[3.866382] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.0\n'}
+[3.866922] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [boundingbox_camera]\n'}
+[3.870190] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-boundingbox_camera -- found version 6.8.0\n'}
+[3.870859] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-boundingbox_camera\n'}
+[3.871412] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [segmentation_camera]\n'}
+[3.874020] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-segmentation_camera -- found version 6.8.0\n'}
+[3.874465] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-segmentation_camera\n'}
+[3.874879] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [depth_camera]\n'}
+[3.877262] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-depth_camera -- found version 6.8.0\n'}
+[3.877717] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-depth_camera\n'}
+[3.878084] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.0\n'}
+[3.878575] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [rgbd_camera]\n'}
+[3.882179] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-rgbd_camera -- found version 6.8.0\n'}
+[3.882594] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-rgbd_camera\n'}
+[3.882873] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.0\n'}
+[3.883286] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for <ignition-sensors6> component [thermal_camera]\n'}
+[3.885650] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6-thermal_camera -- found version 6.8.0\n'}
+[3.886159] (ign_ros2_control) StdoutLine: {'line': b'-- Searching for dependencies of ignition-sensors6-thermal_camera\n'}
+[3.886466] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-sensors6 -- found version 6.8.0\n'}
+[3.887248] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-rendering6 -- found version 6.6.3\n'}
+[3.887581] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-math6 -- found version 6.15.1\n'}
+[3.890521] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-utils1 -- found version 1.5.1\n'}
+[3.907247] (-) TimerEvent: {}
+[3.916786] (ign_ros2_control) StdoutLine: {'line': b'-- Compiling against Ignition Fortress\n'}
+[3.917128] (ign_ros2_control) StdoutLine: {'line': b'-- Looking for ignition-plugin1 -- found version 1.4.0\n'}
+[4.007368] (-) TimerEvent: {}
+[4.107739] (-) TimerEvent: {}
+[4.208112] (-) TimerEvent: {}
+[4.308433] (-) TimerEvent: {}
+[4.397767] (ign_ros2_control) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[4.408563] (-) TimerEvent: {}
+[4.496274] (ign_ros2_control) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[4.498232] (ign_ros2_control) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[4.498565] (ign_ros2_control) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/akshat/atom_projects/Hexapod/src/gz_ros2_control/ign_ros2_control/include\n'}
+[4.498633] (ign_ros2_control) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[4.499911] (ign_ros2_control) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[4.499985] (ign_ros2_control) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[4.500816] (ign_ros2_control) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.502226] (ign_ros2_control) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[4.502312] (ign_ros2_control) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[4.502727] (ign_ros2_control) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.506605] (ign_ros2_control) StdoutLine: {'line': b'-- Configuring done\n'}
+[4.508688] (-) TimerEvent: {}
+[4.568272] (ign_ros2_control) StdoutLine: {'line': b'-- Generating done\n'}
+[4.572011] (ign_ros2_control) StdoutLine: {'line': b'-- Build files have been written to: /home/akshat/atom_projects/Hexapod/build/ign_ros2_control\n'}
+[4.590740] (ign_ros2_control) CommandEnded: {'returncode': 0}
+[4.591616] (ign_ros2_control) JobProgress: {'identifier': 'ign_ros2_control', 'progress': 'build'}
+[4.592239] (ign_ros2_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control', '--', '-j12', '-l12'], 'cwd': '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control', 'env': OrderedDict([('LANGUAGE', 'en_IN:en'), ('USER', 'akshat'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/akshat'), ('OLDPWD', '/home/akshat'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('NVM_BIN', '/home/akshat/.nvm/versions/node/v21.7.1/bin'), ('ZSH', '/home/akshat/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('NVM_INC', '/home/akshat/.nvm/versions/node/v21.7.1/include/node'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/akshat/.nvm'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu-xorg.mandatory.path'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/akshat/Desktop/atom_aud/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'akshat'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu-xorg.default.path'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'akshat'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/akshat/.nvm/versions/node/v21.7.1/bin:/opt/ros/humble/bin:/home/akshat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/akshat/.spicetify'), ('SESSION_MANAGER', 'local/akshat-ASUS-TUF:@/tmp/.ICE-unix/2320,unix/akshat-ASUS-TUF:/tmp/.ICE-unix/2320'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0aeb7297_6375_42f1_9f6e_52084a08cd30'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_IN'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('GNOME_TERMINAL_SERVICE', ':1.187'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('NVM_CD_FLAGS', '-q'), ('PYTHONPATH', '/home/akshat/Desktop/atom_aud/build/selection_task:/home/akshat/Desktop/atom_aud/install/selection_task/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble')]), 'shell': False}
+[4.608875] (-) TimerEvent: {}
+[4.658433] (ign_ros2_control) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ign_hardware_plugins.dir/src/ign_system.cpp.o\x1b[0m\n'}
+[4.658714] (ign_ros2_control) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ign_ros2_control-system.dir/src/ign_ros2_control_plugin.cpp.o\x1b[0m\n'}
+[4.709057] (-) TimerEvent: {}
+[4.809734] (-) TimerEvent: {}
+[4.910198] (-) TimerEvent: {}
+[5.010473] (-) TimerEvent: {}
+[5.110852] (-) TimerEvent: {}
+[5.211383] (-) TimerEvent: {}
+[5.311685] (-) TimerEvent: {}
+[5.412108] (-) TimerEvent: {}
+[5.512509] (-) TimerEvent: {}
+[5.612870] (-) TimerEvent: {}
+[5.713351] (-) TimerEvent: {}
+[5.813915] (-) TimerEvent: {}
+[5.914312] (-) TimerEvent: {}
+[6.014802] (-) TimerEvent: {}
+[6.115338] (-) TimerEvent: {}
+[6.215805] (-) TimerEvent: {}
+[6.316265] (-) TimerEvent: {}
+[6.416862] (-) TimerEvent: {}
+[6.517360] (-) TimerEvent: {}
+[6.617846] (-) TimerEvent: {}
+[6.718368] (-) TimerEvent: {}
+[6.818928] (-) TimerEvent: {}
+[6.919406] (-) TimerEvent: {}
+[7.019945] (-) TimerEvent: {}
+[7.120496] (-) TimerEvent: {}
+[7.221035] (-) TimerEvent: {}
+[7.321639] (-) TimerEvent: {}
+[7.422130] (-) TimerEvent: {}
+[7.522529] (-) TimerEvent: {}
+[7.622933] (-) TimerEvent: {}
+[7.723499] (-) TimerEvent: {}
+[7.823912] (-) TimerEvent: {}
+[7.924300] (-) TimerEvent: {}
+[8.024762] (-) TimerEvent: {}
+[8.125351] (-) TimerEvent: {}
+[8.225978] (-) TimerEvent: {}
+[8.326355] (-) TimerEvent: {}
+[8.426773] (-) TimerEvent: {}
+[8.527268] (-) TimerEvent: {}
+[8.627625] (-) TimerEvent: {}
+[8.728033] (-) TimerEvent: {}
+[8.828416] (-) TimerEvent: {}
+[8.928825] (-) TimerEvent: {}
+[9.029378] (-) TimerEvent: {}
+[9.129950] (-) TimerEvent: {}
+[9.230348] (-) TimerEvent: {}
+[9.330774] (-) TimerEvent: {}
+[9.431144] (-) TimerEvent: {}
+[9.531510] (-) TimerEvent: {}
+[9.631924] (-) TimerEvent: {}
+[9.732434] (-) TimerEvent: {}
+[9.832864] (-) TimerEvent: {}
+[9.933312] (-) TimerEvent: {}
+[10.033833] (-) TimerEvent: {}
+[10.134239] (-) TimerEvent: {}
+[10.234661] (-) TimerEvent: {}
+[10.335141] (-) TimerEvent: {}
+[10.435922] (-) TimerEvent: {}
+[10.536300] (-) TimerEvent: {}
+[10.636742] (-) TimerEvent: {}
+[10.737180] (-) TimerEvent: {}
+[10.837729] (-) TimerEvent: {}
+[10.938340] (-) TimerEvent: {}
+[11.038889] (-) TimerEvent: {}
+[11.139428] (-) TimerEvent: {}
+[11.239767] (-) TimerEvent: {}
+[11.340146] (-) TimerEvent: {}
+[11.440554] (-) TimerEvent: {}
+[11.540972] (-) TimerEvent: {}
+[11.641540] (-) TimerEvent: {}
+[11.742186] (-) TimerEvent: {}
+[11.842547] (-) TimerEvent: {}
+[11.942967] (-) TimerEvent: {}
+[12.043389] (-) TimerEvent: {}
+[12.143851] (-) TimerEvent: {}
+[12.244263] (-) TimerEvent: {}
+[12.344717] (-) TimerEvent: {}
+[12.445172] (-) TimerEvent: {}
+[12.545585] (-) TimerEvent: {}
+[12.646013] (-) TimerEvent: {}
+[12.746359] (-) TimerEvent: {}
+[12.846668] (-) TimerEvent: {}
+[12.947059] (-) TimerEvent: {}
+[13.047463] (-) TimerEvent: {}
+[13.147863] (-) TimerEvent: {}
+[13.248382] (-) TimerEvent: {}
+[13.349341] (-) TimerEvent: {}
+[13.449803] (-) TimerEvent: {}
+[13.550184] (-) TimerEvent: {}
+[13.650527] (-) TimerEvent: {}
+[13.751121] (-) TimerEvent: {}
+[13.851898] (-) TimerEvent: {}
+[13.952285] (-) TimerEvent: {}
+[14.052579] (-) TimerEvent: {}
+[14.152891] (-) TimerEvent: {}
+[14.253327] (-) TimerEvent: {}
+[14.353970] (-) TimerEvent: {}
+[14.454291] (-) TimerEvent: {}
+[14.554612] (-) TimerEvent: {}
+[14.654966] (-) TimerEvent: {}
+[14.755304] (-) TimerEvent: {}
+[14.855620] (-) TimerEvent: {}
+[14.955933] (-) TimerEvent: {}
+[15.056277] (-) TimerEvent: {}
+[15.156572] (-) TimerEvent: {}
+[15.256929] (-) TimerEvent: {}
+[15.357364] (-) TimerEvent: {}
+[15.457779] (-) TimerEvent: {}
+[15.558172] (-) TimerEvent: {}
+[15.658603] (-) TimerEvent: {}
+[15.759018] (-) TimerEvent: {}
+[15.859409] (-) TimerEvent: {}
+[15.959776] (-) TimerEvent: {}
+[16.060131] (-) TimerEvent: {}
+[16.160531] (-) TimerEvent: {}
+[16.260869] (-) TimerEvent: {}
+[16.361269] (-) TimerEvent: {}
+[16.461634] (-) TimerEvent: {}
+[16.562041] (-) TimerEvent: {}
+[16.662373] (-) TimerEvent: {}
+[16.670024] (ign_ros2_control) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX shared library libign_hardware_plugins.so\x1b[0m\n'}
+[16.762554] (-) TimerEvent: {}
+[16.863040] (-) TimerEvent: {}
+[16.963534] (-) TimerEvent: {}
+[17.064122] (-) TimerEvent: {}
+[17.164692] (-) TimerEvent: {}
+[17.265195] (-) TimerEvent: {}
+[17.302344] (ign_ros2_control) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libign_ros2_control-system.so\x1b[0m\n'}
+[17.365343] (-) TimerEvent: {}
+[17.465791] (-) TimerEvent: {}
+[17.566207] (-) TimerEvent: {}
+[17.666642] (-) TimerEvent: {}
+[17.767080] (-) TimerEvent: {}
+[17.798340] (ign_ros2_control) StdoutLine: {'line': b'[100%] Built target ign_hardware_plugins\n'}
+[17.867237] (-) TimerEvent: {}
+[17.967740] (-) TimerEvent: {}
+[18.068197] (-) TimerEvent: {}
+[18.168665] (-) TimerEvent: {}
+[18.269074] (-) TimerEvent: {}
+[18.369367] (-) TimerEvent: {}
+[18.469735] (-) TimerEvent: {}
+[18.570074] (-) TimerEvent: {}
+[18.622578] (ign_ros2_control) StdoutLine: {'line': b'[100%] Built target ign_ros2_control-system\n'}
+[18.636808] (ign_ros2_control) CommandEnded: {'returncode': 0}
+[18.670160] (-) TimerEvent: {}
+[18.671060] (ign_ros2_control) JobProgress: {'identifier': 'ign_ros2_control', 'progress': 'install'}
+[18.681436] (ign_ros2_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control'], 'cwd': '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control', 'env': OrderedDict([('LANGUAGE', 'en_IN:en'), ('USER', 'akshat'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/akshat'), ('OLDPWD', '/home/akshat'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('NVM_BIN', '/home/akshat/.nvm/versions/node/v21.7.1/bin'), ('ZSH', '/home/akshat/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('NVM_INC', '/home/akshat/.nvm/versions/node/v21.7.1/include/node'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/akshat/.nvm'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu-xorg.mandatory.path'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/akshat/Desktop/atom_aud/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'akshat'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu-xorg.default.path'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'akshat'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/akshat/.nvm/versions/node/v21.7.1/bin:/opt/ros/humble/bin:/home/akshat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/akshat/.spicetify'), ('SESSION_MANAGER', 'local/akshat-ASUS-TUF:@/tmp/.ICE-unix/2320,unix/akshat-ASUS-TUF:/tmp/.ICE-unix/2320'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0aeb7297_6375_42f1_9f6e_52084a08cd30'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_IN'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('GNOME_TERMINAL_SERVICE', ':1.187'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('NVM_CD_FLAGS', '-q'), ('PYTHONPATH', '/home/akshat/Desktop/atom_aud/build/selection_task:/home/akshat/Desktop/atom_aud/install/selection_task/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble')]), 'shell': False}
+[18.691027] (ign_ros2_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[18.691484] (ign_ros2_control) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[18.692001] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/lib/libign_hardware_plugins.so\n'}
+[18.702743] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/include/ign_ros2_control/ign_ros2_control_plugin.hpp\n'}
+[18.713529] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/include/ign_ros2_control/ign_system.hpp\n'}
+[18.724548] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/include/ign_ros2_control/ign_system_interface.hpp\n'}
+[18.735231] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/environment/library_path.sh\n'}
+[18.746270] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/environment/library_path.dsv\n'}
+[18.762105] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/lib/libign_ros2_control-system.so\n'}
+[18.770285] (-) TimerEvent: {}
+[18.772620] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control//ign_hardware_plugins.xml\n'}
+[18.784901] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ament_index/resource_index/package_run_dependencies/ign_ros2_control\n'}
+[18.796343] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ament_index/resource_index/parent_prefix_path/ign_ros2_control\n'}
+[18.807623] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/environment/ament_prefix_path.sh\n'}
+[18.818595] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/environment/ament_prefix_path.dsv\n'}
+[18.829168] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/environment/path.sh\n'}
+[18.840062] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/environment/path.dsv\n'}
+[18.851516] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/local_setup.bash\n'}
+[18.862185] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/local_setup.sh\n'}
+[18.870409] (-) TimerEvent: {}
+[18.872266] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/local_setup.zsh\n'}
+[18.883849] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/local_setup.dsv\n'}
+[18.894222] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/package.dsv\n'}
+[18.904381] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ament_index/resource_index/packages/ign_ros2_control\n'}
+[18.916103] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ament_index/resource_index/ign_ros2_control__pluginlib__plugin/ign_ros2_control\n'}
+[18.927054] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[18.937000] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[18.947643] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/cmake/ign_ros2_controlConfig.cmake\n'}
+[18.959297] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/cmake/ign_ros2_controlConfig-version.cmake\n'}
+[18.970183] (ign_ros2_control) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control/share/ign_ros2_control/package.xml\n'}
+[18.970586] (-) TimerEvent: {}
+[18.984033] (ign_ros2_control) CommandEnded: {'returncode': 0}
+[19.037818] (ign_ros2_control) JobEnded: {'identifier': 'ign_ros2_control', 'rc': 0}
+[19.038422] (gz_ros2_control_tests) JobStarted: {'identifier': 'gz_ros2_control_tests'}
+[19.041973] (ign_ros2_control_demos) JobStarted: {'identifier': 'ign_ros2_control_demos'}
+[19.046954] (gz_ros2_control_tests) JobProgress: {'identifier': 'gz_ros2_control_tests', 'progress': 'cmake'}
+[19.047131] (gz_ros2_control_tests) Command: {'cmd': ['/usr/bin/cmake', '/home/akshat/atom_projects/Hexapod/src/gz_ros2_control/gz_ros2_control_tests', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests'], 'cwd': '/home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests', 'env': OrderedDict([('LANGUAGE', 'en_IN:en'), ('USER', 'akshat'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/akshat'), ('OLDPWD', '/home/akshat'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('NVM_BIN', '/home/akshat/.nvm/versions/node/v21.7.1/bin'), ('ZSH', '/home/akshat/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('NVM_INC', '/home/akshat/.nvm/versions/node/v21.7.1/include/node'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/akshat/.nvm'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu-xorg.mandatory.path'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/akshat/Desktop/atom_aud/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'akshat'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu-xorg.default.path'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'akshat'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/akshat/.nvm/versions/node/v21.7.1/bin:/opt/ros/humble/bin:/home/akshat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/akshat/.spicetify'), ('SESSION_MANAGER', 'local/akshat-ASUS-TUF:@/tmp/.ICE-unix/2320,unix/akshat-ASUS-TUF:/tmp/.ICE-unix/2320'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0aeb7297_6375_42f1_9f6e_52084a08cd30'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_IN'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('GNOME_TERMINAL_SERVICE', ':1.187'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('NVM_CD_FLAGS', '-q'), ('PYTHONPATH', '/home/akshat/Desktop/atom_aud/build/selection_task:/home/akshat/Desktop/atom_aud/install/selection_task/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble')]), 'shell': False}
+[19.049457] (ign_ros2_control_demos) JobProgress: {'identifier': 'ign_ros2_control_demos', 'progress': 'cmake'}
+[19.049604] (ign_ros2_control_demos) Command: {'cmd': ['/usr/bin/cmake', '/home/akshat/atom_projects/Hexapod/src/gz_ros2_control/ign_ros2_control_demos', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos'], 'cwd': '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos', 'env': OrderedDict([('LANGUAGE', 'en_IN:en'), ('USER', 'akshat'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/akshat'), ('OLDPWD', '/home/akshat'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('NVM_BIN', '/home/akshat/.nvm/versions/node/v21.7.1/bin'), ('ZSH', '/home/akshat/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('NVM_INC', '/home/akshat/.nvm/versions/node/v21.7.1/include/node'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/akshat/.nvm'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu-xorg.mandatory.path'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/akshat/Desktop/atom_aud/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'akshat'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu-xorg.default.path'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'akshat'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/akshat/.nvm/versions/node/v21.7.1/bin:/opt/ros/humble/bin:/home/akshat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/akshat/.spicetify'), ('SESSION_MANAGER', 'local/akshat-ASUS-TUF:@/tmp/.ICE-unix/2320,unix/akshat-ASUS-TUF:/tmp/.ICE-unix/2320'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0aeb7297_6375_42f1_9f6e_52084a08cd30'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_IN'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('GNOME_TERMINAL_SERVICE', ':1.187'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('NVM_CD_FLAGS', '-q'), ('PYTHONPATH', '/home/akshat/Desktop/atom_aud/build/selection_task:/home/akshat/Desktop/atom_aud/install/selection_task/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble')]), 'shell': False}
+[19.070698] (-) TimerEvent: {}
+[19.110945] (ign_ros2_control_demos) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[19.112393] (gz_ros2_control_tests) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[19.170820] (-) TimerEvent: {}
+[19.173760] (ign_ros2_control_demos) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[19.174277] (gz_ros2_control_tests) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[19.181745] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[19.182173] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[19.266420] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[19.266649] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[19.270906] (-) TimerEvent: {}
+[19.273343] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[19.273594] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[19.273714] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[19.274088] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[19.275083] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[19.275356] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[19.277101] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[19.277342] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[19.370151] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[19.370978] (-) TimerEvent: {}
+[19.376856] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[19.377315] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[19.377612] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[19.378123] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[19.380808] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[19.383925] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[19.384166] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[19.384556] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[19.387451] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[19.471096] (-) TimerEvent: {}
+[19.558778] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[19.562307] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[19.571213] (-) TimerEvent: {}
+[19.628667] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[19.631927] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[19.658493] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[19.662609] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Found control_msgs: 4.4.0 (/opt/ros/humble/share/control_msgs/cmake)\n'}
+[19.671342] (-) TimerEvent: {}
+[19.706252] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[19.712259] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[19.721343] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[19.735833] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[19.757008] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[19.758714] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found control_msgs: 4.4.0 (/opt/ros/humble/share/control_msgs/cmake)\n'}
+[19.771468] (-) TimerEvent: {}
+[19.806195] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[19.812169] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[19.821497] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[19.837261] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[19.859967] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[19.871580] (-) TimerEvent: {}
+[19.971950] (-) TimerEvent: {}
+[20.072293] (-) TimerEvent: {}
+[20.172655] (-) TimerEvent: {}
+[20.273004] (-) TimerEvent: {}
+[20.294852] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[20.356654] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[20.360556] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[20.373144] (-) TimerEvent: {}
+[20.403129] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found rclcpp: 16.0.8 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[20.465083] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[20.467985] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[20.473243] (-) TimerEvent: {}
+[20.488763] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[20.533745] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[20.573369] (-) TimerEvent: {}
+[20.599089] (ign_ros2_control_demos) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[20.604627] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[20.609697] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[20.643609] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[20.673484] (-) TimerEvent: {}
+[20.693746] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[20.694171] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[20.708934] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[20.719754] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[20.773630] (-) TimerEvent: {}
+[20.788278] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[20.789298] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[20.809550] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[20.809833] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[20.873773] (-) TimerEvent: {}
+[20.895223] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[20.896760] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[20.918059] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.8 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[20.952611] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 1.3.8 (/opt/ros/humble/share/ament_cmake_gtest/cmake)\n'}
+[20.954717] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.10 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[20.973869] (-) TimerEvent: {}
+[21.042044] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found rclcpp_action: 16.0.8 (/opt/ros/humble/share/rclcpp_action/cmake)\n'}
+[21.056131] (ign_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[21.059097] (ign_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[21.059409] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[21.059512] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[21.062201] (ign_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[21.062421] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[21.063359] (ign_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[21.064464] (ign_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[21.065342] (ign_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[21.068074] (ign_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[21.068224] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[21.068920] (ign_ros2_control_demos) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[21.071242] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Configuring done\n'}
+[21.073996] (-) TimerEvent: {}
+[21.075533] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found launch_testing_ament_cmake: 1.0.5 (/opt/ros/humble/share/launch_testing_ament_cmake/cmake)\n'}
+[21.077605] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[21.098855] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[21.106058] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[21.106461] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[21.106521] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[21.106576] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[21.110756] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Generating done\n'}
+[21.114091] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Build files have been written to: /home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos\n'}
+[21.134256] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[21.137493] (ign_ros2_control_demos) CommandEnded: {'returncode': 0}
+[21.138422] (ign_ros2_control_demos) JobProgress: {'identifier': 'ign_ros2_control_demos', 'progress': 'build'}
+[21.139485] (ign_ros2_control_demos) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos', '--', '-j12', '-l12'], 'cwd': '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos', 'env': OrderedDict([('LANGUAGE', 'en_IN:en'), ('USER', 'akshat'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/akshat'), ('OLDPWD', '/home/akshat'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('NVM_BIN', '/home/akshat/.nvm/versions/node/v21.7.1/bin'), ('ZSH', '/home/akshat/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('NVM_INC', '/home/akshat/.nvm/versions/node/v21.7.1/include/node'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/akshat/.nvm'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu-xorg.mandatory.path'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/akshat/Desktop/atom_aud/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'akshat'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu-xorg.default.path'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'akshat'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/akshat/.nvm/versions/node/v21.7.1/bin:/opt/ros/humble/bin:/home/akshat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/akshat/.spicetify'), ('SESSION_MANAGER', 'local/akshat-ASUS-TUF:@/tmp/.ICE-unix/2320,unix/akshat-ASUS-TUF:/tmp/.ICE-unix/2320'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0aeb7297_6375_42f1_9f6e_52084a08cd30'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_IN'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('GNOME_TERMINAL_SERVICE', ':1.187'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('NVM_CD_FLAGS', '-q'), ('PYTHONPATH', '/home/akshat/Desktop/atom_aud/build/selection_task:/home/akshat/Desktop/atom_aud/install/selection_task/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble')]), 'shell': False}
+[21.140543] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[21.141902] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[21.142090] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[21.142183] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[21.143322] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[21.143463] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[21.143892] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[21.144592] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[21.145145] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[21.146406] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[21.146602] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[21.147099] (gz_ros2_control_tests) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[21.148915] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Configuring done\n'}
+[21.162395] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Generating done\n'}
+[21.165102] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Build files have been written to: /home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests\n'}
+[21.174136] (-) TimerEvent: {}
+[21.185600] (gz_ros2_control_tests) CommandEnded: {'returncode': 0}
+[21.186711] (gz_ros2_control_tests) JobProgress: {'identifier': 'gz_ros2_control_tests', 'progress': 'build'}
+[21.187429] (gz_ros2_control_tests) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests', '--', '-j12', '-l12'], 'cwd': '/home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests', 'env': OrderedDict([('LANGUAGE', 'en_IN:en'), ('USER', 'akshat'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/akshat'), ('OLDPWD', '/home/akshat'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('NVM_BIN', '/home/akshat/.nvm/versions/node/v21.7.1/bin'), ('ZSH', '/home/akshat/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('NVM_INC', '/home/akshat/.nvm/versions/node/v21.7.1/include/node'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/akshat/.nvm'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu-xorg.mandatory.path'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/akshat/Desktop/atom_aud/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'akshat'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu-xorg.default.path'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'akshat'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/akshat/.nvm/versions/node/v21.7.1/bin:/opt/ros/humble/bin:/home/akshat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/akshat/.spicetify'), ('SESSION_MANAGER', 'local/akshat-ASUS-TUF:@/tmp/.ICE-unix/2320,unix/akshat-ASUS-TUF:/tmp/.ICE-unix/2320'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0aeb7297_6375_42f1_9f6e_52084a08cd30'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_IN'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('GNOME_TERMINAL_SERVICE', ':1.187'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('NVM_CD_FLAGS', '-q'), ('PYTHONPATH', '/home/akshat/Desktop/atom_aud/build/selection_task:/home/akshat/Desktop/atom_aud/install/selection_task/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble')]), 'shell': False}
+[21.205284] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/example_position.dir/examples/example_position.cpp.o\x1b[0m\n'}
+[21.205684] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/example_effort.dir/examples/example_effort.cpp.o\x1b[0m\n'}
+[21.205774] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/example_diff_drive.dir/examples/example_diff_drive.cpp.o\x1b[0m\n'}
+[21.206665] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/example_gripper.dir/examples/example_gripper.cpp.o\x1b[0m\n'}
+[21.207056] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/example_velocity.dir/examples/example_velocity.cpp.o\x1b[0m\n'}
+[21.210681] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/example_tricycle_drive.dir/examples/example_tricycle_drive.cpp.o\x1b[0m\n'}
+[21.274283] (-) TimerEvent: {}
+[21.278704] (gz_ros2_control_tests) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/test_position.dir/src/test_position.cpp.o\x1b[0m\n'}
+[21.374410] (-) TimerEvent: {}
+[21.474806] (-) TimerEvent: {}
+[21.575191] (-) TimerEvent: {}
+[21.684517] (-) TimerEvent: {}
+[21.785019] (-) TimerEvent: {}
+[21.885494] (-) TimerEvent: {}
+[21.985928] (-) TimerEvent: {}
+[22.086313] (-) TimerEvent: {}
+[22.186822] (-) TimerEvent: {}
+[22.287217] (-) TimerEvent: {}
+[22.387616] (-) TimerEvent: {}
+[22.488093] (-) TimerEvent: {}
+[22.588540] (-) TimerEvent: {}
+[22.689017] (-) TimerEvent: {}
+[22.789478] (-) TimerEvent: {}
+[22.890076] (-) TimerEvent: {}
+[22.990482] (-) TimerEvent: {}
+[23.091103] (-) TimerEvent: {}
+[23.191550] (-) TimerEvent: {}
+[23.292017] (-) TimerEvent: {}
+[23.392448] (-) TimerEvent: {}
+[23.492901] (-) TimerEvent: {}
+[23.593372] (-) TimerEvent: {}
+[23.693791] (-) TimerEvent: {}
+[23.794203] (-) TimerEvent: {}
+[23.894733] (-) TimerEvent: {}
+[23.995224] (-) TimerEvent: {}
+[24.095647] (-) TimerEvent: {}
+[24.196369] (-) TimerEvent: {}
+[24.296780] (-) TimerEvent: {}
+[24.397170] (-) TimerEvent: {}
+[24.497553] (-) TimerEvent: {}
+[24.598224] (-) TimerEvent: {}
+[24.699143] (-) TimerEvent: {}
+[24.799956] (-) TimerEvent: {}
+[24.902172] (-) TimerEvent: {}
+[25.002802] (-) TimerEvent: {}
+[25.103322] (-) TimerEvent: {}
+[25.204046] (-) TimerEvent: {}
+[25.305032] (-) TimerEvent: {}
+[25.405785] (-) TimerEvent: {}
+[25.506289] (-) TimerEvent: {}
+[25.608175] (-) TimerEvent: {}
+[25.711050] (-) TimerEvent: {}
+[25.821817] (-) TimerEvent: {}
+[25.922318] (-) TimerEvent: {}
+[26.022852] (-) TimerEvent: {}
+[26.123805] (-) TimerEvent: {}
+[26.224483] (-) TimerEvent: {}
+[26.325142] (-) TimerEvent: {}
+[26.426068] (-) TimerEvent: {}
+[26.526712] (-) TimerEvent: {}
+[26.627506] (-) TimerEvent: {}
+[26.728619] (-) TimerEvent: {}
+[26.830230] (-) TimerEvent: {}
+[26.930928] (-) TimerEvent: {}
+[27.032208] (-) TimerEvent: {}
+[27.133753] (-) TimerEvent: {}
+[27.234737] (-) TimerEvent: {}
+[27.335325] (-) TimerEvent: {}
+[27.436347] (-) TimerEvent: {}
+[27.537014] (-) TimerEvent: {}
+[27.637607] (-) TimerEvent: {}
+[27.738674] (-) TimerEvent: {}
+[27.839427] (-) TimerEvent: {}
+[27.940805] (-) TimerEvent: {}
+[28.041576] (-) TimerEvent: {}
+[28.082516] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking CXX executable example_effort\x1b[0m\n'}
+[28.131692] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable example_diff_drive\x1b[0m\n'}
+[28.142580] (-) TimerEvent: {}
+[28.147143] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable example_tricycle_drive\x1b[0m\n'}
+[28.244159] (-) TimerEvent: {}
+[28.345843] (-) TimerEvent: {}
+[28.447368] (-) TimerEvent: {}
+[28.548707] (-) TimerEvent: {}
+[28.615017] (gz_ros2_control_tests) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable test_position\x1b[0m\n'}
+[28.648919] (-) TimerEvent: {}
+[28.654792] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX executable example_gripper\x1b[0m\n'}
+[28.751498] (-) TimerEvent: {}
+[28.761710] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 83%] Built target example_effort\n'}
+[28.830307] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking CXX executable example_velocity\x1b[0m\n'}
+[28.851347] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 91%] Built target example_tricycle_drive\n'}
+[28.851615] (-) TimerEvent: {}
+[28.870390] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 91%] Built target example_diff_drive\n'}
+[28.951799] (-) TimerEvent: {}
+[29.052323] (-) TimerEvent: {}
+[29.121613] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 91%] Built target example_gripper\n'}
+[29.152435] (-) TimerEvent: {}
+[29.170895] (gz_ros2_control_tests) StdoutLine: {'line': b'[100%] Built target test_position\n'}
+[29.186953] (gz_ros2_control_tests) CommandEnded: {'returncode': 0}
+[29.214920] (gz_ros2_control_tests) JobProgress: {'identifier': 'gz_ros2_control_tests', 'progress': 'install'}
+[29.215199] (gz_ros2_control_tests) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests'], 'cwd': '/home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests', 'env': OrderedDict([('LANGUAGE', 'en_IN:en'), ('USER', 'akshat'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/akshat'), ('OLDPWD', '/home/akshat'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('NVM_BIN', '/home/akshat/.nvm/versions/node/v21.7.1/bin'), ('ZSH', '/home/akshat/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('NVM_INC', '/home/akshat/.nvm/versions/node/v21.7.1/include/node'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/akshat/.nvm'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu-xorg.mandatory.path'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/akshat/Desktop/atom_aud/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'akshat'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu-xorg.default.path'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'akshat'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/akshat/.nvm/versions/node/v21.7.1/bin:/opt/ros/humble/bin:/home/akshat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/akshat/.spicetify'), ('SESSION_MANAGER', 'local/akshat-ASUS-TUF:@/tmp/.ICE-unix/2320,unix/akshat-ASUS-TUF:/tmp/.ICE-unix/2320'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0aeb7297_6375_42f1_9f6e_52084a08cd30'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_IN'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('GNOME_TERMINAL_SERVICE', ':1.187'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/akshat/atom_projects/Hexapod/build/gz_ros2_control_tests'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('NVM_CD_FLAGS', '-q'), ('PYTHONPATH', '/home/akshat/Desktop/atom_aud/build/selection_task:/home/akshat/Desktop/atom_aud/install/selection_task/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble')]), 'shell': False}
+[29.223416] (ign_ros2_control_demos) StdoutLine: {'line': b'[ 91%] Built target example_velocity\n'}
+[29.224846] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[29.225260] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[29.225758] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/lib/gz_ros2_control_tests/test_position\n'}
+[29.236125] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests//urdf/test_cart_position.xacro.urdf\n'}
+[29.249365] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests//config/cart_controller_position.yaml\n'}
+[29.252541] (-) TimerEvent: {}
+[29.260902] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/ament_index/resource_index/package_run_dependencies/gz_ros2_control_tests\n'}
+[29.277026] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/ament_index/resource_index/parent_prefix_path/gz_ros2_control_tests\n'}
+[29.289283] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/environment/ament_prefix_path.sh\n'}
+[29.300787] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/environment/ament_prefix_path.dsv\n'}
+[29.314200] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/environment/path.sh\n'}
+[29.324823] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/environment/path.dsv\n'}
+[29.335478] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/local_setup.bash\n'}
+[29.348115] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/local_setup.sh\n'}
+[29.352690] (-) TimerEvent: {}
+[29.358851] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/local_setup.zsh\n'}
+[29.369600] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/local_setup.dsv\n'}
+[29.382487] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.dsv\n'}
+[29.387259] (ign_ros2_control_demos) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable example_position\x1b[0m\n'}
+[29.393810] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/ament_index/resource_index/packages/gz_ros2_control_tests\n'}
+[29.405372] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/cmake/gz_ros2_control_testsConfig.cmake\n'}
+[29.417132] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/cmake/gz_ros2_control_testsConfig-version.cmake\n'}
+[29.428702] (gz_ros2_control_tests) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/gz_ros2_control_tests/share/gz_ros2_control_tests/package.xml\n'}
+[29.443518] (gz_ros2_control_tests) CommandEnded: {'returncode': 0}
+[29.452779] (-) TimerEvent: {}
+[29.489089] (gz_ros2_control_tests) JobEnded: {'identifier': 'gz_ros2_control_tests', 'rc': 0}
+[29.552919] (-) TimerEvent: {}
+[29.650089] (ign_ros2_control_demos) StdoutLine: {'line': b'[100%] Built target example_position\n'}
+[29.653010] (-) TimerEvent: {}
+[29.663255] (ign_ros2_control_demos) CommandEnded: {'returncode': 0}
+[29.710489] (ign_ros2_control_demos) JobProgress: {'identifier': 'ign_ros2_control_demos', 'progress': 'install'}
+[29.711543] (ign_ros2_control_demos) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos'], 'cwd': '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos', 'env': OrderedDict([('LANGUAGE', 'en_IN:en'), ('USER', 'akshat'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/akshat'), ('OLDPWD', '/home/akshat'), ('LESS', '-R'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('NVM_BIN', '/home/akshat/.nvm/versions/node/v21.7.1/bin'), ('ZSH', '/home/akshat/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('NVM_INC', '/home/akshat/.nvm/versions/node/v21.7.1/include/node'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('SYSTEMD_EXEC_PID', '2551'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/akshat/.nvm'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu-xorg.mandatory.path'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/akshat/Desktop/atom_aud/install'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'akshat'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu-xorg.default.path'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USERNAME', 'akshat'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/akshat/.nvm/versions/node/v21.7.1/bin:/opt/ros/humble/bin:/home/akshat/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/akshat/.spicetify'), ('SESSION_MANAGER', 'local/akshat-ASUS-TUF:@/tmp/.ICE-unix/2320,unix/akshat-ASUS-TUF:/tmp/.ICE-unix/2320'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/0aeb7297_6375_42f1_9f6e_52084a08cd30'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_IN'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('GNOME_TERMINAL_SERVICE', ':1.187'), ('XMODIFIERS', '@im=ibus'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('AMENT_PREFIX_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('NVM_CD_FLAGS', '-q'), ('PYTHONPATH', '/home/akshat/Desktop/atom_aud/build/selection_task:/home/akshat/Desktop/atom_aud/install/selection_task/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/akshat/atom_projects/Hexapod/install/ign_ros2_control:/home/akshat/Desktop/atom_aud/install/selection_task:/opt/ros/humble')]), 'shell': False}
+[29.720339] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[29.720802] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[29.721423] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//launch/cart_example_effort.launch.py\n'}
+[29.731528] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//launch/cart_example_position.launch.py\n'}
+[29.741836] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//launch/cart_example_velocity.launch.py\n'}
+[29.753390] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//launch/diff_drive_example.launch.py\n'}
+[29.753749] (-) TimerEvent: {}
+[29.764308] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//launch/gripper_mimic_joint_example.launch.py\n'}
+[29.782420] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//launch/tricycle_drive_example.launch.py\n'}
+[29.793773] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//config/cart_controller_effort.yaml\n'}
+[29.804724] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//config/cart_controller_position.yaml\n'}
+[29.816091] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//config/cart_controller_velocity.yaml\n'}
+[29.827022] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//config/diff_drive_controller_velocity.yaml\n'}
+[29.838053] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//config/gripper_controller.yaml\n'}
+[29.849486] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//config/tricycle_drive_controller.yaml\n'}
+[29.853857] (-) TimerEvent: {}
+[29.860465] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//urdf/test_cart_effort.xacro.urdf\n'}
+[29.870892] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//urdf/test_cart_position.xacro.urdf\n'}
+[29.882677] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//urdf/test_cart_velocity.xacro.urdf\n'}
+[29.893312] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//urdf/test_diff_drive.xacro.urdf\n'}
+[29.904000] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//urdf/test_gripper_mimic_joint.xacro.urdf\n'}
+[29.916405] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos//urdf/test_tricycle_drive.xacro.urdf\n'}
+[29.927691] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_position\n'}
+[29.939045] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_velocity\n'}
+[29.951890] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_effort\n'}
+[29.953974] (-) TimerEvent: {}
+[29.962772] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_diff_drive\n'}
+[29.972775] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_tricycle_drive\n'}
+[29.985303] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/lib/ign_ros2_control_demos/example_gripper\n'}
+[29.996714] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ament_index/resource_index/package_run_dependencies/ign_ros2_control_demos\n'}
+[30.008549] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ament_index/resource_index/parent_prefix_path/ign_ros2_control_demos\n'}
+[30.021293] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/environment/ament_prefix_path.sh\n'}
+[30.034836] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/environment/ament_prefix_path.dsv\n'}
+[30.045380] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/environment/path.sh\n'}
+[30.054107] (-) TimerEvent: {}
+[30.056804] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/environment/path.dsv\n'}
+[30.067415] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/local_setup.bash\n'}
+[30.084284] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/local_setup.sh\n'}
+[30.101804] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/local_setup.zsh\n'}
+[30.113137] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/local_setup.dsv\n'}
+[30.127624] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.dsv\n'}
+[30.140793] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ament_index/resource_index/packages/ign_ros2_control_demos\n'}
+[30.154226] (-) TimerEvent: {}
+[30.154696] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/cmake/ign_ros2_control_demosConfig.cmake\n'}
+[30.168918] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/cmake/ign_ros2_control_demosConfig-version.cmake\n'}
+[30.182668] (ign_ros2_control_demos) StdoutLine: {'line': b'-- Symlinking: /home/akshat/atom_projects/Hexapod/install/ign_ros2_control_demos/share/ign_ros2_control_demos/package.xml\n'}
+[30.196767] (ign_ros2_control_demos) CommandEnded: {'returncode': 0}
+[30.254321] (-) TimerEvent: {}
+[30.260658] (ign_ros2_control_demos) JobEnded: {'identifier': 'ign_ros2_control_demos', 'rc': 0}
+[30.261545] (-) EventReactorShutdown: {}

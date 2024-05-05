@@ -45,7 +45,7 @@ def generate_launch_description():
                            arguments = ["-topic", "/robot_description",
                                         "-name", "mr_robot",
                                         "-allow_renaming", "true",
-                                        "-z", "3.0",
+                                        "-z", "1.0",
                                         "-x", "2.0",
                                         "-y", "0.0",
                                         "-Y", "-1.57",
@@ -59,6 +59,19 @@ def generate_launch_description():
 											description="Enable sim time from /clock")
 	
 	# argument to specify if rviz needs to be launched
+	controller = Node(
+    	package="controller_manager",
+    	executable="ros2_control_node",
+    	parameters=["/home/akshat/atom_projects/Hexapod/src/hexapod_description/urdf/hexapod.xacro", "/home/akshat/atom_projects/Hexapod/src/hexapod_description/config/my_controllers.yaml"],
+		output = "both",
+	)
+
+
+	joint_state_broadcaster_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+    )
 
 	
 	
@@ -66,7 +79,8 @@ def generate_launch_description():
 		arg_use_sim_time,
 
 		spawn_robot,
-
+		joint_state_broadcaster_spawner,
 		state_publisher,
+		controller,
 
 	])
