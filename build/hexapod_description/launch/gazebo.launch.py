@@ -1,1 +1,0 @@
-/home/akshat/atom_projects/Hexapod/src/hexapod_description/launch/gazebo.launch.py

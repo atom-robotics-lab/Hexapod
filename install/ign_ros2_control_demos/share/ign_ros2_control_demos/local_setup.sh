@@ -1,1 +1,0 @@
-/home/akshat/atom_projects/Hexapod/build/ign_ros2_control_demos/ament_cmake_environment_hooks/local_setup.sh
