@@ -47,7 +47,7 @@ def generate_launch_description():
                            arguments = ["-string", robot_urdf,
                                         "-name", "hexabot",
                                         "-allow_renaming", "true",
-                                        "-z", "3.0",
+                                        "-z", "1.0",
                                         "-x", "2.0",
                                         "-y", "0.0",
                                         "-Y", "-1.57",
