@@ -3,9 +3,9 @@
 
 <xacro:property name="body_color" value="Gazebo/Silver" />
 
-<gazebo>
+<!-- <gazebo>
   <plugin name="control" filename="libgazebo_ros_control.so"/>
-</gazebo>
+</gazebo> -->
 <gazebo reference="base_link">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
@@ -119,7 +119,7 @@
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="leg_2_link_3__1">
+<gazebo reference="leg_2_link_3__1__1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
