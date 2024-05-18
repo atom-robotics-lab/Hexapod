@@ -6,8 +6,7 @@ from sensor_msgs.msg import JointState
 
 class Mynode(Node):
     def __init__(self):
-        super().__init__("rviz_to_gazebo")
-        self.get_logger().info("Rviz to Gazebo started")
+        super().__init__("bot_control")
         self.cmd_vel_pub_ = self.create_publisher(Float64MultiArray, "/hexapod_controller/commands", 10)
         self.timer = self.create_timer(0.5, self.send_value)
         self.msg = Float64MultiArray()

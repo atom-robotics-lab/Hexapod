@@ -29,6 +29,8 @@ def generate_launch_description():
 	# launch configs to use launch args
 	use_sim_time = LaunchConfiguration('use_sim_time')
 
+	rviz_config_file = os.path.join(pkg_mr_robot_desc, 'config', 'display.rviz')
+
 	# create urdf from xacro 
 	robot_xacro_config = xacro.process_file(xacro_path)
 	robot_urdf = robot_xacro_config.toxml()
@@ -44,8 +46,8 @@ def generate_launch_description():
 	# spawn robot in gz sim using urdf
 	spawn_robot = Node(package = "ros_gz_sim",
                            executable = "create",
-                           arguments = ["-string", robot_urdf,
-                                        "-name", "hexabot",
+                           arguments = ["-topic", "/robot_description",
+                                        "-name", "hexapod",
                                         "-allow_renaming", "true",
                                         "-z", "1.0",
                                         "-x", "2.0",
@@ -66,6 +68,13 @@ def generate_launch_description():
         output='screen'
     )
 
+	rviz_node = Node(
+        package='rviz2',
+        executable='rviz2',
+        name='rviz2',
+        arguments=['-d', rviz_config_file],
+        output='screen'
+    )
 
 	arg_use_sim_time = DeclareLaunchArgument('use_sim_time',
 											default_value='true',
@@ -93,5 +102,7 @@ def generate_launch_description():
 		spawn_robot,
 
 		state_publisher,
+
+		rviz_node,
 
 	])
