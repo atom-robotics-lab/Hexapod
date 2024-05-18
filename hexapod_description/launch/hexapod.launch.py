@@ -27,11 +27,7 @@ def generate_launch_description():
     robot = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(
                     os.path.join(pkg_mr_robot_desc, 'launch', 'robot.launch.py')
-                ),
-                launch_arguments={
-                    'rviz': 'false',
-                    'with_bridge': 'false'
-                }.items()
+                )
             )
 
     return LaunchDescription([
