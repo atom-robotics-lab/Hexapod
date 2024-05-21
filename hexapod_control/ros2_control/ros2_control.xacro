@@ -7,183 +7,184 @@
   </hardware>
 
   <joint name="Revolute_63">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   <joint name="Revolute_64">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   <joint name="Revolute_65">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   <joint name="Revolute_69">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   <joint name="Revolute_70">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   <joint name="Revolute_71">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   <joint name="Revolute_72">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   <joint name="Revolute_73">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   <joint name="Revolute_74">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   <joint name="Revolute_75">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   <joint name="Revolute_76">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
 
   <joint name="Revolute_77">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
 
   <joint name="Revolute_78">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   <joint name="Revolute_79">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   <joint name="Revolute_80">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   <joint name="Revolute_81">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   <joint name="Revolute_82">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   <joint name="Revolute_83">
-    <command_interface name="position">
+    <command_interface name="velocity">
     <param name="min">-1</param>
     <param name="max">1</param>
     </command_interface>
-    <state_interface name="position">
-      <param name="initial_value">0</param>
-    </state_interface>
+    
+    <state_interface name="velocity"/>
+    <state_interface name="position"/>
   </joint>
   
   

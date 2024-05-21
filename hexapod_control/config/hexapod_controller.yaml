@@ -31,4 +31,4 @@ hexapod_controller:
       
       
       
-    interface_name: position
+    interface_name: velocity
