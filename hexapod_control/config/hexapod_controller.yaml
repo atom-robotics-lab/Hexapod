@@ -1,0 +1,38 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000  # Hz
+
+    hexapod_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+hexapod_controller:
+  ros__parameters:
+    joints:
+      - Revolute_63
+      - Revolute_64
+      - Revolute_65
+      - Revolute_69
+      - Revolute_70
+      - Revolute_71
+      - Revolute_72
+      - Revolute_73
+      - Revolute_74
+      - Revolute_75
+      - Revolute_76
+      - Revolute_77
+      - Revolute_78
+      - Revolute_79
+      - Revolute_80
+      - Revolute_81
+      - Revolute_82
+      - Revolute_83
+      
+      
+      
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
