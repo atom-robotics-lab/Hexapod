@@ -3,9 +3,7 @@
 
 <xacro:property name="body_color" value="Gazebo/Silver" />
 
-<!-- <gazebo>
-  <plugin name="control" filename="libgazebo_ros_control.so"/>
-</gazebo> -->
+
 <gazebo reference="base_link">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
@@ -63,20 +61,6 @@
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="leg_4_link_2_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <self_collide>true</self_collide>
-</gazebo>
-
-<gazebo reference="leg_4_link_1_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <self_collide>true</self_collide>
-</gazebo>
-
 <gazebo reference="leg_5_link_3_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
@@ -119,7 +103,7 @@
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="leg_2_link_3__1__1">
+<gazebo reference="leg_2_link_3__1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
@@ -134,6 +118,20 @@
 </gazebo>
 
 <gazebo reference="leg_2_link_1_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="leg_4_link_2_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="leg_4_link_1_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
