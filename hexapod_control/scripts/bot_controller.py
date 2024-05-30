@@ -15,15 +15,16 @@ class SimpleTrajectoryPublisher(Node):
     def timer_callback(self):
         traj_msg = JointTrajectory()
         traj_msg.joint_names = [
-            'Revolute_63', 'Revolute_64', 'Revolute_65', 'Revolute_69',
-            'Revolute_70', 'Revolute_71', 'Revolute_72', 'Revolute_73',
-            'Revolute_74', 'Revolute_75', 'Revolute_76', 'Revolute_77',
-            'Revolute_78', 'Revolute_79', 'Revolute_80', 'Revolute_81',
-            'Revolute_82', 'Revolute_83'
+            'Leg_1_coxa', 'Leg_1_tibia', 'Leg_1_femur', 
+            'Leg_2_coxa', 'Leg_2_tibia', 'Leg_2_femur',
+            'Leg_3_coxa', 'Leg_3_tibia', 'Leg_3_femur',
+            'Leg_4_coxa', 'Leg_4_tibia', 'Leg_4_femur',
+            'Leg_5_coxa', 'Leg_5_tibia', 'Leg_5_femur',
+            'Leg_6_coxa', 'Leg_6_tibia', 'Leg_6_femur',
         ]
 
         point = JointTrajectoryPoint()
-        point.positions = [0.0] * 18  # example positions
+        point.positions = [0.5] * 18  # example positions
         point.time_from_start.sec =  0 # 2 seconds to reach the target
         point.time_from_start.nanosec = 500
 
