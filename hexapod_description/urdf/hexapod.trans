@@ -67,12 +67,12 @@
   </actuator>
 </transmission>
 
-<transmission name="leg_4_coxa_tran">
+<transmission name="Leg_4_coxa_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="leg_4_coxa">
+  <joint name="Leg_4_coxa">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="leg_4_coxa_actr">
+  <actuator name="Leg_4_coxa_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>

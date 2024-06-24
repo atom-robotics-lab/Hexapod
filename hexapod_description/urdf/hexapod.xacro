@@ -467,7 +467,7 @@
   <dynamics damping="10" friction="0.1"/>
 </joint>
 
-<joint name="leg_5_coxa" type="revolute">
+<joint name="Leg_5_coxa" type="revolute">
   <origin xyz="0.22226 0.096026 0.037823" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="leg_5_link_3_1"/>
