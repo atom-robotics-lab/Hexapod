@@ -3,9 +3,181 @@
 
 <xacro:property name="body_color" value="Gazebo/Silver" />
 
-<!-- <gazebo>
-  <plugin name="control" filename="libgazebo_ros_control.so"/>
-</gazebo> -->
+<gazebo>
+  <plugin
+    filename="gz-sim-joint-trajectory-controller-system"
+    name="gz::sim::systems::JointTrajectoryController">
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+
+    <initial_position>0</initial_position>
+    <position_p_gain>20</position_p_gain>
+    <position_i_gain>0.4</position_i_gain>
+    <position_d_gain>1.0</position_d_gain>
+    <position_i_min>-1</position_i_min>
+    <position_i_max>1</position_i_max>
+    <position_cmd_min>-20</position_cmd_min>
+    <position_cmd_max>20</position_cmd_max>
+    
+  </plugin>
+
+  <plugin filename="libgz-sim-joint-state-publisher-system.so" 
+    name="gz::sim::systems::JointStatePublisher">
+    <topic>/joint_states</topic>
+  </plugin>
+
+</gazebo>
 <gazebo reference="base_link">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
@@ -63,20 +235,6 @@
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="leg_4_link_2_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <self_collide>true</self_collide>
-</gazebo>
-
-<gazebo reference="leg_4_link_1_1">
-  <material>${body_color}</material>
-  <mu1>0.2</mu1>
-  <mu2>0.2</mu2>
-  <self_collide>true</self_collide>
-</gazebo>
-
 <gazebo reference="leg_5_link_3_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
@@ -119,7 +277,7 @@
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="leg_2_link_3__1__1">
+<gazebo reference="leg_2_link_3__1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
@@ -134,6 +292,20 @@
 </gazebo>
 
 <gazebo reference="leg_2_link_1_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="leg_4_link_2_1">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <self_collide>true</self_collide>
+</gazebo>
+
+<gazebo reference="leg_4_link_1_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
