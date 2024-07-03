@@ -1,5 +1,7 @@
 FROM nvidia/cuda:11.8.0-devel-ubuntu22.04
 
+RUN apt-get update && apt-get install -y sudo
+
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
@@ -69,11 +71,11 @@ RUN apt-get update && apt-get -y --quiet --no-install-recommends install \
 
 RUN apt update
 
-RUN apt install -y cmake
+RUN apt update && apt install -y cmake
 
-RUN apt update && apt install locales && locale-gen en_US en_US.UTF-8 && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && export LANG=en_US.UTF-8
+RUN apt update && apt install -y locales && locale-gen en_US en_US.UTF-8 && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && export LANG=en_US.UTF-8
 
-RUN apt install software-properties-common -y
+RUN apt install -y software-properties-common
 
 RUN add-apt-repository universe
 
@@ -137,7 +139,17 @@ RUN sudo apt-get install lsb-release wget gnupg
 RUN sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
 RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
 RUN sudo apt-get update
-RUN sudo apt-get install ignition-fortress
+# Update package lists and install dependencies
+RUN apt-get update && \
+    apt-get install -y \
+        ignition-fortress \
+        libignition-launch5 \
+        libignition-launch5-dev \
+        python3-ignition-gazebo6 \
+        python3-ignition-math6 && \
+    rm -rf /var/lib/apt/lists/*
+
+
 
 
 RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
