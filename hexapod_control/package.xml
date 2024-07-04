@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>hexapod_description</name>
+  <name>hexapod_control</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
   <maintainer email="atomroboticslab@gmail.com">mitanshu</maintainer>
@@ -12,13 +12,12 @@
 
   <depend>rclpy</depend>
   <depend>rclcpp</depend>
+  <depend>xacro</depend>
   <depend>rviz2</depend>
   <depend>robot_state_publisher</depend>
   <depend>joint_state_publisher</depend>
   <depend>joint_state_publisher_gui</depend>
   <depend>ros_gz_sim</depend>
-  <depend>xacro</depend>
-  
 
   <build_depend>control_msgs</build_depend>
   <build_depend>geometry_msgs</build_depend>
