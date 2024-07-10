@@ -1,0 +1,38 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000  # Hz
+
+    hexapod_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+hexapod_controller:
+  ros__parameters:
+    joints:
+      - Leg_1_coxa
+      - Leg_2_coxa
+      - Leg_3_coxa
+      - Leg_4_coxa
+      - Leg_5_coxa
+      - Leg_6_coxa
+      - Leg_1_tibia
+      - Leg_2_tibia
+      - Leg_3_tibia
+      - Leg_4_tibia
+      - Leg_5_tibia
+      - Leg_6_tibia
+      - Leg_1_femur
+      - Leg_2_femur
+      - Leg_3_femur
+      - Leg_4_femur
+      - Leg_5_femur
+      - Leg_6_femur
+      
+      
+      
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity

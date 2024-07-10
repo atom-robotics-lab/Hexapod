@@ -4,6 +4,7 @@
 <xacro:include filename="$(find hexapod_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find hexapod_description)/urdf/hexapod.trans" />
 <xacro:include filename="$(find hexapod_description)/urdf/hexapod.gazebo" />
+<xacro:include filename="$(find hexapod_control)/ros2_control/ros2_control.xacro" />
 <link name="base_link">
   <inertial>
     <origin xyz="0.10909777793044037 0.06468612005136756 0.006889314215312581" rpy="0 0 0"/>
