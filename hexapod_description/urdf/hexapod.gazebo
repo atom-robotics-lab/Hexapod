@@ -117,7 +117,7 @@
   <self_collide>true</self_collide>
 </gazebo>
 
-<gazebo reference="leg_2_link_3__1__1">
+<gazebo reference="leg_2_link_3__1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>

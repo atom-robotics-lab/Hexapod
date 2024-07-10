@@ -6,184 +6,220 @@
     <plugin>ign_ros2_control/IgnitionSystem</plugin>
   </hardware>
 
-  <joint name="Revolute_63">
+  <joint name="Leg_1_coxa">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
-  <joint name="Revolute_64">
+  <joint name="Leg_2_coxa">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
-  <joint name="Revolute_65">
+  <joint name="Leg_3_coxa">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
-  <joint name="Revolute_69">
+  <joint name="Leg_1_tibia">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
-  <joint name="Revolute_70">
+  <joint name="Leg_2_tibia">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
-  <joint name="Revolute_71">
+  <joint name="Leg_3_tibia">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
-  <joint name="Revolute_72">
+  <joint name="Leg_1_femur">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
-  <joint name="Revolute_73">
+  <joint name="Leg_2_femur">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
-  <joint name="Revolute_74">
+  <joint name="Leg_3_femur">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
-  <joint name="Revolute_75">
+  <joint name="Leg_6_femur">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
-  <joint name="Revolute_76">
+  <joint name="Leg_4_coxa">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
 
-  <joint name="Revolute_77">
+  <joint name="Leg_5_coxa">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
 
-  <joint name="Revolute_78">
+  <joint name="Leg_6_coxa">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
-  <joint name="Revolute_79">
+  <joint name="Leg_4_tibia">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
-  <joint name="Revolute_80">
+  <joint name="Leg_5_tibia">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
-  <joint name="Revolute_81">
+  <joint name="Leg_6_tibia">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
-  <joint name="Revolute_82">
+  <joint name="Leg_4_femur">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
-  <joint name="Revolute_83">
+  <joint name="Leg_5_femur">
     <command_interface name="position">
-    <param name="min">-1</param>
-    <param name="max">1</param>
+    <param name="min">-1.57</param>
+    <param name="max">1.57</param>
     </command_interface>
+    
     <state_interface name="position">
-      <param name="initial_value">0</param>
+        <param name="initial_value">0</param>
     </state_interface>
+    
   </joint>
   
   

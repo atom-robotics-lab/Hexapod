@@ -1,199 +1,199 @@
 <?xml version="1.0" ?>
 <robot name="hexapod" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-<transmission name="Revolute 63_tran">
+<transmission name="Leg_1_coxa_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 63">
+  <joint name="Leg_1_coxa">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 63_actr">
+  <actuator name="Leg_1_coxa_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 64_tran">
+<transmission name="Leg_1_tibia_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 64">
+  <joint name="Leg_1_tibia">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 64_actr">
+  <actuator name="Leg_1_tibia_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 65_tran">
+<transmission name="Leg_1_femur_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 65">
+  <joint name="Leg_1_femur">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 65_actr">
+  <actuator name="Leg_1_femur_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 69_tran">
+<transmission name="Leg_3_coxa_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 69">
+  <joint name="Leg_3_coxa">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 69_actr">
+  <actuator name="Leg_3_coxa_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 70_tran">
+<transmission name="Leg_3_tibia_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 70">
+  <joint name="Leg_3_tibia">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 70_actr">
+  <actuator name="Leg_3_tibia_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 71_tran">
+<transmission name="Leg_3_femur_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 71">
+  <joint name="Leg_3_femur">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 71_actr">
+  <actuator name="Leg_3_femur_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 72_tran">
+<transmission name="Leg_4_coxa_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 72">
+  <joint name="Leg_4_coxa">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 72_actr">
+  <actuator name="Leg_4_coxa_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 73_tran">
+<transmission name="Leg_5_coxa_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 73">
+  <joint name="Leg_5_coxa">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 73_actr">
+  <actuator name="Leg_5_coxa_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 74_tran">
+<transmission name="Leg_5_tibia_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 74">
+  <joint name="Leg_5_tibia">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 74_actr">
+  <actuator name="Leg_5_tibia_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 75_tran">
+<transmission name="Leg_5_femur_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 75">
+  <joint name="Leg_5_femur">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 75_actr">
+  <actuator name="Leg_5_femur_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 76_tran">
+<transmission name="Leg_6_coxa_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 76">
+  <joint name="Leg_6_coxa">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 76_actr">
+  <actuator name="Leg_6_coxa_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 77_tran">
+<transmission name="Leg_6_tibia_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 77">
+  <joint name="Leg_6_tibia">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 77_actr">
+  <actuator name="Leg_6_tibia_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 78_tran">
+<transmission name="Leg_6_femur_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 78">
+  <joint name="Leg_6_femur">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 78_actr">
+  <actuator name="Leg_6_femur_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 79_tran">
+<transmission name="Leg_2_coxa_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 79">
+  <joint name="Leg_2_coxa">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 79_actr">
+  <actuator name="Leg_2_coxa_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 80_tran">
+<transmission name="Leg_2_tibia_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 80">
+  <joint name="Leg_2_tibia">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 80_actr">
+  <actuator name="Leg_2_tibia_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 81_tran">
+<transmission name="Leg_2_femur_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 81">
+  <joint name="Leg_2_femur">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 81_actr">
+  <actuator name="Leg_2_femur_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 82_tran">
+<transmission name="Leg_4_tibia_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 82">
+  <joint name="Leg_4_tibia">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 82_actr">
+  <actuator name="Leg_4_tibia_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<transmission name="Revolute 83_tran">
+<transmission name="Leg_4_femur_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Revolute 83">
+  <joint name="Leg_4_femur">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Revolute 83_actr">
+  <actuator name="Leg_4_femur_actr">
     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>

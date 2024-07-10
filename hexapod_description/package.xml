@@ -12,12 +12,13 @@
 
   <depend>rclpy</depend>
   <depend>rclcpp</depend>
-  <depend>xacro</depend>
   <depend>rviz2</depend>
   <depend>robot_state_publisher</depend>
   <depend>joint_state_publisher</depend>
   <depend>joint_state_publisher_gui</depend>
   <depend>ros_gz_sim</depend>
+  <depend>xacro</depend>
+  
 
   <build_depend>control_msgs</build_depend>
   <build_depend>geometry_msgs</build_depend>
