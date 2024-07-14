@@ -4,13 +4,51 @@ from rclpy.node import Node
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 import sys
 
+class JointPositions:
+    def __init__(self):
+        self.Leg_1_coxa = 0.0
+        self.Leg_1_tibia = 0.0
+        self.Leg_1_femur = 0.0
+        self.Leg_2_coxa = 0.0
+        self.Leg_2_tibia = 0.0
+        self.Leg_2_femur = 0.0
+        self.Leg_3_coxa = 0.0
+        self.Leg_3_tibia = 0.0
+        self.Leg_3_femur = 0.0
+        self.Leg_4_coxa = 0.0
+        self.Leg_4_tibia = 0.0
+        self.Leg_4_femur = 0.0
+        self.Leg_5_coxa = 0.0
+        self.Leg_5_tibia = 0.0
+        self.Leg_5_femur = 0.0
+        self.Leg_6_coxa = 0.0
+        self.Leg_6_tibia = 0.0
+        self.Leg_6_femur = 0.0
+
+    def get_positions(self):
+        return [
+            self.Leg_1_coxa, self.Leg_1_tibia, self.Leg_1_femur,
+            self.Leg_2_coxa, self.Leg_2_tibia, self.Leg_2_femur,
+            self.Leg_3_coxa, self.Leg_3_tibia, self.Leg_3_femur,
+            self.Leg_4_coxa, self.Leg_4_tibia, self.Leg_4_femur,
+            self.Leg_5_coxa, self.Leg_5_tibia, self.Leg_5_femur,
+            self.Leg_6_coxa, self.Leg_6_tibia, self.Leg_6_femur,
+        ]
+
 class SimpleTrajectoryPublisher(Node):
     def __init__(self):
         super().__init__('simple_trajectory_publisher')
         self.publisher_ = self.create_publisher(JointTrajectory, '/hexapod_controller/joint_trajectory', 10)
-        timer_period = 1.0  # seconds
+        self.joint_positions = JointPositions()
         self.timer_callback()
         self.get_logger().info('Simple Trajectory Publisher has been started.')
+
+    def create_trajectory_point(self, positions, sec, nanosec=0):
+        point = JointTrajectoryPoint()
+        point.positions = positions
+        point.time_from_start.sec = sec
+        point.time_from_start.nanosec = nanosec
+        return point
 
     def timer_callback(self):
         traj_msg = JointTrajectory()
@@ -23,12 +61,14 @@ class SimpleTrajectoryPublisher(Node):
             'Leg_6_coxa', 'Leg_6_tibia', 'Leg_6_femur',
         ]
 
-        point = JointTrajectoryPoint()
-        point.positions = [0.5] * 18  # example positions
-        point.time_from_start.sec =  0 # 2 seconds to reach the target
-        point.time_from_start.nanosec = 500
+        # Creating trajectory points using the helper function
+        self.joint_positions.Leg_2_tibia=0.2
+        point1 = self.create_trajectory_point(self.joint_positions.get_positions(), 2)
+        
+       
+        traj_msg.points.append(point1)
 
-        traj_msg.points.append(point)
+        
 
         self.publisher_.publish(traj_msg)
         self.get_logger().info('Publishing trajectory: %s' % traj_msg)
