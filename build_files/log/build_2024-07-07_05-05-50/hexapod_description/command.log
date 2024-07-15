@@ -1,6 +1,0 @@
-Invoking command in '/workspaces/hexapod_ws/build/hexapod_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/hexapod_ws/src/hexapod_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/hexapod_ws/install/hexapod_description
-Invoked command in '/workspaces/hexapod_ws/build/hexapod_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/hexapod_ws/src/hexapod_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/workspaces/hexapod_ws/install/hexapod_description
-Invoking command in '/workspaces/hexapod_ws/build/hexapod_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/hexapod_ws/build/hexapod_description -- -j12 -l12
-Invoked command in '/workspaces/hexapod_ws/build/hexapod_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/hexapod_ws/build/hexapod_description -- -j12 -l12
-Invoking command in '/workspaces/hexapod_ws/build/hexapod_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/hexapod_ws/build/hexapod_description
-Invoked command in '/workspaces/hexapod_ws/build/hexapod_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/hexapod_ws/build/hexapod_description

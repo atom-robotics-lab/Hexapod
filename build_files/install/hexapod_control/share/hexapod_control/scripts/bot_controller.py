@@ -1,1 +1,0 @@
-/workspaces/hexapod_ws/src/hexapod_control/scripts/bot_controller.py
