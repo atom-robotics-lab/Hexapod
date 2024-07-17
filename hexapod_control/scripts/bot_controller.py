@@ -2,7 +2,7 @@
 import rclpy
 from rclpy.node import Node
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
-import sys
+
 
 class JointPositions:
     def __init__(self):
@@ -24,6 +24,7 @@ class JointPositions:
         self.Leg_6_coxa = 0.0
         self.Leg_6_tibia = 0.0
         self.Leg_6_femur = 0.0
+    
 
     def get_positions(self):
         return [
@@ -40,19 +41,8 @@ class SimpleTrajectoryPublisher(Node):
         super().__init__('simple_trajectory_publisher')
         self.publisher_ = self.create_publisher(JointTrajectory, '/hexapod_controller/joint_trajectory', 10)
         self.joint_positions = JointPositions()
-        self.timer_callback()
-        self.get_logger().info('Simple Trajectory Publisher has been started.')
-
-    def create_trajectory_point(self, positions, sec, nanosec=0):
-        point = JointTrajectoryPoint()
-        point.positions = positions
-        point.time_from_start.sec = sec
-        point.time_from_start.nanosec = nanosec
-        return point
-
-    def timer_callback(self):
-        traj_msg = JointTrajectory()
-        traj_msg.joint_names = [
+        self.traj_msg = JointTrajectory()
+        self.traj_msg.joint_names = [
             'Leg_1_coxa', 'Leg_1_tibia', 'Leg_1_femur', 
             'Leg_2_coxa', 'Leg_2_tibia', 'Leg_2_femur',
             'Leg_3_coxa', 'Leg_3_tibia', 'Leg_3_femur',
@@ -60,18 +50,50 @@ class SimpleTrajectoryPublisher(Node):
             'Leg_5_coxa', 'Leg_5_tibia', 'Leg_5_femur',
             'Leg_6_coxa', 'Leg_6_tibia', 'Leg_6_femur',
         ]
+        self.reach_time_sec = 0
+        self.reach_time_nanosec = 0
+        self.create_trajectory()
+        self.get_logger().info('Simple Trajectory Publisher has been started.')
 
-        # Creating trajectory points using the helper function
-        self.joint_positions.Leg_2_tibia=0.2
-        point1 = self.create_trajectory_point(self.joint_positions.get_positions(), 2)
-        
-       
-        traj_msg.points.append(point1)
+    def create_points(self, TIME):
+        point = JointTrajectoryPoint()
+        point.positions = self.joint_positions.get_positions()
 
-        
+        # Update the reach time with the provided sec and nanosec
+        sec = int(TIME)
+        nanosec = int((TIME - sec) * 1_000_000_000)
 
-        self.publisher_.publish(traj_msg)
-        self.get_logger().info('Publishing trajectory: %s' % traj_msg)
+        self.reach_time_sec += sec
+        self.reach_time_nanosec += nanosec
+
+        # Handle nanosecond overflow
+        if self.reach_time_nanosec >= 1e9:
+            extra_sec = self.reach_time_nanosec // 1e9
+            self.reach_time_sec += int(extra_sec)
+            self.reach_time_nanosec = self.reach_time_nanosec % int(1e9)
+
+        point.time_from_start.sec = self.reach_time_sec
+        point.time_from_start.nanosec = self.reach_time_nanosec
+        self.traj_msg.points.append(point)
+
+    def create_trajectory(self):
+        # Bring all joints to 0 position
+        self.create_points(1.6)
+
+        # Sets Leg_2_tibia to 0.2 position
+        self.joint_positions.Leg_2_tibia = 0.2
+
+        # Make point in which only Leg_2_tibia was changed
+        self.create_points(1.6)
+
+        self.joint_positions.Leg_2_tibia = 0.0
+
+        # Make point in which only Leg_2_tibia was changed
+        self.create_points(1.6)
+
+        # Publishes the trajectory in which all the points are sent
+        self.publisher_.publish(self.traj_msg)
+        self.get_logger().info('Publishing trajectory: %s' % self.traj_msg)
 
 def main(args=None):
     rclpy.init(args=args)
