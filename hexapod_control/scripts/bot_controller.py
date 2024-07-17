@@ -55,7 +55,7 @@ class SimpleTrajectoryPublisher(Node):
         self.create_trajectory()
         self.get_logger().info('Simple Trajectory Publisher has been started.')
 
-    def create_points(self, TIME):
+    def create_point(self, TIME):
         point = JointTrajectoryPoint()
         point.positions = self.joint_positions.get_positions()
 
@@ -77,19 +77,14 @@ class SimpleTrajectoryPublisher(Node):
         self.traj_msg.points.append(point)
 
     def create_trajectory(self):
-        # Bring all joints to 0 position
-        self.create_points(1.6)
+        # Bring all joints to 0 position in time 1.6 seconds
+        self.create_point(1.0)
 
         # Sets Leg_2_tibia to 0.2 position
         self.joint_positions.Leg_2_tibia = 0.2
 
         # Make point in which only Leg_2_tibia was changed
-        self.create_points(1.6)
-
-        self.joint_positions.Leg_2_tibia = 0.0
-
-        # Make point in which only Leg_2_tibia was changed
-        self.create_points(1.6)
+        self.create_point(1.6)
 
         # Publishes the trajectory in which all the points are sent
         self.publisher_.publish(self.traj_msg)
