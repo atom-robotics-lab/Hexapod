@@ -13,7 +13,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
 
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
-    pkg_mr_robot_desc = get_package_share_directory('hexapod_description')
+    pkg_robot_desc = get_package_share_directory('hexapod_description')
 
     # launch GZ Sim with empty world
     gz_sim = IncludeLaunchDescription(
@@ -26,7 +26,7 @@ def generate_launch_description():
     # spawn robot with rviz
     robot = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(
-                    os.path.join(pkg_mr_robot_desc, 'launch', 'robot.launch.py')
+                    os.path.join(pkg_robot_desc, 'launch', 'robot.launch.py')
                 )
             )
 
