@@ -410,7 +410,7 @@
   <child link="leg_1_link_2_1"/>
   <axis xyz="-0.001529 0.016683 -0.99986"/>
   <limit effort="100" lower="-1.57" upper="0.785" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_1_tibia" type="revolute">
@@ -419,7 +419,7 @@
   <child link="leg_1_link_3_1"/>
   <axis xyz="-0.013531 -0.99977 -0.016661"/>
   <limit effort="100" lower="-1.57" upper="1.57" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_1_femur" type="revolute">
@@ -428,7 +428,7 @@
   <child link="leg_1_link_1_1"/>
   <axis xyz="-0.013531 -0.99977 -0.016661"/>
   <limit effort="100" lower="-1.57" upper="1.57" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_3_coxa" type="revolute">
@@ -437,7 +437,7 @@
   <child link="leg_3_link_3_1"/>
   <axis xyz="-0.001529 0.016683 -0.99986"/>
   <limit effort="100" lower="-0.785" upper="1.57" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_3_tibia" type="revolute">
@@ -446,7 +446,7 @@
   <child link="leg_3_link_2_1"/>
   <axis xyz="-0.014767 -0.999752 -0.016659"/>
   <limit effort="100" lower="-1.57" upper="1.57" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_3_femur" type="revolute">
@@ -455,7 +455,7 @@
   <child link="leg_3_link_1_1"/>
   <axis xyz="-0.014767 -0.999752 -0.016659"/>
   <limit effort="100" lower="-1.57" upper="1.57" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_4_coxa" type="revolute">
@@ -464,7 +464,7 @@
   <child link="leg_4_link_3_1"/>
   <axis xyz="-0.001529 0.016683 -0.99986"/>
   <limit effort="100" lower="-0.785" upper="1.57" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_5_coxa" type="revolute">
@@ -473,7 +473,7 @@
   <child link="leg_5_link_3_1"/>
   <axis xyz="-0.001529 0.016683 -0.99986"/>
   <limit effort="100" lower="-0.785" upper="0.785" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_5_tibia" type="revolute">
@@ -482,7 +482,7 @@
   <child link="leg_5_llink_2_1"/>
   <axis xyz="0.065266 -0.997727 -0.016747"/>
   <limit effort="100" lower="-1.57" upper="1.57" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_5_femur" type="revolute">
@@ -491,7 +491,7 @@
   <child link="leg_5_link_1_1"/>
   <axis xyz="-0.065266 0.997727 0.016747"/>
   <limit effort="100" lower="-1.57" upper="1.57" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_6_coxa" type="revolute">
@@ -500,7 +500,7 @@
   <child link="leg_6_link_3_1"/>
   <axis xyz="-0.001529 0.016683 -0.99986"/>
   <limit effort="100" lower="-1.57" upper="0.785" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_6_tibia" type="revolute">
@@ -509,7 +509,7 @@
   <child link="leg_6_link_2_1"/>
   <axis xyz="0.065266 -0.997727 -0.016747"/>
   <limit effort="100" lower="-1.57" upper="1.57" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_6_femur" type="revolute">
@@ -518,7 +518,7 @@
   <child link="leg_6_link_1_1"/>
   <axis xyz="-0.065266 0.997727 0.016747"/>
   <limit effort="100" lower="-1.57" upper="1.57" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_2_coxa" type="revolute">
@@ -527,7 +527,7 @@
   <child link="leg_2_link_3__1"/>
   <axis xyz="-0.001529 0.016683 -0.99986"/>
   <limit effort="100" lower="-0.785" upper="0.785" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_2_tibia" type="revolute">
@@ -536,7 +536,7 @@
   <child link="leg_2_link_2_1"/>
   <axis xyz="-0.016551 -0.999724 -0.016656"/>
   <limit effort="100" lower="-1.57" upper="1.57" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_2_femur" type="revolute">
@@ -545,7 +545,7 @@
   <child link="leg_2_link_1_1"/>
   <axis xyz="-0.016551 -0.999724 -0.016656"/>
   <limit effort="100" lower="-1.57" upper="1.57" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_4_tibia" type="revolute">
@@ -554,7 +554,7 @@
   <child link="leg_4_link_2_1"/>
   <axis xyz="0.041169 -0.999012 -0.016732"/>
   <limit effort="100" lower="-1.57" upper="1.57" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 <joint name="Leg_4_femur" type="revolute">
@@ -563,7 +563,7 @@
   <child link="leg_4_link_1_1"/>
   <axis xyz="-0.041169 0.999012 0.016732"/>
   <limit effort="100" lower="-1.57" upper="1.57" velocity="100"/>
-  <dynamics damping="10" friction="0.1"/>
+  <dynamics damping="10" friction="0.5"/>
 </joint>
 
 </robot>

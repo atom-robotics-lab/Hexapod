@@ -46,6 +46,12 @@ install(PROGRAMS
   
   DESTINATION lib/${PROJECT_NAME}
 )
+
+install(PROGRAMS
+  scripts/controller_backup.py
+  
+  DESTINATION lib/${PROJECT_NAME}
+)
 install(PROGRAMS
   scripts/position_subcriber.py
   
