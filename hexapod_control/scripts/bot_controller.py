@@ -5,9 +5,9 @@ from rclpy.node import Node
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 import math
 
-class SimpleTrajectoryPublisher(Node):
+class Hexapod(Node):
     def __init__(self):
-        super().__init__('simple_trajectory_publisher')
+        super().__init__('Hexapod')
         self.publisher_ = self.create_publisher(JointTrajectory, '/hexapod_controller/joint_trajectory', 10)
         timer_period = 0.2  # seconds
         self.timer_ = self.create_timer(timer_period, self.timer_callback)
@@ -64,7 +64,6 @@ class SimpleTrajectoryPublisher(Node):
             'Leg_6_coxa', 'Leg_6_femur', 'Leg_6_tibia',   
         ]
 
-        # Define the walking cycle with variations in z-axis for lifting the legs
         tripod_gait_cycle = [
             [(0.0, -5.0, -0.5), (0.0, -5.0, 0.0), (0.0, -5.0, -0.5), (0.0, 5.0, 0.0), (0.0, 5.0, -0.5), (0.0, 5.0, 0.0)],
             [(0.0, -5.0, 0.5), (0.0, 5.0, 0.0), (0.0, -5.0, 0.5), (0.0, -5.0, 0.0), (0.0, 5.0, 0.5), (0.0, -5.0, 0.0)],
@@ -89,17 +88,17 @@ class SimpleTrajectoryPublisher(Node):
 
         point.positions = positions
         point.time_from_start.sec = 0
-        point.time_from_start.nanosec = 200000000  # 0.2 seconds
+        point.time_from_start.nanosec = 200000000  
 
         traj_msg.points.append(point)
 
         self.publisher_.publish(traj_msg)
         self.get_logger().info(f'Publishing trajectory: {traj_msg}')
-        self.cycle_index += 1  # Update cycle index for the next callback
+        self.cycle_index += 1  
 
 def main(args=None):
     rclpy.init(args=args)
-    node = SimpleTrajectoryPublisher()
+    node = Hexapod()
     rclpy.spin(node)
     rclpy.shutdown()
 
