@@ -103,6 +103,6 @@ def generate_launch_description():
 
 		state_publisher,
 
-		rviz_node,
+#		rviz_node,
 
 	])
