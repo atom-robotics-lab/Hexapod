@@ -43,6 +43,12 @@ def generate_launch_description():
 											]), value_type=str)}]
 								)
 
+# joint state publisher GUI
+	joint_state_publisher_gui = Node(
+	    package='joint_state_publisher_gui',
+	    executable='joint_state_publisher_gui'
+	)
+
 	# spawn robot in gz sim using urdf
 	spawn_robot = Node(package = "ros_gz_sim",
                            executable = "create",
@@ -103,6 +109,8 @@ def generate_launch_description():
 
 		state_publisher,
 
-#		rviz_node,
+		joint_state_publisher_gui,
+
+		rviz_node,
 
 	])

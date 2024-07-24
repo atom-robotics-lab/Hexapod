@@ -5,4 +5,8 @@
   <color rgba="0.100 0.100 0.100 1.000"/>
 </material>
 
+<material name="gold">
+  <color rgba="0.90 0.90 0.00 1.000"/>
+</material>
+
 </robot>

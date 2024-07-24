@@ -37,7 +37,7 @@
     <geometry>
       <mesh filename="file://$(find hexapod_description)/meshes/leg_1_link_2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="gold"/>
   </visual>
   <collision>
     <origin xyz="0.003565 0.030766 -0.036053" rpy="0 0 0"/>
@@ -100,7 +100,7 @@
     <geometry>
       <mesh filename="file://$(find hexapod_description)/meshes/leg_3_link_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="gold"/>
   </visual>
   <collision>
     <origin xyz="-0.00013 -0.229172 -0.040385" rpy="0 0 0"/>
@@ -163,7 +163,7 @@
     <geometry>
       <mesh filename="file://$(find hexapod_description)/meshes/leg_4_link_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="gold"/>
   </visual>
   <collision>
     <origin xyz="-0.212413 0.03383 -0.035672" rpy="0 0 0"/>
@@ -184,7 +184,7 @@
     <geometry>
       <mesh filename="file://$(find hexapod_description)/meshes/leg_5_link_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="gold"/>
   </visual>
   <collision>
     <origin xyz="-0.22226 -0.096026 -0.037823" rpy="0 0 0"/>
@@ -247,7 +247,7 @@
     <geometry>
       <mesh filename="file://$(find hexapod_description)/meshes/leg_6_link_3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="gold"/>
   </visual>
   <collision>
     <origin xyz="-0.216108 -0.226108 -0.040003" rpy="0 0 0"/>
@@ -310,7 +310,7 @@
     <geometry>
       <mesh filename="file://$(find hexapod_description)/meshes/leg_2_link_3__1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="gold"/>
   </visual>
   <collision>
     <origin xyz="0.009716 -0.099316 -0.038233" rpy="0 0 0"/>
