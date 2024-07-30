@@ -4,7 +4,6 @@
 <xacro:include filename="$(find hexapod_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find hexapod_description)/urdf/hexapod.trans" />
 <xacro:include filename="$(find hexapod_description)/urdf/hexapod.gazebo" />
-<xacro:include filename="$(find hexapod_control)/ros2_control/ros2_control.xacro" />
 <link name="base_link">
   <inertial>
     <origin xyz="0.10909777793044037 0.06468612005136756 0.006889314215312581" rpy="0 0 0"/>
@@ -413,7 +412,7 @@
   <dynamics damping="10" friction="0.1"/>
 </joint>
 
-<joint name="Leg_1_tibia" type="revolute">
+<joint name="Leg_1_femur" type="revolute">
   <origin xyz="-0.067837 -0.031701 -0.079213" rpy="0 0 0"/>
   <parent link="leg_1_link_2_1"/>
   <child link="leg_1_link_3_1"/>
@@ -422,7 +421,7 @@
   <dynamics damping="10" friction="0.1"/>
 </joint>
 
-<joint name="Leg_1_femur" type="revolute">
+<joint name="Leg_1_tibia" type="revolute">
   <origin xyz="-0.072686 -0.00016 0.068679" rpy="0 0 0"/>
   <parent link="leg_1_link_3_1"/>
   <child link="leg_1_link_1_1"/>
@@ -440,7 +439,7 @@
   <dynamics damping="10" friction="0.1"/>
 </joint>
 
-<joint name="Leg_3_tibia" type="revolute">
+<joint name="Leg_3_femur" type="revolute">
   <origin xyz="-0.067878 -0.031617 -0.079212" rpy="0 0 0"/>
   <parent link="leg_3_link_3_1"/>
   <child link="leg_3_link_2_1"/>
@@ -449,7 +448,7 @@
   <dynamics damping="10" friction="0.1"/>
 </joint>
 
-<joint name="Leg_3_femur" type="revolute">
+<joint name="Leg_3_tibia" type="revolute">
   <origin xyz="-0.076498 5.6e-05 0.064406" rpy="0 0 0"/>
   <parent link="leg_3_link_2_1"/>
   <child link="leg_3_link_1_1"/>
@@ -476,7 +475,7 @@
   <dynamics damping="10" friction="0.1"/>
 </joint>
 
-<joint name="Leg_5_tibia" type="revolute">
+<joint name="Leg_5_femur" type="revolute">
   <origin xyz="0.069726 -0.028381 -0.07958" rpy="0 0 0"/>
   <parent link="leg_5_link_3_1"/>
   <child link="leg_5_llink_2_1"/>
@@ -485,7 +484,7 @@
   <dynamics damping="10" friction="0.1"/>
 </joint>
 
-<joint name="Leg_5_femur" type="revolute">
+<joint name="Leg_5_tibia" type="revolute">
   <origin xyz="0.069625 0.003351 0.071701" rpy="0 0 0"/>
   <parent link="leg_5_llink_2_1"/>
   <child link="leg_5_link_1_1"/>
@@ -503,7 +502,7 @@
   <dynamics damping="10" friction="0.1"/>
 </joint>
 
-<joint name="Leg_6_tibia" type="revolute">
+<joint name="Leg_6_femur" type="revolute">
   <origin xyz="0.069726 -0.028381 -0.07958" rpy="0 0 0"/>
   <parent link="leg_6_link_3_1"/>
   <child link="leg_6_link_2_1"/>
@@ -512,7 +511,7 @@
   <dynamics damping="10" friction="0.1"/>
 </joint>
 
-<joint name="Leg_6_femur" type="revolute">
+<joint name="Leg_6_tibia" type="revolute">
   <origin xyz="0.069626 0.003351 0.071701" rpy="0 0 0"/>
   <parent link="leg_6_link_2_1"/>
   <child link="leg_6_link_1_1"/>
@@ -530,7 +529,7 @@
   <dynamics damping="10" friction="0.1"/>
 </joint>
 
-<joint name="Leg_2_tibia" type="revolute">
+<joint name="Leg_2_femur" type="revolute">
   <origin xyz="-0.067937 -0.031496 -0.079209" rpy="0 0 0"/>
   <parent link="leg_2_link_3__1"/>
   <child link="leg_2_link_2_1"/>
@@ -539,7 +538,7 @@
   <dynamics damping="10" friction="0.1"/>
 </joint>
 
-<joint name="Leg_2_femur" type="revolute">
+<joint name="Leg_2_tibia" type="revolute">
   <origin xyz="-0.072405 5e-05 0.068975" rpy="0 0 0"/>
   <parent link="leg_2_link_2_1"/>
   <child link="leg_2_link_1_1"/>
@@ -548,7 +547,7 @@
   <dynamics damping="10" friction="0.1"/>
 </joint>
 
-<joint name="Leg_4_tibia" type="revolute">
+<joint name="Leg_4_femur" type="revolute">
   <origin xyz="0.068989 -0.030057 -0.079607" rpy="0 0 0"/>
   <parent link="leg_4_link_3_1"/>
   <child link="leg_4_link_2_1"/>
@@ -557,7 +556,7 @@
   <dynamics damping="10" friction="0.1"/>
 </joint>
 
-<joint name="Leg_4_femur" type="revolute">
+<joint name="Leg_4_tibia" type="revolute">
   <origin xyz="0.069715 0.001672 0.071673" rpy="0 0 0"/>
   <parent link="leg_4_link_2_1"/>
   <child link="leg_4_link_1_1"/>

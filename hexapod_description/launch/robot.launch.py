@@ -18,28 +18,19 @@ def generate_launch_description():
 
 	# get the required paths of packages & files
 	pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
-	pkg_mr_robot_desc = get_package_share_directory('hexapod_description')
-	xacro_path = pkg_mr_robot_desc + '/urdf/hexapod.xacro'
+	pkg_hexapod_desc = get_package_share_directory('hexapod_control')
 	
-	# TODO: take rviz config file as launch arg 
-	# use this one as default
-	#rviz_config = pkg_mr_robot_desc + '/config/urdf.rviz'
-	#bridge_config = pkg_mr_robot_desc + '/config/bridge.yaml'
 
 	# launch configs to use launch args
 	use_sim_time = LaunchConfiguration('use_sim_time')
 
-	rviz_config_file = os.path.join(pkg_mr_robot_desc, 'config', 'display.rviz')
-
-	# create urdf from xacro 
-	robot_xacro_config = xacro.process_file(xacro_path)
-	robot_urdf = robot_xacro_config.toxml()
+	rviz_config_file = os.path.join(pkg_hexapod_desc, 'config', 'display.rviz')
 
 	# joint state publisher
 	state_publisher = Node(package = 'robot_state_publisher',
 								executable = 'robot_state_publisher',
 								parameters = [{'robot_description': ParameterValue(Command( \
-											['xacro ', os.path.join(pkg_mr_robot_desc, 'urdf/hexapod.xacro'),
+											['xacro ', os.path.join(pkg_hexapod_desc, 'ros2_control/ros2_control.xacro'),
 											]), value_type=str)}]
 								)
 
