@@ -5,6 +5,7 @@ from sensor_msgs.msg import JointState
 
 class Mynode(Node):
     def __init__(self):
+        
         super().__init__("position_subscriber")
         self.get_logger().info("Position Subscriber started")
         self.pose_subscriber = self.create_subscription(
