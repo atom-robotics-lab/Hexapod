@@ -32,7 +32,7 @@ class JointPositions:
             self.Leg_2_coxa, self.Leg_2_femur, self.Leg_2_tibia, 
             self.Leg_3_coxa, self.Leg_3_femur, self.Leg_3_tibia, 
             self.Leg_4_coxa, self.Leg_4_femur, self.Leg_4_tibia, 
-            self.Leg_5_coxa, gself.Leg_5_femur, self.Leg_5_tibia, 
+            self.Leg_5_coxa, self.Leg_5_femur, self.Leg_5_tibia, 
             self.Leg_6_coxa, self.Leg_6_femur, self.Leg_6_tibia, 
         ]
 

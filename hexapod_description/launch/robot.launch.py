@@ -18,7 +18,7 @@ def generate_launch_description():
 
 	# get the required paths of packages & files
 	pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
-	pkg_hexapod_desc = get_package_share_directory('hexapod_control')
+	pkg_hexapod_desc = get_package_share_directory('hexapod_description')
 	
 
 	# launch configs to use launch args
@@ -30,7 +30,7 @@ def generate_launch_description():
 	state_publisher = Node(package = 'robot_state_publisher',
 								executable = 'robot_state_publisher',
 								parameters = [{'robot_description': ParameterValue(Command( \
-											['xacro ', os.path.join(pkg_hexapod_desc, 'ros2_control/ros2_control.xacro'),
+											['xacro ', os.path.join(pkg_hexapod_desc, 'urdf/hexapod.xacro'),
 											]), value_type=str)}]
 								)
 
