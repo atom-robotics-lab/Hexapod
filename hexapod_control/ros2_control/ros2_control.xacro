@@ -1,9 +1,6 @@
 <?xml version="1.0" ?>
 <robot name="hexapod" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-
-<xacro:include filename="$(find hexapod_description)/urdf/hexapod.xacro" />
-
 <!--Ros2 control-->
 <ros2_control name="hexapod" type="system">
   <hardware>
