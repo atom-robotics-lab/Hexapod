@@ -3,6 +3,7 @@ import rclpy
 from rclpy.node import Node
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 
+import math
 
 class JointPositions:
     def __init__(self):
@@ -75,18 +76,44 @@ class SimpleTrajectoryPublisher(Node):
         point.time_from_start.sec = self.reach_time_sec
         point.time_from_start.nanosec = self.reach_time_nanosec
         self.traj_msg.points.append(point)
+    
+    def ik(self, x, y, z):
+        # Calculate gamma
+        gamma = math.atan2(z, 54.2 + x)
+        
+        # Calculate x'
+        x_prime = (54.2 + x) / math.cos(gamma) - 54.2
+        
+        # Calculate beta
+        beta = math.acos((40800.25 - x_prime**2 - y**2) / 35100)
+        
+        # Calculate alpha
+        distance = math.sqrt(x_prime**2 + y**2)
+        alpha = math.radians(180) - math.acos((x_prime**2 + y**2 - 20800.25) / (200 * distance)) + math.atan2(y, x_prime)
+
+        # Convert to degrees
+        gamma_deg = math.degrees(gamma)
+        beta_deg = math.degrees(beta)
+        alpha_deg = math.degrees(alpha)
+        
+        return [gamma_deg, alpha_deg, beta_deg]
+
 
     def create_trajectory(self):
-        # Bring all joints to 0 position in time 1.6 seconds
-        self.create_point(1.0)
+        
 
-        # Sets Leg_2_tibia to 0.2 position
-        self.joint_positions.Leg_2_tibia = -0.2
+        self.x=100
+        self.y=100
+        self.z=0
+        self.angles=self.ik(self.x,self.y,self.z)
+        self.get_logger().info(f'Publishing angles: coxa: {self.angles[0]}, femur: {self.angles[1]}, tibia: {self.angles[2]}')
 
-        # Make point in which only Leg_2_tibia was changed
-        self.create_point(1.6)
+        self.joint_positions.Leg_1_coxa = math.radians(self.angles[0])
+        self.joint_positions.Leg_1_femur = math.radians(self.angles[1]-146.2)
+        self.joint_positions.Leg_1_tibia = -math.radians(self.angles[2]-63.8)
 
-        # Publishes the trajectory in which all the points are sent
+        self.create_point(0.5)
+
         self.publisher_.publish(self.traj_msg)
         self.get_logger().info('Publishing trajectory: %s' % self.traj_msg)
 
