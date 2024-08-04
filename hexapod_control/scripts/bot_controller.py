@@ -25,6 +25,7 @@ class SimpleTrajectoryPublisher(Node):
         self.y_list = [160]*6
         self.z_list = [120]*6
         self.joint_positions=[0.0]*18
+        self.gaits()
         self.get_logger().info('Simple Trajectory Publisher has been started.')
 
     def create_point(self, TIME):
@@ -60,15 +61,23 @@ class SimpleTrajectoryPublisher(Node):
         alpha_deg = math.degrees(alpha)
         return [gamma_deg, alpha_deg, beta_deg]
     
+    def z(self,amount,legs):
+        for i in legs:
+            self.z_list[i-1]+=amount
+    
+    def x(self,amount,legs):
+        for i in legs:
+            self.x_list[i-1]+=amount
+    
+    
+    
     
 
 
 
     def create_trajectory(self):
-    # Clear the previous points to avoid piling up
         self.traj_msg.points.clear()
 
-        
 
         for i in range(6):
             if i<3:
@@ -77,7 +86,7 @@ class SimpleTrajectoryPublisher(Node):
                 self.angles = self.ik(-self.x_list[i], self.y_list[i], self.z_list[i])
             
 
-            self.get_logger().info(f'Publishing angles: coxa: {self.angles[0]}, femur: {self.angles[1]}, tibia: {self.angles[2]}')
+            self.get_logger().info(f'Publishing angles for leg {i+1}: coxa: {self.angles[0]}, femur: {self.angles[1]}, tibia: {self.angles[2]}')
 
             self.joint_positions[i*3]= math.radians(self.angles[0])
             if i<3:
@@ -91,9 +100,14 @@ class SimpleTrajectoryPublisher(Node):
 
         self.publisher_.publish(self.traj_msg)
         self.get_logger().info('Published trajectory')
-        
+    
+    def gaits(self):
+        self.create_trajectory()
+        self.z[-50,[1,3,5]]
+        self.create_trajectory()
 
-
+    #-------Interpolation function to keep the path straight ---------
+    #-------Not being used right now----------------------------------
     def interpolate_and_create_trajectory(self, direction, start_value, end_value):
         step_size = 1.0 if end_value > start_value else -1.0
         current_value = start_value
@@ -110,45 +124,49 @@ class SimpleTrajectoryPublisher(Node):
 
         
 
-
+    #-------use this to publish values using terminal--------
+    #-------Not being used right now-------------------------
     def update_position_and_publish(self):
-        self.publisher_.publish(self.traj_msg)
+        self.create_trajectory()
         self.get_logger().info('Published trajectory')
 
         while rclpy.ok():
             try:
-                leg_number = int(input("Enter leg number to change (1-6) or 'q' to quit: ").strip())
-                if leg_number == 'q':
+                command = input("Enter command (format: | x/z [leg_numbers] amount | or | q | to quit): ").strip().lower()
+                if command == 'q':
                     break
 
-                if leg_number not in range(1, 7):
-                    print("Invalid leg number. Please enter a number between 1 and 6.")
+                parts = command.split()
+                if len(parts) != 3:
+                    print("Invalid command format. Please use: x/z [leg_numbers] amount")
                     continue
 
-                direction = input("Enter direction to change (x, y, z) or 'q' to quit: ").strip().lower()
-                if direction == 'q':
-                    break
+                direction = parts[0]
+                legs = list(map(int, parts[1].strip('[]').split(',')))
+                amount = float(parts[2])
 
-                if direction not in ['x', 'y', 'z']:
-                    print("Invalid direction. Please enter 'x', 'y', or 'z'.")
+                if direction not in ['x', 'z']:
+                    print("Invalid direction. Please enter 'x' or 'z'.")
                     continue
 
-                value = float(input(f"Enter the amount to move leg {leg_number} along {direction}: "))
+                # Validate leg numbers
+                if not all(1 <= leg <= 6 for leg in legs):
+                    print("Invalid leg numbers. Please enter numbers between 1 and 6.")
+                    continue
 
-                # Update the selected leg's position
+                # Call the appropriate function based on the direction
                 if direction == 'x':
-                    self.x_list[leg_number - 1] += value
-                elif direction == 'y':
-                    self.y_list[leg_number - 1] += value
+                    self.x(amount, legs)
                 elif direction == 'z':
-                    self.z_list[leg_number - 1] += value
+                    self.z(amount, legs)
 
                 # Recompute and publish the trajectory
                 self.create_trajectory()
 
             except ValueError:
-                print("Invalid input. Please enter a valid number.")
+                print("Invalid input. Please enter valid numbers.")
                 continue
+
 
 
 
@@ -156,8 +174,13 @@ class SimpleTrajectoryPublisher(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = SimpleTrajectoryPublisher()
+
     try:
-        node.update_position_and_publish()
+        rclpy.spin(node)
+
+        #use this for publishing values through terminal
+        #node.update_position_and_publish()
+
     except KeyboardInterrupt:
         print("\nShutting down node.")
     finally:
