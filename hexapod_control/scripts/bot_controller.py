@@ -3,6 +3,7 @@ import rclpy
 from rclpy.node import Node
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 import math
+import time
 
 
 
@@ -103,7 +104,12 @@ class SimpleTrajectoryPublisher(Node):
     
     def gaits(self):
         self.create_trajectory()
-        self.z[-50,[1,3,5]]
+        
+        time.sleep(2)
+        self.get_logger().info('Published next trajectory')
+        time.sleep(2)
+
+        self.z(-50,[1,3,5])
         self.create_trajectory()
 
     #-------Interpolation function to keep the path straight ---------
