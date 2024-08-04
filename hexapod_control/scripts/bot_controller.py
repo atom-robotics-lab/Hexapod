@@ -52,9 +52,9 @@ class SimpleTrajectoryPublisher(Node):
         ]
         self.reach_time_sec = 0
         self.reach_time_nanosec = 0
-        self.x = 170
-        self.y = 120
-        self.z = 0
+        self.x = 0
+        self.y = 160
+        self.z = 120
         self.get_logger().info('Simple Trajectory Publisher has been started.')
 
     def create_point(self, TIME):
@@ -77,13 +77,13 @@ class SimpleTrajectoryPublisher(Node):
         self.traj_msg.points.append(point)
     
     def ik(self, x, y, z):
-        x=x-70
-        gamma = math.atan2(z, 70 + x)
+        
+        gamma = math.atan2(x, y)
 
-        x_prime = math.sqrt(((70 + x)**2)+(z**2))-70
-        beta = math.acos((40800.25 - x_prime**2 - y**2) / 35100)
-        distance = math.sqrt(x_prime**2 + y**2)
-        alpha = math.radians(180) - math.acos((x_prime**2 + y**2 - 20800.25) / (200 * distance)) + math.atan2(y, x_prime)
+        y_prime = math.sqrt(((x)**2)+(y**2))-54.2
+        beta = math.acos((40800.25 - y_prime**2 - z**2) / 35100)
+        distance = math.sqrt(y_prime**2 + z**2)
+        alpha = math.radians(180) - math.acos((y_prime**2 + z**2 - 20800.25) / (200 * distance)) + math.atan2(z, y_prime)
 
         gamma_deg = math.degrees(gamma)
         beta_deg = math.degrees(beta)
@@ -105,13 +105,33 @@ class SimpleTrajectoryPublisher(Node):
 
         self.get_logger().info(f'Publishing sim angles: coxa: {self.joint_positions.Leg_1_coxa}, femur: {self.joint_positions.Leg_1_femur}, tibia: {self.joint_positions.Leg_1_tibia}')
 
-        self.create_point(0.1)
+        self.create_point(0.02)
+        
+
+
+    def interpolate_and_create_trajectory(self, direction, start_value, end_value):
+        step_size = 1.0 if end_value > start_value else -1.0
+        current_value = start_value
+
+        while (step_size > 0 and current_value < end_value) or (step_size < 0 and current_value > end_value):
+            current_value += step_size
+            setattr(self, direction, current_value)
+            self.create_trajectory()
+
+        # Ensure the final target value is reached
+        
+        setattr(self, direction, end_value)
+        self.create_trajectory()
+
         self.publisher_.publish(self.traj_msg)
         self.get_logger().info('Published trajectory')
 
 
     def update_position_and_publish(self):
-        self.create_trajectory() 
+        self.create_point(0.1)
+        self.publisher_.publish(self.traj_msg)
+        self.get_logger().info('Published trajectory')
+
         while rclpy.ok():
             direction = input("Enter direction to change (x, y, z) or 'q' to quit: ").strip().lower()
             if direction == 'q':
@@ -122,15 +142,20 @@ class SimpleTrajectoryPublisher(Node):
                 continue
 
             try:
-                
-                value = float(input(f"Enter the new value for {direction}: "))
-                setattr(self, direction, value)  # Set the new value directly
+                value = float(input(f"Enter the amount to move {direction}: "))
 
-                self.create_trajectory()  # Create and publish the new trajectory with the updated values
+                # Get the current value and compute the new target value
+                current_value = getattr(self, direction)
+                target_value = current_value + value
+
+                # Interpolate between current and target values and publish the trajectory
+                self.interpolate_and_create_trajectory(direction, current_value, target_value)
 
             except ValueError:
                 print("Invalid value. Please enter a numeric value.")
                 continue
+
+
 
 def main(args=None):
     rclpy.init(args=args)

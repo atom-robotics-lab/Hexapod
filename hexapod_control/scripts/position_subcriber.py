@@ -16,8 +16,8 @@ class Mynode(Node):
         )
 
     def joint_callback(self, msg: JointState):
-        formatted_positions = [f"{pos:.5f}" for pos in msg.position]
-        self.get_logger().info(f"Positions: {formatted_positions}")
+        self.get_logger().info(f"sec: {msg.header.stamp.sec}")
+        self.get_logger().info(f"nanosec: {msg.header.stamp.nanosec}")
 
 def main(args=None):
     rclpy.init(args=args)
