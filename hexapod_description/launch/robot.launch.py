@@ -109,8 +109,8 @@ def generate_launch_description():
 
 		state_publisher,
 
-		joint_state_publisher_gui,
+		#joint_state_publisher_gui,
 
-		rviz_node,
+		#rviz_node,
 
 	])
