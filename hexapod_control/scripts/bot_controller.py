@@ -39,8 +39,9 @@ class SimpleTrajectoryPublisher(Node):
         self.gaits()
 
         
-
-    def create_point(self, TIME):
+    #----use when interpolation--------
+    #----not being used right now------
+    def create_multiple_points(self, TIME):
         point = JointTrajectoryPoint()
         point.positions = self.joint_positions
 
@@ -57,6 +58,17 @@ class SimpleTrajectoryPublisher(Node):
 
         point.time_from_start.sec = self.reach_time_sec
         point.time_from_start.nanosec = self.reach_time_nanosec
+        self.traj_msg.points.append(point)
+    
+    def create_point(self,TIME):
+        point = JointTrajectoryPoint()
+        point.positions = self.joint_positions
+
+        sec = int(TIME)
+        nanosec = int((TIME - sec) * 1_000_000_000)
+
+        point.time_from_start.sec = sec
+        point.time_from_start.nanosec = nanosec
         self.traj_msg.points.append(point)
     
     def ik(self, x, y, z):
@@ -89,8 +101,6 @@ class SimpleTrajectoryPublisher(Node):
 
     def create_trajectory(self,trajectory_time):
         self.traj_msg.points.clear()
-        self.reach_time_sec = 0
-        self.reach_time_nanosec = 0
 
 
         for i in range(6):
@@ -118,7 +128,7 @@ class SimpleTrajectoryPublisher(Node):
     
     def gaits(self):
         
-        cd5)
+        
         
         self.z(-50, [1, 3, 5])
         self.create_trajectory(0.5)
@@ -148,28 +158,6 @@ class SimpleTrajectoryPublisher(Node):
             self.x(-50, [1, 3, 5])
             self.x(50, [2, 4, 6])
             self.create_trajectory(0.5)
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-        
-
-
-
-        
-
-        
-
 
 
     
