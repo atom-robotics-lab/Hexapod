@@ -37,7 +37,6 @@ class SimpleTrajectoryPublisher(Node):
         self.z_list = [120]*6
         self.joint_positions=[0.0]*18
         self.gaits()
-        self.get_logger().info('Simple Trajectory Publisher has been started.')
 
         
 
@@ -115,15 +114,17 @@ class SimpleTrajectoryPublisher(Node):
         self.get_logger().info('Published trajectory')
     
     def gaits(self):
+
+        #-----First trajectory------
         self.create_trajectory()
         
         self.initial_time=self.call_service()
-        self.get_logger().info(f'Published first trajectory at {self.initial_time}')
+        self.get_logger().info(f'Published first trajectory at {self.call_service()}')
         while self.call_service()<=self.initial_time+2:
-            self.get_logger().info(f'waiting for 2 seconds to be completed {self.call_service()-self.initial_time}')
+            pass
 
-        self.get_logger().info('Published next trajectory')
-
+        #-----Second trajectory------
+        self.get_logger().info(f'Published next trajectory at {self.call_service()}')
         self.z(-50,[1,3,5])
         self.create_trajectory()
 
