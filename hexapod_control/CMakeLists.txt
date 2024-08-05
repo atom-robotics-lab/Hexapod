@@ -43,14 +43,11 @@ install(
 
 install(PROGRAMS
   scripts/bot_controller.py
+  scripts/get_sim_time.py
   
   DESTINATION lib/${PROJECT_NAME}
 )
-install(PROGRAMS
-  scripts/position_subcriber.py
-  
-  DESTINATION lib/${PROJECT_NAME}
-)
+
 
 
 ament_package()

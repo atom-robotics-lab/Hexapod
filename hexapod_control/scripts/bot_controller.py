@@ -3,6 +3,7 @@ import rclpy
 from rclpy.node import Node
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 import math
+from std_srvs.srv import Trigger
 import time
 
 
@@ -11,6 +12,15 @@ class SimpleTrajectoryPublisher(Node):
     def __init__(self):
         super().__init__('simple_trajectory_publisher')
         self.publisher_ = self.create_publisher(JointTrajectory, '/hexapod_controller/joint_trajectory', 10)
+
+        self.client = self.create_client(Trigger, '/get_joint_state')
+        
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Service not available, waiting again...')
+            
+        self.request = Trigger.Request()
+
+
         self.traj_msg = JointTrajectory()
         self.traj_msg.joint_names = [
             'Leg_1_coxa', 'Leg_1_femur', 'Leg_1_tibia',
@@ -28,6 +38,8 @@ class SimpleTrajectoryPublisher(Node):
         self.joint_positions=[0.0]*18
         self.gaits()
         self.get_logger().info('Simple Trajectory Publisher has been started.')
+
+        
 
     def create_point(self, TIME):
         point = JointTrajectoryPoint()
@@ -87,7 +99,7 @@ class SimpleTrajectoryPublisher(Node):
                 self.angles = self.ik(-self.x_list[i], self.y_list[i], self.z_list[i])
             
 
-            self.get_logger().info(f'Publishing angles for leg {i+1}: coxa: {self.angles[0]}, femur: {self.angles[1]}, tibia: {self.angles[2]}')
+            #self.get_logger().info(f'Publishing angles for leg {i+1}: coxa: {self.angles[0]}, femur: {self.angles[1]}, tibia: {self.angles[2]}')
 
             self.joint_positions[i*3]= math.radians(self.angles[0])
             if i<3:
@@ -97,7 +109,7 @@ class SimpleTrajectoryPublisher(Node):
 
             self.joint_positions[i*3+2]= -math.radians(self.angles[2] - 63.8)
 
-        self.create_point(1.0)
+        self.create_point(2.0)
 
         self.publisher_.publish(self.traj_msg)
         self.get_logger().info('Published trajectory')
@@ -105,12 +117,23 @@ class SimpleTrajectoryPublisher(Node):
     def gaits(self):
         self.create_trajectory()
         
-        time.sleep(2)
+        self.initial_time=self.call_service()
+        self.get_logger().info(f'Published first trajectory at {self.initial_time}')
+        while self.call_service()<=self.initial_time+2:
+            self.get_logger().info(f'waiting for 2 seconds to be completed {self.call_service()-self.initial_time}')
+
         self.get_logger().info('Published next trajectory')
-        time.sleep(2)
 
         self.z(-50,[1,3,5])
         self.create_trajectory()
+
+    def call_service(self):
+        future = self.client.call_async(self.request)
+        rclpy.spin_until_future_complete(self, future)
+        if future.result() is not None:
+            return(float(future.result().message))
+        else:
+            self.get_logger().error('Service call failed')
 
     #-------Interpolation function to keep the path straight ---------
     #-------Not being used right now----------------------------------
