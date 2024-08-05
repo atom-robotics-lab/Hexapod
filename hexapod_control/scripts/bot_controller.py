@@ -4,7 +4,6 @@ from rclpy.node import Node
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 import math
 from std_srvs.srv import Trigger
-import time
 
 
 
@@ -36,6 +35,7 @@ class SimpleTrajectoryPublisher(Node):
         self.y_list = [160]*6
         self.z_list = [120]*6
         self.joint_positions=[0.0]*18
+        self.rate = self.create_rate(10)
         self.gaits()
 
         
@@ -89,6 +89,8 @@ class SimpleTrajectoryPublisher(Node):
 
     def create_trajectory(self,trajectory_time):
         self.traj_msg.points.clear()
+        self.reach_time_sec = 0
+        self.reach_time_nanosec = 0
 
 
         for i in range(6):
@@ -111,21 +113,48 @@ class SimpleTrajectoryPublisher(Node):
         self.create_point(trajectory_time)
         self.get_logger().info(f'Published trajectory at {self.call_service()}')
         self.publisher_.publish(self.traj_msg)
-        self.get_logger().info('Published trajectory')
+        self.get_logger().info(f'{self.traj_msg}')
         self.wait_until_time(trajectory_time)
     
     def gaits(self):
         
-        self.create_trajectory(1)
+        cd5)
         
         self.z(-50, [1, 3, 5])
-        self.create_trajectory(1)
+        self.create_trajectory(0.5)
 
         self.x(-25, [1, 3, 5])
         self.x(25, [2, 4, 6])
-        self.create_trajectory(1)
+        self.create_trajectory(0.5)
 
-        
+        while True:
+
+            self.z(50, [1, 3, 5])
+            self.create_trajectory(0.5)
+
+            self.z(-50, [2, 4, 6])
+            self.create_trajectory(0.5)
+
+            self.x(50, [1, 3, 5])
+            self.x(-50, [2, 4, 6])
+            self.create_trajectory(0.5)
+
+            self.z(50, [2, 4, 6])
+            self.create_trajectory(0.5)
+
+            self.z(-50, [1, 3, 5])
+            self.create_trajectory(0.5)
+
+            self.x(-50, [1, 3, 5])
+            self.x(50, [2, 4, 6])
+            self.create_trajectory(0.5)
+
+
+
+
+
+
+
 
 
         
@@ -149,8 +178,7 @@ class SimpleTrajectoryPublisher(Node):
         while rclpy.ok():
             current_time = self.call_service()
             if current_time >= target_time:
-                break
-            time.sleep(0.1)  # Sleep for a short period to avoid busy-waiting
+                break # Sleep for a short period to avoid busy-waiting
 
     def call_service(self):
         future = self.client.call_async(self.request)
@@ -182,7 +210,7 @@ class SimpleTrajectoryPublisher(Node):
     #-------use this to publish values using terminal--------
     #-------Not being used right now-------------------------
     def update_position_and_publish(self):
-        self.create_trajectory()
+        self.create_trajectory(0.5)
         self.get_logger().info('Published trajectory')
 
         while rclpy.ok():
@@ -216,7 +244,7 @@ class SimpleTrajectoryPublisher(Node):
                     self.z(amount, legs)
 
                 # Recompute and publish the trajectory
-                self.create_trajectory()
+                self.create_trajectory(0.5)
 
             except ValueError:
                 print("Invalid input. Please enter valid numbers.")
