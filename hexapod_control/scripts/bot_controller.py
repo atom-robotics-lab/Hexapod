@@ -87,7 +87,7 @@ class SimpleTrajectoryPublisher(Node):
 
 
 
-    def create_trajectory(self):
+    def create_trajectory(self,trajectory_time):
         self.traj_msg.points.clear()
 
 
@@ -108,33 +108,43 @@ class SimpleTrajectoryPublisher(Node):
 
             self.joint_positions[i*3+2]= -math.radians(self.angles[2] - 63.8)
 
-        self.create_point(2.0)
+        self.create_point(trajectory_time)
 
         self.publisher_.publish(self.traj_msg)
         self.get_logger().info('Published trajectory')
     
     def gaits(self):
-
         #-----First trajectory------
-        self.create_trajectory()
-        
-        self.initial_time=self.call_service()
         self.get_logger().info(f'Published first trajectory at {self.call_service()}')
-        while self.call_service()<=self.initial_time+2:
-            pass
+
+        #Time required by joint positions to be reached =1
+        self.create_trajectory(1)
+
+        #Wait for 1 second so the trajectory is completed
+        self.wait_until_time(1)
 
         #-----Second trajectory------
-        self.get_logger().info(f'Published next trajectory at {self.call_service()}')
-        self.z(-50,[1,3,5])
-        self.create_trajectory()
+        self.get_logger().info(f'Publishing second trajectory at {self.call_service()}')
+        self.z(-50, [1, 3, 5])
+        self.create_trajectory(1)
+
+    
+    def wait_until_time(self, target_time):
+        target_time+=self.call_service()
+        while rclpy.ok():
+            current_time = self.call_service()
+            if current_time >= target_time:
+                break
+            time.sleep(0.1)  # Sleep for a short period to avoid busy-waiting
 
     def call_service(self):
         future = self.client.call_async(self.request)
         rclpy.spin_until_future_complete(self, future)
         if future.result() is not None:
-            return(float(future.result().message))
+            return float(future.result().message)
         else:
             self.get_logger().error('Service call failed')
+
 
     #-------Interpolation function to keep the path straight ---------
     #-------Not being used right now----------------------------------
