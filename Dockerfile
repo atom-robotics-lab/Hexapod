@@ -11,8 +11,6 @@ ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES graphics,utility,compute
 ENV QT_X11_NO_MITSHM 1
 
-ENV GZ_VERSION=harmonic
-
 RUN apt-get update && apt-get -y --quiet --no-install-recommends install \
     ant \
     binutils-dev \
@@ -101,7 +99,6 @@ RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/r
 RUN wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg && \
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null && \
     apt-get update && apt-get install -y \
-        gz-harmonic \
     && rm -rf /var/lib/apt/lists/*
 
 # ROS INSTALLATION WITH DEPENDENCIES
@@ -123,14 +120,12 @@ RUN apt update && apt-get install -y \
     ros-humble-xacro \
     tmux \
     ros-humble-rmw-cyclonedds-cpp \
-    ros-humble-ros-gzharmonic\
     ros-humble-ign-ros2-control\
     lsb-release wget gnupg/
 
 RUN sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
 RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
 RUN sudo apt-get update
-RUN sudo apt-get install gz-harmonic
 RUN sudo apt-get update
 RUN sudo apt-get install lsb-release wget gnupg
 RUN sudo wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
