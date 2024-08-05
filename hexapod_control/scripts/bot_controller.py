@@ -109,24 +109,39 @@ class SimpleTrajectoryPublisher(Node):
             self.joint_positions[i*3+2]= -math.radians(self.angles[2] - 63.8)
 
         self.create_point(trajectory_time)
-
+        self.get_logger().info(f'Published trajectory at {self.call_service()}')
         self.publisher_.publish(self.traj_msg)
         self.get_logger().info('Published trajectory')
+        self.wait_until_time(trajectory_time)
     
     def gaits(self):
-        #-----First trajectory------
-        self.get_logger().info(f'Published first trajectory at {self.call_service()}')
-
-        #Time required by joint positions to be reached =1
+        
         self.create_trajectory(1)
-
-        #Wait for 1 second so the trajectory is completed
-        self.wait_until_time(1)
-
-        #-----Second trajectory------
-        self.get_logger().info(f'Publishing second trajectory at {self.call_service()}')
+        
         self.z(-50, [1, 3, 5])
         self.create_trajectory(1)
+
+        self.x(-25, [1, 3, 5])
+        self.x(25, [2, 4, 6])
+        self.create_trajectory(1)
+
+        
+
+
+        
+
+
+
+
+        
+
+
+
+        
+
+        
+
+
 
     
     def wait_until_time(self, target_time):
