@@ -10,24 +10,24 @@ controller_manager:
 hexapod_controller:
   ros__parameters:
     joints:
-      - Leg_1_coxa
-      - Leg_2_coxa
-      - Leg_3_coxa
-      - Leg_4_coxa
-      - Leg_5_coxa
-      - Leg_6_coxa
-      - Leg_1_tibia
-      - Leg_2_tibia
-      - Leg_3_tibia
-      - Leg_4_tibia
-      - Leg_5_tibia
-      - Leg_6_tibia
-      - Leg_1_femur
-      - Leg_2_femur
-      - Leg_3_femur
-      - Leg_4_femur
-      - Leg_5_femur
-      - Leg_6_femur
+      - leg_1_coxa_joint
+      - leg_2_coxa_joint
+      - leg_3_coxa_joint
+      - leg_4_coxa_joint
+      - leg_5_coxa_joint
+      - leg_6_coxa_joint
+      - leg_1_tibia_joint
+      - leg_2_tibia_joint
+      - leg_3_tibia_joint
+      - leg_4_tibia_joint
+      - leg_5_tibia_joint
+      - leg_6_tibia_joint
+      - leg_1_femur_joint
+      - leg_2_femur_joint
+      - leg_3_femur_joint
+      - leg_4_femur_joint
+      - leg_5_femur_joint
+      - leg_6_femur_joint
       
       
       

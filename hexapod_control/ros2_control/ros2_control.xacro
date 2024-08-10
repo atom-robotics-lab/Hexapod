@@ -7,7 +7,7 @@
     <plugin>ign_ros2_control/IgnitionSystem</plugin>
   </hardware>
 
-  <joint name="Leg_1_coxa">
+  <joint name="leg_1_coxa_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -23,7 +23,7 @@
     </limit>
   </joint>
   
-  <joint name="Leg_2_coxa">
+  <joint name="leg_2_coxa_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -39,7 +39,7 @@
     </limit>
   </joint>
   
-  <joint name="Leg_3_coxa">
+  <joint name="leg_3_coxa_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -55,7 +55,7 @@
     </limit>
   </joint>
   
-  <joint name="Leg_1_tibia">
+  <joint name="leg_1_tibia_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -71,7 +71,7 @@
     </limit>
   </joint>
   
-  <joint name="Leg_2_tibia">
+  <joint name="leg_2_tibia_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -87,7 +87,7 @@
     </limit>
   </joint>
   
-  <joint name="Leg_3_tibia">
+  <joint name="leg_3_tibia_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -103,7 +103,7 @@
     </limit>
   </joint>
   
-  <joint name="Leg_1_femur">
+  <joint name="leg_1_femur_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -119,7 +119,7 @@
     </limit>
   </joint>
   
-  <joint name="Leg_2_femur">
+  <joint name="leg_2_femur_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -135,7 +135,7 @@
     </limit>
   </joint>
   
-  <joint name="Leg_3_femur">
+  <joint name="leg_3_femur_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -151,7 +151,7 @@
     </limit>
   </joint>
   
-  <joint name="Leg_6_femur">
+  <joint name="leg_6_femur_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -167,7 +167,7 @@
     </limit>
   </joint>
   
-  <joint name="Leg_4_coxa">
+  <joint name="leg_4_coxa_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -183,7 +183,7 @@
     </limit>
   </joint>
 
-  <joint name="Leg_5_coxa">
+  <joint name="leg_5_coxa_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -199,7 +199,7 @@
     </limit>
   </joint>
 
-  <joint name="Leg_6_coxa">
+  <joint name="leg_6_coxa_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -215,7 +215,7 @@
     </limit>
   </joint>
   
-  <joint name="Leg_4_tibia">
+  <joint name="leg_4_tibia_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -231,7 +231,7 @@
     </limit>
   </joint>
   
-  <joint name="Leg_5_tibia">
+  <joint name="leg_5_tibia_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -247,7 +247,7 @@
     </limit>
   </joint>
   
-  <joint name="Leg_6_tibia">
+  <joint name="leg_6_tibia_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -263,7 +263,7 @@
     </limit>
   </joint>
   
-  <joint name="Leg_4_femur">
+  <joint name="leg_4_femur_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
@@ -279,7 +279,7 @@
     </limit>
   </joint>
   
-  <joint name="Leg_5_femur">
+  <joint name="leg_5_femur_joint">
     <command_interface name="position">
     <param name="min">-1.57</param>
     <param name="max">1.57</param>
