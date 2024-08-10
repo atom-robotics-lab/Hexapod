@@ -11,6 +11,12 @@ class SimpleTrajectoryPublisher(Node):
         super().__init__('simple_trajectory_publisher')
         self.publisher_ = self.create_publisher(JointTrajectory, '/hexapod_controller/joint_trajectory', 10)
         self.client = self.create_client(Trigger, '/get_joint_state')
+        self.step_length_subscriber_ = self.create_subscription(
+            Float64,  # Message type
+            '/step_length',  # Topic name
+            self.step_length_callback,  # Callback function
+            10  # QoS depth
+        )
         
         while not self.client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Service not available, waiting again...')
@@ -32,25 +38,24 @@ class SimpleTrajectoryPublisher(Node):
         self.y_list = [160]*6
         self.z_list = [120]*6
         self.joint_positions = [0.0]*18
-        self.req_speed_time = 0.5
-        self.get_logger().info(f'Current speed: {2.5/self.req_speed_time} cm/s')
-        self.rate = self.create_rate(10)
-        
-        #use this to update velocities
-        #ros2 topic pub /update_speed std_msgs/msg/Float64 "data: 1.0" --once
+        self.new_step_length=100
 
-        self.create_subscription(Float64, '/update_speed', self.update_speed_callback, 10)
+        
+
+        
+        self.initialize()
         
         self.gaits()
+
+    def print_speed(self):
+        self.get_logger().info(f'speed: {(self.step_length)/10} cm/s')
     
-    def update_speed_callback(self, msg):
-        # Update the speed time from the received message
-        new_speed_time = 2.5/msg.data
-        if new_speed_time > 0:
-            self.req_speed_time = new_speed_time
-            self.get_logger().info(f'Updated speed: {2.5/self.req_speed_time}')
-        else:
-            self.get_logger().warning('Received non-positive speed time. Ignoring.')
+    def step_length_callback(self, msg):
+        self.get_logger().info(f'Received new step length: {msg.data}')
+        self.new_step_length = msg.data
+
+    
+   
 
     def create_multiple_points(self, TIME):
         point = JointTrajectoryPoint()
@@ -122,41 +127,91 @@ class SimpleTrajectoryPublisher(Node):
         self.publisher_.publish(self.traj_msg)
         self.wait_until_time(trajectory_time)
     
-    def gaits(self):
-        self.z(-50, [1, 3, 5])
-        self.create_trajectory(self.req_speed_time)
+    def initialize(self):
+        self.get_logger().info(f'Initializing the hexapod')
+        self.create_trajectory(0.2)
 
-        self.x(-25, [1, 3, 5])
-        self.x(25, [2, 4, 6])
-        self.create_trajectory(self.req_speed_time)
+        self.z(-50,[3])
+        self.x(30,[3])
+        self.create_trajectory(0.2)
+        self.z(50,[3])
+        self.x(30,[3])
+        self.create_trajectory(0.2)
+
+        self.z(-50,[6])
+        self.x(30,[6])
+        self.create_trajectory(0.2)
+        self.z(50,[6])
+        self.x(30,[6])
+        self.create_trajectory(0.2)
+
+        self.z(-50,[1])
+        self.x(-30,[1])
+        self.create_trajectory(0.2)
+        self.z(50,[1])
+        self.x(-30,[1])
+        self.create_trajectory(0.2)
+
+        self.z(-50,[4])
+        self.x(-30,[4])
+        self.create_trajectory(0.2)
+        self.z(50,[4])
+        self.x(-30,[4])
+        self.create_trajectory(0.2)
+
+        self.get_logger().info(f'Completed...')
+
+        
+
+    def gaits(self):
+        self.move_forward()
+    
+    def move_forward(self):
+        self.step_length=self.new_step_length
+        self.timer = self.create_timer(0.5, self.print_speed)
+        
+        self.z(-50, [1, 3, 5])
+        self.x(-self.step_length/4, [1, 3, 5])
+        self.x(self.step_length/4, [2, 4, 6])
+        self.create_trajectory(0.25)
 
         self.z(50, [1, 3, 5])
-        self.create_trajectory(self.req_speed_time)
+        self.x(-self.step_length/4, [1, 3, 5])
+        self.x(self.step_length/4, [2, 4, 6])
+        self.create_trajectory(0.25)
 
-        while True:
+        while rclpy.ok():
             self.z(-50, [2, 4, 6])
-            self.x(25, [1, 3, 5])
-            self.x(-25, [2, 4, 6])
-            self.create_trajectory(self.req_speed_time)
-            self.get_logger().info(f'Current speed: {2.5/self.req_speed_time}')
+            self.x(self.step_length/2, [1, 3, 5])
+            self.x(-self.step_length/2, [2, 4, 6])
+            self.create_trajectory(0.5)
+            
+            self.step_length=self.new_step_length
+
+            
 
             self.z(50, [2, 4, 6])
-            self.x(25, [1, 3, 5])
-            self.x(-25, [2, 4, 6])
-            self.create_trajectory(self.req_speed_time)
-            self.get_logger().info(f'Current speed: {2.5/self.req_speed_time}')
+            self.x(self.step_length/2, [1, 3, 5])
+            self.x(-self.step_length/2, [2, 4, 6])
+            self.create_trajectory(0.5)
+
+            
             
             self.z(-50, [1, 3, 5])
-            self.x(25, [2, 4, 6])
-            self.x(-25, [1, 3, 5])
-            self.create_trajectory(self.req_speed_time)
-            self.get_logger().info(f'Current speed: {2.5/self.req_speed_time}')
+            self.x(self.step_length/2, [2, 4, 6])
+            self.x(-self.step_length/2, [1, 3, 5])
+            self.create_trajectory(0.5)
+
+            self.step_length=self.new_step_length
+
+            
 
             self.z(50, [1, 3, 5])
-            self.x(25, [2, 4, 6])
-            self.x(-25, [1, 3, 5])
-            self.create_trajectory(self.req_speed_time)
-            self.get_logger().info(f'Current speed: {2.5/self.req_speed_time}')
+            self.x(self.step_length/2, [2, 4, 6])
+            self.x(-self.step_length/2, [1, 3, 5])
+            self.create_trajectory(0.5)
+            
+            
     
     def wait_until_time(self, target_time):
         target_time += self.call_service()
