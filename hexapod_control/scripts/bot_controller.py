@@ -39,6 +39,9 @@ class SimpleTrajectoryPublisher(Node):
         self.z_list = [120]*6
         self.joint_positions = [0.0]*18
         self.new_step_length=100
+        self.step_length=self.new_step_length
+
+        self.timer = self.create_timer(0.5, self.print_speed)
 
         
 
@@ -164,11 +167,68 @@ class SimpleTrajectoryPublisher(Node):
         
 
     def gaits(self):
-        self.move_forward()
+        self.straight()
     
-    def move_forward(self):
+    
+    def rest(self):
+        self.create_trajectory(0.25)
+        
+    
+    def rotate(self):
         self.step_length=self.new_step_length
-        self.timer = self.create_timer(0.5, self.print_speed)
+
+        if self.flag!='rotate' and (self.flag=='straight' or self.flag=='rest'):
+            return
+
+
+        self.z(-50,[1,3,5])
+        self.x(-self.step_length/4, [1, 3, 4, 6])
+        self.x(self.step_length/4, [2,5])
+        self.create_trajectory(0.25)
+
+        self.z(50,[1,3,5])
+        self.x(-self.step_length/4, [1, 3, 4, 6])
+        self.x(self.step_length/4, [2,5])
+        self.create_trajectory(0.25)
+
+        while rclpy.ok():
+
+            self.z(-50,[2,4,6])
+            self.x(self.step_length/2, [1, 3, 4, 6])
+            self.x(-self.step_length/2, [2,5])
+            self.create_trajectory(0.5)
+
+            self.step_length=self.new_step_length
+
+            self.z(50,[2,4,6])
+            self.x(self.step_length/2, [1, 3, 4, 6])
+            self.x(-self.step_length/2, [2,5])
+            self.create_trajectory(0.5)
+
+            self.z(-50,[1,3,5])
+            self.x(-self.step_length/2, [1, 3, 4, 6])
+            self.x(self.step_length/2, [2,5])
+            self.create_trajectory(0.5)
+
+            self.step_length=self.new_step_length
+
+            self.z(50,[1,3,5])
+            self.x(-self.step_length/2, [1, 3, 4, 6])
+            self.x(self.step_length/2, [2,5])
+            self.create_trajectory(0.5)
+
+            
+
+            
+
+
+        
+        
+    
+    def straight(self):
+        
+        self.step_length=self.new_step_length
+        
         
         self.z(-50, [1, 3, 5])
         self.x(-self.step_length/4, [1, 3, 5])
