@@ -63,15 +63,11 @@ class SimpleTrajectoryPublisher(Node):
             self.new_left_step_length -= 10.0
             self.new_right_step_length -= 10.0
         elif msg.angular.z > 0:
-            self.new_left_step_length -= 10.0
-            self.new_right_step_length += 10.0
-        elif msg.angular.z < 0:
             self.new_left_step_length += 10.0
             self.new_right_step_length -= 10.0
-        self.get_logger().info(f' Got speed update {(self.new_left_step_length)/10} : {(self.new_right_step_length)/10} ')
-        
-        
-        
+        elif msg.angular.z < 0:
+            self.new_left_step_length -= 10.0
+            self.new_right_step_length += 10.0
     
    
 
@@ -147,8 +143,6 @@ class SimpleTrajectoryPublisher(Node):
     
     def initialize(self):
         self.get_logger().info(f'Initializing the hexapod')
-        self.get_logger().info(f'After this you can use teleop to control hexapod.')
-        self.get_logger().info(f'Updated values will only come to effect when bot reaches the initial position')
         self.create_trajectory(0.2)
 
         self.z(-50,[3])
@@ -203,28 +197,28 @@ class SimpleTrajectoryPublisher(Node):
         
         
         self.z(-50, [1, 3, 5])
-        self.x(-self.right_step_length/4, [1, 3])
-        self.x(-self.left_step_length/4, [5])
+        self.x(-self.left_step_length/4, [1, 3])
+        self.x(-self.right_step_length/4, [5])
 
-        self.x(self.right_step_length/4, [2])
-        self.x(self.left_step_length/4, [4, 6])
+        self.x(self.left_step_length/4, [2])
+        self.x(self.right_step_length/4, [4, 6])
         self.create_trajectory(0.25)
 
         self.z(50, [1, 3, 5])
-        self.x(-self.right_step_length/4, [1, 3])
-        self.x(-self.left_step_length/4, [5])
+        self.x(-self.left_step_length/4, [1, 3])
+        self.x(-self.right_step_length/4, [5])
 
-        self.x(self.right_step_length/4, [2])
-        self.x(self.left_step_length/4, [4, 6])
+        self.x(self.left_step_length/4, [2])
+        self.x(self.right_step_length/4, [4, 6])
         self.create_trajectory(0.25)
 
         while rclpy.ok():
             self.z(-50, [2, 4, 6])
-            self.x(self.right_step_length/2, [1, 3])
-            self.x(self.left_step_length/2, [5])
+            self.x(self.left_step_length/2, [1, 3])
+            self.x(self.right_step_length/2, [5])
 
-            self.x(-self.right_step_length/2, [2])
-            self.x(-self.left_step_length/2, [4, 6])
+            self.x(-self.left_step_length/2, [2])
+            self.x(-self.right_step_length/2, [4, 6])
             self.create_trajectory(0.5)
             
             self.right_step_length=self.new_right_step_length
@@ -233,21 +227,21 @@ class SimpleTrajectoryPublisher(Node):
             
 
             self.z(50, [2, 4, 6])
-            self.x(self.right_step_length/2, [1, 3])
-            self.x(self.left_step_length/2, [5])
+            self.x(self.left_step_length/2, [1, 3])
+            self.x(self.right_step_length/2, [5])
 
-            self.x(-self.right_step_length/2, [2])
-            self.x(-self.left_step_length/2, [4, 6])
+            self.x(-self.left_step_length/2, [2])
+            self.x(-self.right_step_length/2, [4, 6])
             self.create_trajectory(0.5)
 
             
             
             self.z(-50, [1, 3, 5])
-            self.x(-self.right_step_length/2, [1, 3])
-            self.x(-self.left_step_length/2, [5])
+            self.x(-self.left_step_length/2, [1, 3])
+            self.x(-self.right_step_length/2, [5])
 
-            self.x(self.right_step_length/2, [2])
-            self.x(self.left_step_length/2, [4, 6])
+            self.x(self.left_step_length/2, [2])
+            self.x(self.right_step_length/2, [4, 6])
             self.create_trajectory(0.5)
 
             self.right_step_length=self.new_right_step_length
@@ -256,11 +250,11 @@ class SimpleTrajectoryPublisher(Node):
             
 
             self.z(50, [1, 3, 5])
-            self.x(-self.right_step_length/2, [1, 3])
-            self.x(-self.left_step_length/2, [5])
+            self.x(-self.left_step_length/2, [1, 3])
+            self.x(-self.right_step_length/2, [5])
 
-            self.x(self.right_step_length/2, [2])
-            self.x(self.left_step_length/2, [4, 6])
+            self.x(self.left_step_length/2, [2])
+            self.x(self.right_step_length/2, [4, 6])
             self.create_trajectory(0.5)
             
             

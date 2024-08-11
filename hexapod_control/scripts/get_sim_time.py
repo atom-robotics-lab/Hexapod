@@ -18,7 +18,7 @@ class JointStateService(Node):
         )
         
         # Create a service
-        self.srv = self.create_service(Trigger, 'get_joint_state', self.handle_joint_state_request)
+        self.srv = self.create_service(Trigger, 'get_sim_time', self.handle_joint_state_request)
         
         # Store the last received JointState message
         self.last_joint_state = None

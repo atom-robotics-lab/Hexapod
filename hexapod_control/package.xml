@@ -18,6 +18,7 @@
   <depend>joint_state_publisher</depend>
   <depend>joint_state_publisher_gui</depend>
   <depend>ros_gz_sim</depend>
+  <depend>keyboard</depend>
 
   <build_depend>control_msgs</build_depend>
   <build_depend>geometry_msgs</build_depend>
