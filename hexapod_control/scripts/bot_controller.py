@@ -52,7 +52,7 @@ class SimpleTrajectoryPublisher(Node):
         self.gaits()
 
     def print_speed(self):
-        self.get_logger().info(f' Speed {(self.left_step_length)/10} : {(self.right_step_length)/10} ')
+        self.get_logger().info(f' Speed {(self.left_step_length)/10} : {(self.right_step_length)/10} cm/s')
     
     
     def listener_callback(self, msg):
@@ -68,7 +68,7 @@ class SimpleTrajectoryPublisher(Node):
         elif msg.angular.z < 0:
             self.new_left_step_length += 10.0
             self.new_right_step_length -= 10.0
-        self.get_logger().info(f' Got speed update {(self.new_left_step_length)/10} : {(self.new_right_step_length)/10} ')
+        self.get_logger().info(f' Got speed update {(self.new_left_step_length)/10} : {(self.new_right_step_length)/10} cm/s')
         
         
         
