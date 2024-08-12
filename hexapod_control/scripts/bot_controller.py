@@ -57,17 +57,25 @@ class SimpleTrajectoryPublisher(Node):
     
     def listener_callback(self, msg):
         if msg.linear.x > 0:
-            self.new_left_step_length += 10.0
-            self.new_right_step_length += 10.0
+            if (self.new_left_step_length<=100):
+                self.new_left_step_length += 10.0
+            if (self.new_right_step_length<=100):
+                self.new_right_step_length += 10.0
         elif msg.linear.x < 0:
-            self.new_left_step_length -= 10.0
-            self.new_right_step_length -= 10.0
+            if (self.new_left_step_length>=-100):
+                self.new_left_step_length -= 10.0
+            if (self.new_right_step_length>=-100):
+                self.new_right_step_length -= 10.0
         elif msg.angular.z > 0:
-            self.new_left_step_length -= 10.0
-            self.new_right_step_length += 10.0
+            if (self.new_left_step_length>=-100):
+                self.new_left_step_length -= 10.0
+            if (self.new_right_step_length<=100):
+                self.new_right_step_length += 10.0
         elif msg.angular.z < 0:
-            self.new_left_step_length += 10.0
-            self.new_right_step_length -= 10.0
+            if (self.new_left_step_length<=100):
+                self.new_left_step_length += 10.0
+            if (self.new_right_step_length>=-100):
+                self.new_right_step_length -= 10.0
         self.get_logger().info(f' Got speed update {(self.new_left_step_length)/10} : {(self.new_right_step_length)/10} cm/s')
         
         
@@ -200,8 +208,6 @@ class SimpleTrajectoryPublisher(Node):
         self.right_step_length=self.new_right_step_length
         self.left_step_length=self.new_left_step_length
         
-        
-        
         self.z(-50, [1, 3, 5])
         self.x(-self.right_step_length/4, [1, 3])
         self.x(-self.left_step_length/4, [5])
@@ -239,8 +245,6 @@ class SimpleTrajectoryPublisher(Node):
             self.x(-self.right_step_length/2, [2])
             self.x(-self.left_step_length/2, [4, 6])
             self.create_trajectory(0.5)
-
-            
             
             self.z(-50, [1, 3, 5])
             self.x(-self.right_step_length/2, [1, 3])
@@ -252,8 +256,6 @@ class SimpleTrajectoryPublisher(Node):
 
             self.right_step_length=self.new_right_step_length
             self.left_step_length=self.new_left_step_length
-
-            
 
             self.z(50, [1, 3, 5])
             self.x(-self.right_step_length/2, [1, 3])
