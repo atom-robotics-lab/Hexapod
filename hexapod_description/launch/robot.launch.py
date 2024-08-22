@@ -48,18 +48,18 @@ def generate_launch_description():
 	)
 
 	# spawn robot in gz sim using urdf
-	spawn_robot = Node(package = "ros_gz_sim",
-                           executable = "create",
-                           arguments = ["-topic", "/robot_description",
-                                        "-name", "hexapod",
-                                        "-allow_renaming", "true",
-                                        "-z", "1.0",
-                                        "-x", "2.0",
-                                        "-y", "0.0",
-                                        "-Y", "-1.57",
-                                        ],
-							output='screen'
-                           )
+	# spawn_robot = Node(package = "ros_gz_sim",
+    #                        executable = "create",
+    #                        arguments = ["-topic", "/robot_description",
+    #                                     "-name", "hexapod",
+    #                                     "-allow_renaming", "true",
+    #                                     "-z", "1.0",
+    #                                     "-x", "2.0",
+    #                                     "-y", "0.0",
+    #                                     "-Y", "-1.57",
+    #                                     ],
+	# 						output='screen'
+    #                        )
 	
 	load_joint_state_broadcaster = ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
@@ -72,30 +72,28 @@ def generate_launch_description():
         output='screen'
     )
 
-	rviz_node = Node(
-        package='rviz2',
-        executable='rviz2',
-        name='rviz2',
-        arguments=['-d', rviz_config_file],
-        output='screen'
-    )
+	# rviz_node = Node(
+    #     package='rviz2',
+    #     executable='rviz2',
+    #     name='rviz2',
+    #     arguments=['-d', rviz_config_file],
+    #     output='screen'
+    # )
 
-	arg_use_sim_time = DeclareLaunchArgument('use_sim_time',
-											default_value='true',
-											description="Enable sim time from /clock")
+	# arg_use_sim_time = DeclareLaunchArgument('use_sim_time',
+	# 										default_value='true',
+	# 										description="Enable sim time from /clock")
 	
-	# argument to specify if rviz needs to be launched
-
 	
 	
 	return LaunchDescription([
-		arg_use_sim_time,
-		RegisterEventHandler(
-            event_handler=OnProcessExit(
-                target_action=spawn_robot,
-                on_exit=[load_joint_state_broadcaster],
-            )
-        ),
+		# arg_use_sim_time,
+		# RegisterEventHandler(
+        #     event_handler=OnProcessExit(
+        #         target_action=spawn_robot,
+        #         on_exit=[load_joint_state_broadcaster],
+        #     )
+        # ),
 		RegisterEventHandler(
             event_handler=OnProcessExit(
                 target_action=load_joint_state_broadcaster,
@@ -103,12 +101,12 @@ def generate_launch_description():
             )
         ),
 
-		spawn_robot,
+		#spawn_robot,
 
 		state_publisher,
 
 		#joint_state_publisher_gui,
 
-		rviz_node,
+		#rviz_node,
 
 	])
