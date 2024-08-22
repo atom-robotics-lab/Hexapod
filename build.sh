@@ -10,8 +10,6 @@ gpu=$(lspci | grep -i '.* vga .* nvidia .*')
 
 # DOCKER_ARGS+=("-e FASTRTPS_DEFAULT_PROFILES_FILE=/usr/local/share/middleware_profiles/rtps_udp_profile.xml")
 
-xhost +local:root
-
 image_name="hexapod_image"
 container_name="hexapod_atom"
 

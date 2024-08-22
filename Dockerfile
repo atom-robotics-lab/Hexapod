@@ -6,89 +6,26 @@ ENV LC_ALL C.UTF-8
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-#NVIDIA ENV
-ENV NVIDIA_VISIBLE_DEVICES all
-ENV NVIDIA_DRIVER_CAPABILITIES graphics,utility,compute
-ENV QT_X11_NO_MITSHM 1
-
 RUN apt-get update && apt-get -y --quiet --no-install-recommends install \
-    ant \
     binutils-dev \
-		ca-certificates \
-		ccache \
 		cmake \
-		cppcheck \
 		curl \
-		dirmngr \
-		doxygen \
-		g++-multilib \
-		gcc-multilib \
-		gdb \
-    gettext \
 		git \
-		gnupg \
-		gosu \
-		lcov \
-    libelf-dev \
-		libexpat-dev \
-    libvecmath-java \
-		libfreetype6-dev \
-		libgmp-dev \
-		libgtest-dev \
-		libisl-dev \
-		libmpc-dev \
-		libmpfr-dev \
-		libpng-dev \
-		libssl-dev \
-		lsb-release \
-		make \
-		ninja-build \
-		openssh-client \
-    openjdk-11-jre \
-    openjdk-11-jdk \
 		python3 \
 		python3-dev \
 		python3-pip \
-		rsync \
-    screen \
-		shellcheck \
-		tzdata \
-    texinfo \
-    u-boot-tools \
-    util-linux \
 		unzip \
-		valgrind \
 		wget \
-		xsltproc \
 		zip \
 	&& apt-get -y autoremove \
 	&& apt-get clean autoclean \
 	&& rm -rf /var/lib/apt/lists/{apt,dpkg,cache,log} /tmp/* /var/tmp/*
-
-RUN apt update
-
-RUN apt install -y cmake
 
 RUN apt update && apt install locales && locale-gen en_US en_US.UTF-8 && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && export LANG=en_US.UTF-8
 
 RUN apt install software-properties-common -y
 
 RUN add-apt-repository universe
-
-# Install vcpkg dependencies
-RUN apt install -y \
-    git \
-    curl \
-    zip \
-    unzip \
-    tar \
-    pkg-config \
-    freeglut3-dev \
-    libglew-dev \
-    libglfw3-dev \
-    libfftw3-dev \
-    libcgal-dev \
-    python3
 
 # ROS KEY
 RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
@@ -99,29 +36,19 @@ RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/r
 RUN apt update && apt-get install -y \
     python-is-python3 \
     nano \
-    less \
     apt-utils \
     python3-pip \
-    nlohmann-json3-dev \
-    git cmake python3-vcstools curl \
-    clang lldb lld wget lsb-release gnupg openssl \
     ros-humble-desktop \
     ros-humble-sdformat-urdf \
     ros-humble-hardware-interface\
     ros-humble-ros-gz-interfaces\
     ros-humble-ros2-control\
     ros-humble-ros2-controllers\
-    libgflags-dev \
     ros-humble-xacro \
-    tmux \
     ros-humble-rmw-cyclonedds-cpp \
     ros-humble-ign-ros2-control\
+    ros-humble-ros-gz-interfaces\
     lsb-release wget gnupg/
-
-RUN apt-get update
-RUN apt-get install lsb-release wget gnupg
-
-
 
 RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 
