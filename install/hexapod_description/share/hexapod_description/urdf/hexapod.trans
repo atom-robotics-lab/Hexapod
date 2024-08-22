@@ -1,0 +1,202 @@
+<?xml version="1.0" ?>
+<robot name="hexapod" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="Leg_1_coxa_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_1_coxa">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_1_coxa_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_1_tibia_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_1_tibia">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_1_tibia_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_1_femur_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_1_femur">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_1_femur_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_3_coxa_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_3_coxa">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_3_coxa_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_3_tibia_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_3_tibia">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_3_tibia_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_3_femur_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_3_femur">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_3_femur_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_4_coxa_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_4_coxa">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_4_coxa_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_5_coxa_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_5_coxa">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_5_coxa_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_5_tibia_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_5_tibia">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_5_tibia_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_5_femur_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_5_femur">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_5_femur_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_6_coxa_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_6_coxa">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_6_coxa_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_6_tibia_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_6_tibia">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_6_tibia_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_6_femur_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_6_femur">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_6_femur_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_2_coxa_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_2_coxa">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_2_coxa_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_2_tibia_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_2_tibia">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_2_tibia_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_2_femur_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_2_femur">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_2_femur_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_4_tibia_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_4_tibia">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_4_tibia_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="Leg_4_femur_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="Leg_4_femur">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="Leg_4_femur_actr">
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

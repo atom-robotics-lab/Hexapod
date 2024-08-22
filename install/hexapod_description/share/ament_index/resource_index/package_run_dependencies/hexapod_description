@@ -1,0 +1,1 @@
+rclpy;rclcpp;rviz2;robot_state_publisher;joint_state_publisher;joint_state_publisher_gui;ros_gz_sim;xacro;ament_index_python;control_msgs;geometry_msgs;hardware_interface;ign_ros2_control;joint_state_broadcaster;launch;launch_ros;ros2launch;ros_ign_gazebo;ros_gz_bridge;ros2controlcli;std_msgs;ament_lint_auto;ament_lint_common
