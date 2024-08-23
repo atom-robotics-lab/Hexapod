@@ -58,6 +58,10 @@ RUN echo "alias docker_stop='docker stop hexapod atom'" >> ~/.bashrc
 
 RUN apt update && apt install python3-colcon-common-extensions -y
 
+RUN pip3 install adafruit-circuitpython-servokit
+
+RUN apt-get install python3-dev python3-rpi.gpio
+RUN apt-get install RPi.GPIO
 SHELL ["/bin/bash","-c"]
 
 # Command to run when starting the container

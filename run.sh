@@ -32,7 +32,7 @@ else
         bash -c "./welcome.sh"
     else
     printf 'Nvidia GPU is not present: %s\n' "$gpu"
-    docker run -it --rm \
+    docker run --privileged --device=/dev/gpiomem:/dev/gpiomem -d -it --rm \
         -e DISPLAY=$DISPLAY \
         -v $PWD/build_files:/workspaces/hexapod_ws/ \
         -v $PWD:/workspaces/hexapod_ws/src \
