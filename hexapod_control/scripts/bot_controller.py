@@ -162,9 +162,15 @@ class Hexapod(Node):
             angles = [angle * self.walk_scale for angle in angles]
             positions.extend(angles)
         point.positions = positions
+
+        if servoint > 8:
+            servoint = 1
+
         for i in range(len(angles)):
             #print(angles[i])
             kit.servo[servoint].angle = int(angles[i])
+            print(servoint)
+            servoint += 1
             
         point.time_from_start = Duration(sec=int(self.timer_period), nanosec=int((self.timer_period % 1) * 1e9))
 
