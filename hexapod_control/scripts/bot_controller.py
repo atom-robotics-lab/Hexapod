@@ -7,6 +7,11 @@ from geometry_msgs.msg import Twist
 import math
 from builtin_interfaces.msg import Duration 
 
+from adafruit_servokit import ServoKit
+kit = ServoKit(channels=16)
+servo = 14
+servoint = 1
+
 class Hexapod(Node):
     def __init__(self):
         super().__init__('Hexapod')
@@ -154,18 +159,19 @@ class Hexapod(Node):
         for pos in self.tripod_gait_cycle[self.cycle_index % len(self.tripod_gait_cycle)]:
             x, y, z = pos
             angles = self.inverse_kinematics(x, y, z, *segment_lengths)
-            for i in angles:
-                print(math.degrees(i), end=', ')
             angles = [angle * self.walk_scale for angle in angles]
             positions.extend(angles)
-            print()
         point.positions = positions
+        for i in range(len(angles)):
+            #print(angles[i])
+            kit.servo[servoint].angle = int(angles[i])
+            
         point.time_from_start = Duration(sec=int(self.timer_period), nanosec=int((self.timer_period % 1) * 1e9))
 
         traj_msg.points.append(point)
 
         self.publisher_.publish(traj_msg)
-        print(self.step_length)
+        print(angles)
         self.cycle_index += 1  
 
 def main(args=None):
