@@ -10,7 +10,6 @@ from builtin_interfaces.msg import Duration
 from adafruit_servokit import ServoKit
 kit = ServoKit(channels=16)
 servo = 14
-servoint = 1
 
 class Hexapod(Node):
     def __init__(self):
@@ -26,7 +25,7 @@ class Hexapod(Node):
         self.step_length_l = 0.0
         self.walk_scale = 1.0
         self.side_count = 0
-
+        self.servoint = 1
         self.tripod_gait_cycle = [ [(0.0, 0.0, 0.0)] * 6 ]
         self.joint_names = [
             'Leg_1_coxa', 'Leg_1_femur', 'Leg_1_tibia',   
@@ -163,14 +162,13 @@ class Hexapod(Node):
             positions.extend(angles)
         point.positions = positions
 
-        if servoint > 8:
-            servoint = 1
-
         for i in range(len(angles)):
+            if self.servoint > 8:
+                self.servoint = 1
             #print(angles[i])
-            kit.servo[servoint].angle = int(angles[i])
-            print(servoint)
-            servoint += 1
+            kit.servo[self.servoint].angle = int(math.degrees(angles[i]))
+            print(self.servoint)
+            self.servoint += 1
             
         point.time_from_start = Duration(sec=int(self.timer_period), nanosec=int((self.timer_period % 1) * 1e9))
 
