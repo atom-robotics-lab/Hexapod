@@ -166,9 +166,9 @@ class Hexapod(Node):
             if self.servoint > 8:
                 self.servoint = 1
             #print(angles[i])
-            kit.servo[self.servoint].angle = int(math.degrees(angles[i]))
-            print(self.servoint)
-            self.servoint += 1
+            kit.servo[servoint].angle = int(90+angles[i])
+            print(servoint)
+            servoint += 1
             
         point.time_from_start = Duration(sec=int(self.timer_period), nanosec=int((self.timer_period % 1) * 1e9))
 
