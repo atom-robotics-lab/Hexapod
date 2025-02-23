@@ -53,23 +53,22 @@ class Hexapod(Node):
         epsilon = 1e-6 
 
         theta1 = math.atan2(x, y+170) 
-        print("theta1",theta1)
+        # print("theta1",theta1)
 
         xy_dist = math.sqrt(x**2 + (y+175)**2) - l1
         
         d = math.sqrt(xy_dist**2 + z**2) + epsilon 
         
         cos_theta3 = (l2**2+l3**2-d**2) / (2 * l2 * l3)
-        #cos_theta3 = self.clamp(cos_theta3, -1.0, 1.0)
         theta3 = math.acos(cos_theta3)
-        print("theta3",theta3)
+        # print("theta3",theta3)
         
         cos_theta2 = (d**2 + l2**2 - l3**2) / (2 * d * l2)
         #cos_theta2 = self.clamp(cos_theta2, -1.0, 1.0)
 
         theta2 =  math.acos(cos_theta2) - math.atan2(z, xy_dist) 
-        print("theta2",theta2)
-        print()
+        # print("theta2",theta2)
+        # print()
         
         if self.side_count < 6:
             self.side_count += 1 
@@ -157,18 +156,18 @@ class Hexapod(Node):
         for pos in self.tripod_gait_cycle[self.cycle_index % len(self.tripod_gait_cycle)]:
             x, y, z = pos
             angles = self.inverse_kinematics(x, y, z, *segment_lengths)
-            for i in angles:
-                print(math.degrees(i), end=', ')
+            # for i in angles:
+            #     print(math.degrees(i), end=', ')
             angles = [angle * self.walk_scale for angle in angles]
             positions.extend(angles)
-            print()
+            # print()
         point.positions = positions
         point.time_from_start = Duration(sec=int(self.timer_period), nanosec=int((self.timer_period % 1) * 1e9))
 
         traj_msg.points.append(point)
 
         self.publisher_.publish(traj_msg)
-        print(self.step_length)
+        # print(self.step_length)
         self.cycle_index += 1  
 
 def main(args=None):

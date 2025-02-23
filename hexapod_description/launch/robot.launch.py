@@ -75,8 +75,12 @@ def generate_launch_description():
 											default_value='true',
 											description="Enable sim time from /clock")
 	
-	# argument to specify if rviz needs to be launched
-
+	controller_node = Node(
+		package='hexapod_control',
+		executable='bot_controller.py',
+		name='hexapod_controller_node',
+		output='screen'
+	)
 	
 	
 	return LaunchDescription([
@@ -98,8 +102,8 @@ def generate_launch_description():
 
 		state_publisher,
 
-		#joint_state_publisher_gui,
-
 		rviz_node,
+
+		controller_node
 
 	])
