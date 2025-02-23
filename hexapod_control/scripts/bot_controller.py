@@ -1,98 +1,179 @@
 #!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
+from geometry_msgs.msg import Twist
+import math
+from builtin_interfaces.msg import Duration 
 
-
-class JointPositions:
+class Hexapod(Node):
     def __init__(self):
-        self.Leg_1_coxa = 0.0
-        self.Leg_1_tibia = 0.0
-        self.Leg_1_femur = 0.0
-        self.Leg_2_coxa = 0.0
-        self.Leg_2_tibia = 0.0
-        self.Leg_2_femur = 0.0
-        self.Leg_3_coxa = 0.0
-        self.Leg_3_tibia = 0.0
-        self.Leg_3_femur = 0.0
-        self.Leg_4_coxa = 0.0
-        self.Leg_4_tibia = 0.0
-        self.Leg_4_femur = 0.0
-        self.Leg_5_coxa = 0.0
-        self.Leg_5_tibia = 0.0
-        self.Leg_5_femur = 0.0
-        self.Leg_6_coxa = 0.0
-        self.Leg_6_tibia = 0.0
-        self.Leg_6_femur = 0.0
-    
-
-    def get_positions(self):
-        return [
-            self.Leg_1_coxa, self.Leg_1_femur, self.Leg_1_tibia, 
-            self.Leg_2_coxa, self.Leg_2_femur, self.Leg_2_tibia, 
-            self.Leg_3_coxa, self.Leg_3_femur, self.Leg_3_tibia, 
-            self.Leg_4_coxa, self.Leg_4_femur, self.Leg_4_tibia, 
-            self.Leg_5_coxa, self.Leg_5_femur, self.Leg_5_tibia, 
-            self.Leg_6_coxa, self.Leg_6_femur, self.Leg_6_tibia, 
-        ]
-
-class SimpleTrajectoryPublisher(Node):
-    def __init__(self):
-        super().__init__('simple_trajectory_publisher')
+        super().__init__('Hexapod')
         self.publisher_ = self.create_publisher(JointTrajectory, '/hexapod_controller/joint_trajectory', 10)
-        self.joint_positions = JointPositions()
-        self.traj_msg = JointTrajectory()
-        self.traj_msg.joint_names = [
-            'Leg_1_coxa', 'Leg_1_femur', 'Leg_1_tibia',
-            'Leg_2_coxa', 'Leg_2_femur', 'Leg_2_tibia',
-            'Leg_3_coxa', 'Leg_3_femur', 'Leg_3_tibia',
-            'Leg_4_coxa', 'Leg_4_femur', 'Leg_4_tibia',
-            'Leg_5_coxa', 'Leg_5_femur', 'Leg_5_tibia',
-            'Leg_6_coxa', 'Leg_6_femur', 'Leg_6_tibia',
-        ]
-        self.reach_time_sec = 0
-        self.reach_time_nanosec = 0
-        self.create_trajectory()
+        self.timer_period = 0.2  # seconds
+        self.timer = self.create_timer(self.timer_period, self.timer_callback)
         self.get_logger().info('Simple Trajectory Publisher has been started.')
+        self.cycle_index = 0
+        #self.speed = 2000 #mm/s
+        self.step_length = 0.0
+        self.walk_scale = 1.0
+        self.side_count = 0
 
-    def create_point(self, TIME):
+        self.tripod_gait_cycle = [ [(0.0, 0.0, 0.0)] * 6 ]
+        self.joint_names = [
+            'Leg_1_coxa', 'Leg_1_femur', 'Leg_1_tibia',   
+            'Leg_2_coxa', 'Leg_2_femur', 'Leg_2_tibia',   
+            'Leg_3_coxa', 'Leg_3_femur', 'Leg_3_tibia',   
+            'Leg_4_coxa', 'Leg_4_femur', 'Leg_4_tibia',   
+            'Leg_5_coxa', 'Leg_5_femur', 'Leg_5_tibia',   
+            'Leg_6_coxa', 'Leg_6_femur', 'Leg_6_tibia',   
+        ]
+    
+        self.pose_subscriber = self.create_subscription(
+            Twist,
+            "/cmd_vel",
+            self.joint_callback,
+            10  
+        )
+        
+    # def clamp(self, value, min_value, max_value):
+    #     return max(min(value, max_value), min_value)
+
+    def inverse_kinematics(self, x, y, z, l1, l2, l3):
+        """
+            x, y, z: Desired foot position
+            l1: Length of the coxa segment
+            l2: Length of the femur segment
+            l3: Length of the tibia segment
+            theta1: Angle of the coxa joint
+            theta2: Angle of the femur joint
+            theta3: Angle of the tibia joint
+        """
+        epsilon = 1e-6 
+
+        theta1 = math.atan2(x, y+170) 
+        print("theta1",theta1)
+
+        xy_dist = math.sqrt(x**2 + (y+175)**2) - l1
+        
+        d = math.sqrt(xy_dist**2 + z**2) + epsilon 
+        
+        cos_theta3 = (l2**2+l3**2-d**2) / (2 * l2 * l3)
+        #cos_theta3 = self.clamp(cos_theta3, -1.0, 1.0)
+        theta3 = math.acos(cos_theta3)
+        print("theta3",theta3)
+        
+        cos_theta2 = (d**2 + l2**2 - l3**2) / (2 * d * l2)
+        #cos_theta2 = self.clamp(cos_theta2, -1.0, 1.0)
+
+        theta2 =  math.acos(cos_theta2) - math.atan2(z, xy_dist) 
+        print("theta2",theta2)
+        print()
+        
+        if self.side_count < 6:
+            self.side_count += 1 
+        else:
+            self.side_count = 1
+
+        if self.side_count <= 3:
+            theta2,theta3 = theta2-math.radians(146.2),  math.radians(63.8)-theta3
+        else:
+            theta2,theta3 = math.radians(146.2)-theta2,  math.radians(63.8)-theta3
+
+
+        return theta1, theta2,  theta3
+
+    def rest(self):
+        self.tripod_gait_cycle = [ [(0.0, 0.0, 0.0)] * 6 ]
+
+    def test(self):
+        self.tripod_gait_cycle = [
+            [(30.0, 0.0, 30.0),(0.0, 0.0, 0.0),(0.0, 0.0, 0.0),(30.0, 0.0, 0.0),(30.0, 0.0, 30.0),(0.0, 0.0, 0.0)],
+        ]
+
+    def move_forward(self):
+        self.tripod_gait_cycle = [
+            [(-self.step_length, 0.0, self.step_length), (-self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, self.step_length), (self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, self.step_length), (self.step_length, 0.0, -self.step_length)],
+            [(-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length)],
+
+            [(-self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, self.step_length), (-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, self.step_length), (self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, self.step_length)],
+            [(self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length)],
+        ]
+        
+    
+    def move_backward(self):
+        self.tripod_gait_cycle = [
+            [(self.step_length, 0.0, self.step_length), (self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, self.step_length), (-self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, self.step_length), (-self.step_length, 0.0, -self.step_length)],
+            [(self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length)],
+
+            [(self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, self.step_length), (self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, self.step_length), (-self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, self.step_length)],
+            [(-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length)],
+        ]
+
+    def turn_right(self):
+        self.tripod_gait_cycle = [
+            [(self.step_length, 0.0, self.step_length), (self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, self.step_length), (self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, self.step_length), (self.step_length, 0.0, -self.step_length)],
+            [(self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length)],
+
+            [(self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, self.step_length), (self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, self.step_length), (self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, self.step_length)],
+            [(-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length)],
+        ]
+
+    def turn_left(self):
+        self.tripod_gait_cycle = [
+            [(-self.step_length, 0.0, self.step_length), (-self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, self.step_length), (-self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, self.step_length), (-self.step_length, 0.0, -self.step_length)],
+            [(-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length)],
+
+            [(-self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, self.step_length), (-self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, self.step_length), (-self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, self.step_length)],
+            [(self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length), (self.step_length, 0.0, -self.step_length), (-self.step_length, 0.0, -self.step_length)],
+        ]
+
+    def joint_callback(self, msg: Twist):
+        if msg.linear.x > 0:
+           self.step_length = abs(msg.linear.x) * self.timer_period
+           self.move_forward()
+        if msg.linear.x < 0:
+           self.step_length = abs(msg.linear.x) * self.timer_period
+           self.move_backward()
+        if msg.angular.z < 0:
+           self.step_length = abs(msg.angular.z) * self.timer_period
+           self.turn_right()
+        if msg.angular.z > 0:
+           self.step_length = abs(msg.angular.z) * self.timer_period
+           self.turn_left()
+        if msg.linear.x == 0 and msg.angular.z == 0:
+           self.rest()
+
+    def timer_callback(self):
+        traj_msg = JointTrajectory()
+        traj_msg.joint_names = self.joint_names
+
+        #self.move_forward()
+
         point = JointTrajectoryPoint()
-        point.positions = self.joint_positions.get_positions()
+        segment_lengths = [70.0, 100.0, 175.0]  # segment lengths in mm
+        positions = []
+        for pos in self.tripod_gait_cycle[self.cycle_index % len(self.tripod_gait_cycle)]:
+            x, y, z = pos
+            angles = self.inverse_kinematics(x, y, z, *segment_lengths)
+            for i in angles:
+                print(math.degrees(i), end=', ')
+            angles = [angle * self.walk_scale for angle in angles]
+            positions.extend(angles)
+            print()
+        point.positions = positions
+        point.time_from_start = Duration(sec=int(self.timer_period), nanosec=int((self.timer_period % 1) * 1e9))
 
-        # Update the reach time with the provided sec and nanosec
-        sec = int(TIME)
-        nanosec = int((TIME - sec) * 1_000_000_000)
+        traj_msg.points.append(point)
 
-        self.reach_time_sec += sec
-        self.reach_time_nanosec += nanosec
-
-        # Handle nanosecond overflow
-        if self.reach_time_nanosec >= 1e9:
-            extra_sec = self.reach_time_nanosec // 1e9
-            self.reach_time_sec += int(extra_sec)
-            self.reach_time_nanosec = self.reach_time_nanosec % int(1e9)
-
-        point.time_from_start.sec = self.reach_time_sec
-        point.time_from_start.nanosec = self.reach_time_nanosec
-        self.traj_msg.points.append(point)
-
-    def create_trajectory(self):
-        # Bring all joints to 0 position in time 1.6 seconds
-        self.create_point(1.0)
-
-        # Sets Leg_2_tibia to 0.2 position
-        self.joint_positions.Leg_2_tibia = -0.2
-
-        # Make point in which only Leg_2_tibia was changed
-        self.create_point(1.6)
-
-        # Publishes the trajectory in which all the points are sent
-        self.publisher_.publish(self.traj_msg)
-        self.get_logger().info('Publishing trajectory: %s' % self.traj_msg)
+        self.publisher_.publish(traj_msg)
+        print(self.step_length)
+        self.cycle_index += 1  
 
 def main(args=None):
     rclpy.init(args=args)
-    node = SimpleTrajectoryPublisher()
+    node = Hexapod()
     rclpy.spin(node)
     rclpy.shutdown()
 

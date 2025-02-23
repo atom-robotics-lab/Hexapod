@@ -3,9 +3,7 @@ import xacro
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription,ExecuteProcess
-from launch.conditions import IfCondition
-from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.actions import DeclareLaunchArgument, ExecuteProcess
 from launch.substitutions import LaunchConfiguration, Command
 from launch_ros.actions import Node
 from launch_ros.descriptions import ParameterValue
@@ -33,6 +31,12 @@ def generate_launch_description():
 											['xacro ', os.path.join(pkg_hexapod_desc, 'urdf/hexapod.xacro'),
 											]), value_type=str)}]
 								)
+
+# joint state publisher GUI
+	joint_state_publisher_gui = Node(
+	    package='joint_state_publisher_gui',
+	    executable='joint_state_publisher_gui'
+	)
 
 	# spawn robot in gz sim using urdf
 	spawn_robot = Node(package = "ros_gz_sim",
@@ -93,6 +97,8 @@ def generate_launch_description():
 		spawn_robot,
 
 		state_publisher,
+
+		#joint_state_publisher_gui,
 
 		rviz_node,
 
