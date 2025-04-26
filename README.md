@@ -21,12 +21,7 @@ Our hexapod has six legs and can walk around on rough ground. We made it to work
 * [![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
 * [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-
 ### Prerequisites
-This is an example of how to list things you need to use the software and how to install them.
 
 * Docker
   - Refer to this [docker installation guide](https://docs.docker.com/engine/install/)
